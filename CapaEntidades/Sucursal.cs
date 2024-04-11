@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidades
 {
-    internal class Sucursal
+    public class Sucursal
     {
     }
 }
