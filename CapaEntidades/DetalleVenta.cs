@@ -16,7 +16,7 @@ namespace CapaEntidades
         public int DetalleVentaId { get; set; }
 
         [Required]
-        public int cantidad { get; set; }
+        public int Cantidad { get; set; }
 
         [Required]
         public int VentaId { get; set; }
