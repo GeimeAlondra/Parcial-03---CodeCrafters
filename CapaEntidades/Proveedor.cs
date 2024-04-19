@@ -28,7 +28,7 @@ namespace CapaEntidades
         public string ProveedorDireccion { get; set; }
 
         [Required]
-        [MaxLength(8)]
+        
         public int ProveedorTelefono { get; set; }
 
 

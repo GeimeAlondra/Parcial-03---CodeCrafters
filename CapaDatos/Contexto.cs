@@ -10,7 +10,7 @@ namespace CapaDatos
     public partial class Contexto : DbContext
     {
         public Contexto()
-            : base(ConfigurationManager.ConnectionStrings["Contexto"].ConnectionString)
+            : base("name=Contexto")
         {
         }
 

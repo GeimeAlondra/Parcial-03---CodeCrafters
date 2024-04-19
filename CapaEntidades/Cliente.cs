@@ -31,8 +31,8 @@ namespace CapaEntidades
         [MaxLength(150)]
         public string ClienteCorreo { get; set; }
 
-        
-        [MaxLength(8)]
+
+        [Required]
         public int ClienteTelefono{ get; set; }
 
 

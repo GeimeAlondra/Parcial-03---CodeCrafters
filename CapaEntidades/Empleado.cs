@@ -14,7 +14,6 @@ namespace CapaEntidades
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EmpleadoId { get; set; }
 
-
         [Required]
         [MaxLength(75)]
         public string EmpleadoNombre { get; set; }
@@ -33,7 +32,6 @@ namespace CapaEntidades
         [Required]
         public string EmpleadoFechaNacimiento { get; set; }
 
-
         [Required]
         public int TipoEmpleadoId { get; set; }
         [ForeignKey("TipoEmpleadoId")]
@@ -43,6 +41,8 @@ namespace CapaEntidades
         public int SucursalId { get; set; }
         [ForeignKey("SucursalId")]
         public Sucursal Sucursal { get; set; }
+
+
 
     }
 }
