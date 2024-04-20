@@ -60,6 +60,12 @@
     <Compile Include="Prueb2.Designer.cs">
       <DependentUpon>Prueb2.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistrosMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrosMarcas.Designer.cs">
+      <DependentUpon>RegistrosMarcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </Compile>
     <EmbeddedResource Include="Prueb2.resx">
       <DependentUpon>Prueb2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrosMarcas.resx">
+      <DependentUpon>RegistrosMarcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaPrincipal.resx">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>

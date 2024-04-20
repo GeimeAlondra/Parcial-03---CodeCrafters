@@ -22,7 +22,9 @@ namespace CapaVista
         {
             panelMantenimientos.Visible = false;
             panelVentas.Visible = false;   
-            //..
+            panelTools.Visible = false;
+            //..agregar el panel nuevo cada vez
+
         }
         //Metodo para ocultar un sub menu
         private void HideSubMenu()
@@ -36,6 +38,13 @@ namespace CapaVista
             {
                 panelVentas.Visible = false;
             }
+            if (panelTools.Visible == true)
+            {
+                panelTools.Visible = false;
+            }
+
+
+            //aqui se debe agregar condiciones si se agregan mas paneles
         }
         
         //Metodo para mostrar los submenu de cada boton 
@@ -52,7 +61,7 @@ namespace CapaVista
             }
         }
         #region Mantenimiento
-        //..Panel Mantenimiento
+        //..Panel Mantenimiento ****
         private void btnPrueba_Click(object sender, EventArgs e)
         {
             //Mostrar subMenu
@@ -167,6 +176,46 @@ namespace CapaVista
 
 
         }
+        #region MantenimientoGeneral
+        //para panel mantenimiento general
 
+        private void btnPanelGeneral_Click(object sender, EventArgs e)
+        {
+            //Mostrar subMenu
+            showSubMenu(panelTools);
+        }
+
+        private void btnMantenimientoMarcas_Click(object sender, EventArgs e)
+        {
+            //.abriendo Formulario en el panel 
+            abrirFormulario(new RegistrosMarcas());
+
+            // codigo
+            //...
+            HideSubMenu();
+        }
+       
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            //.
+            // codigo
+            //...
+            HideSubMenu();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //.
+            // codigo
+            //...
+            HideSubMenu();
+        }
+
+
+
+        #endregion MantenimientoGeneral
+
+      
     }
 }

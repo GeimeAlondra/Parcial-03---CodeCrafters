@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexto.cs" />
+    <Compile Include="MarcasDAL.cs" />
     <Compile Include="Migrations\202404190052487_First_commits.cs" />
     <Compile Include="Migrations\202404190052487_First_commits.designer.cs">
       <DependentUpon>202404190052487_First_commits.cs</DependentUpon>
