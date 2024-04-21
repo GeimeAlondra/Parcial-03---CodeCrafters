@@ -12,13 +12,18 @@ namespace Capa_Logica
     {
         MarcasDAL _MarcaDAL;
 
-        public int GuardarProducto(Marca marca, int id = 0, bool esActualizacion = false)
+        public int GuardarMarca(Marca marca, int id = 0, bool esActualizacion = false)
         {
             _MarcaDAL = new MarcasDAL();
 
             return _MarcaDAL.Guardar(marca, id, esActualizacion);
         }
 
+        public List<Marca> ObtenerMarcas()
+        {
+            _MarcaDAL = new MarcasDAL();
 
+            return _MarcaDAL.Leer();
+        }
     }
 }

@@ -36,6 +36,13 @@ namespace CapaDatos
             return resultado;
         }
 
+        public List<Marca> Leer()
+        {
+            _db = new Contexto();
+
+            return _db.Marcas.ToList();
+        }
+
 
     }
 }

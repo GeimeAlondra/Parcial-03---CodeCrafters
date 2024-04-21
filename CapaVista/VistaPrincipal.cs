@@ -16,6 +16,7 @@ namespace CapaVista
         {
             InitializeComponent();
             PersonalizarInterfaz();
+            
         }
 
         private void PersonalizarInterfaz()
@@ -188,7 +189,7 @@ namespace CapaVista
         private void btnMantenimientoMarcas_Click(object sender, EventArgs e)
         {
             //.abriendo Formulario en el panel 
-            abrirFormulario(new RegistrosMarcas());
+            abrirFormulario(new MostrarMarcas());
 
             // codigo
             //...
@@ -214,8 +215,13 @@ namespace CapaVista
 
 
 
+
         #endregion MantenimientoGeneral
 
-      
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("h:mm:ss");
+            lblDia.Text = DateTime.Now.ToString("dddd MMMM yyyy");
+        }
     }
 }
