@@ -43,6 +43,22 @@ namespace CapaDatos
             return _db.Marcas.ToList();
         }
 
+        public int Eliminar(int Id)
+        {
+            _db = new Contexto();
+            int resultado;
+
+            var marca = _db.Marcas.Find(Id);
+            if (marca != null)
+            {
+                _db.Marcas.Remove(marca);
+                _db.SaveChanges();
+            }
+            resultado = marca.MarcaId;
+            return resultado;
+
+        }
+
 
     }
 }

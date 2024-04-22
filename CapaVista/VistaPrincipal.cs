@@ -189,6 +189,7 @@ namespace CapaVista
         private void btnMantenimientoMarcas_Click(object sender, EventArgs e)
         {
             //.abriendo Formulario en el panel 
+            //abrirFormulario(new MostrarMarcas());
             abrirFormulario(new MostrarMarcas());
 
             // codigo

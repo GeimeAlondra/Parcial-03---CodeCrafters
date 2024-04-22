@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrosMarcas));
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.marcasBindingSources = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.plinea = new System.Windows.Forms.Panel();
@@ -38,10 +39,9 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.marcasBindingSources = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSources)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSources)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -57,6 +57,10 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(282, 22);
             this.txtNombre.TabIndex = 0;
+            // 
+            // marcasBindingSources
+            // 
+            this.marcasBindingSources.DataSource = typeof(CapaEntidades.Marca);
             // 
             // label1
             // 
@@ -156,10 +160,6 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // marcasBindingSources
-            // 
-            this.marcasBindingSources.DataSource = typeof(CapaEntidades.Marca);
-            // 
             // RegistrosMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -171,10 +171,10 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegistrosMarcas";
             this.Text = "Registros Marcas | CodeCrafter";
+            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSources)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marcasBindingSources)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -1,4 +1,5 @@
 ﻿using Capa_Logica;
+using CapaEntidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,29 +14,210 @@ namespace CapaVista
 {
     public partial class MostrarMarcas : Form
     {
-        MarcasLOG _MarcaLOG;
+        MarcasLOG _MarcasLOG;
+
+        
         public MostrarMarcas()
         {
-            _MarcaLOG = new MarcasLOG();    
+            
+            _MarcasLOG = new MarcasLOG();    
             InitializeComponent();
-            dvgMarcas.DataSource = _MarcaLOG.ObtenerMarcas();
+            
+            marcasBindingSources.MoveLast();
+            marcasBindingSources.AddNew();
+            dvgMarcas.DataSource = _MarcasLOG.ObtenerMarcas();
         }
 
         private void dvgMarcas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dvgMarcas.Columns[e.ColumnIndex].Name == "Editar")
             {
+                //Esta linea de abajo creo que no esta haciendo nada pero me da miedo borrarla XD
                 int Id = Convert.ToInt32(dvgMarcas.CurrentRow.Cells["MarcaId"].Value.ToString());
-                Console.WriteLine("Aqui esta el id desde editar" + Id);
+               //lleno el formulario con los datos de mi seleccion en el datagridview
+                txtNombre.Text = dvgMarcas.CurrentRow.Cells["Marcas"].Value.ToString();
+                txtMarcaId.Text = dvgMarcas.CurrentRow.Cells["MarcaId"].Value.ToString();
+                btnGuardarMarca.Visible = false;
+                btnActualizar.Visible = true;
+
             }
 
             if (dvgMarcas.Columns[e.ColumnIndex].Name == "Eliminar")
             {
                 int Id = Convert.ToInt32(dvgMarcas.CurrentRow.Cells["MarcaId"].Value.ToString());
-                Console.WriteLine("Aqui esta el id desde eliminar" + Id);
+                //Mando a llamar el metodo para eliminar el registro en la tabla marcas y le paso el id del fila
+                EliminarMarca(Id);
+                
             }
 
 
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            //Cierra la ventana
+            this.Close();
+        }
+        //****************************//
+        //Metodo para guardar registro//
+        //****************************//
+        private void btnGuardarMarca_Click(object sender, EventArgs e)
+        {
+            //Llamamos la funcion de guardar
+            GuardarMarca();
+        }
+       
+
+        private void GuardarMarca()
+        {
+            _MarcasLOG = new MarcasLOG();
+            try
+            {
+                if (txtNombre.Text == "")
+                {
+                    MessageBox.Show("!!El campo nombre no se puede dejar vacio,\nEs obligatorio!!", "Tienda | Registro Marcas",
+                       MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    //Verificamos el texbox
+                    if (string.IsNullOrEmpty(txtNombre.Text))
+                    {
+                        MessageBox.Show("Se requiere el nombre del producto", "Tienda | Registro Productos",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtNombre.Focus();
+                        plinea.BackColor = Color.LightCoral;
+                        return;
+                    }
+                    //Binding Sources
+                    marcasBindingSources.EndEdit();
+                    Marca marca;
+                    marca = (Marca)marcasBindingSources.Current;
+                    int resultado = _MarcasLOG.GuardarMarca(marca);
+                    if (resultado > 0)
+                    {
+                        txtNombre.Clear();
+                        MessageBox.Show("Marca agregado con exito", "Tienda | Registro Marcas",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        dvgMarcas.DataSource = _MarcasLOG.ObtenerMarcas();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se logro guardar la Marca", "Tienda | Registro Marcas",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un Error: ", "Tienda | Registro Marca",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //****************************//
+        //Metodo para Actualizar Marca//
+        //****************************//
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarMarca();
+        }
+
+        private void ActualizarMarca()
+        {
+            _MarcasLOG = new MarcasLOG();
+            try
+            {
+                //Verificamos el texbox
+                if (string.IsNullOrEmpty(txtNombre.Text))
+                {
+                    MessageBox.Show("Se requiere el nombre de la Marcas\n\n !!Este Campo es Obligatorio!!", "Tienda | Registro Productos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNombre.Focus();
+                    plinea.BackColor = Color.LightCoral;
+                    return;
+                }
+                else
+                {
+                    //Binding Sources
+                    marcasBindingSources.EndEdit();
+                    Marca marca;
+                    marca = (Marca)marcasBindingSources.Current;
+                    int Id = Convert.ToInt32(txtMarcaId.Text);
+                    int resultado = _MarcasLOG.GuardarMarca(marca,Id,true);
+                    if (resultado > 0)
+                    {
+                        txtNombre.Clear();
+                        MessageBox.Show("Marca Actualizado con exito", "Tienda | Registro Marcas",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //Cambiamos visivibilidad del boton de guardar a true y ocultamos el deactualizar
+                        btnActualizar.Visible = false;
+                        btnGuardarMarca.Visible = true;
+
+                        dvgMarcas.DataSource = _MarcasLOG.ObtenerMarcas();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se logro guardar la Marca", "Tienda | Registro Marcas",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un Error: ", "Tienda | Registro Marca",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        //****************************//
+        // Metodo para Eliminar Marca //
+        //****************************//
+
+        private void EliminarMarca(int Id)
+        {
+            try 
+            {
+                _MarcasLOG = new MarcasLOG();
+                int resultado;
+                if (Id != null)
+                {
+                    DialogResult result = MessageBox.Show("¿Estás seguro que quieres eliminar este registro?",
+                                            "Tienda | Registro Marcas", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        resultado = _MarcasLOG.EliminarMarca(Id);
+
+                        if(resultado > 0)
+                        {
+                            MessageBox.Show("La Marca ha sido eliminada con exito", "Tienda | Registro Marcas",
+                           MessageBoxButtons.OK, MessageBoxIcon.Information);
+                           dvgMarcas.DataSource = _MarcasLOG.ObtenerMarcas();
+                        }
+                        else
+                        {
+                            MessageBox.Show("La Marca no se a eliminado", "Tienda | Registro Marcas",
+                           MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+
+                    }
+
+                }
+                
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un Error: {ex}", "Tienda | Registro Marca",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
     }
 }

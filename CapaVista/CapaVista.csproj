@@ -143,7 +143,17 @@
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CapaEntidades.Categoria.datasource" />
+    <None Include="Properties\DataSources\CapaEntidades.Cliente.datasource" />
+    <None Include="Properties\DataSources\CapaEntidades.DetallePedido.datasource" />
+    <None Include="Properties\DataSources\CapaEntidades.DetalleVenta.datasource" />
+    <None Include="Properties\DataSources\CapaEntidades.Empleado.datasource" />
     <None Include="Properties\DataSources\CapaEntidades.Marca.datasource" />
+    <None Include="Properties\DataSources\CapaEntidades.Producto.datasource" />
+    <None Include="Properties\DataSources\CapaEntidades.Proveedor.datasource" />
+    <None Include="Properties\DataSources\CapaEntidades.Sucursal.datasource" />
+    <None Include="Properties\DataSources\CapaEntidades.TipoEmpleado.datasource" />
+    <None Include="Properties\DataSources\CapaEntidades.Venta.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

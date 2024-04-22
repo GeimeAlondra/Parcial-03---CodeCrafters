@@ -24,7 +24,7 @@ namespace CapaVista
             marcasBindingSources.AddNew();
         }
 
-        //Metdo para abrir Formularios
+      
 
 
 
@@ -97,5 +97,9 @@ namespace CapaVista
         {
 
         }
+
+      
+
+        
     }
 }

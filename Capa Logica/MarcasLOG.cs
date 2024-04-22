@@ -19,6 +19,14 @@ namespace Capa_Logica
             return _MarcaDAL.Guardar(marca, id, esActualizacion);
         }
 
+        public int EliminarMarca(int Id)
+        {
+            _MarcaDAL = new MarcasDAL();
+
+            return _MarcaDAL.Eliminar(Id);
+        }
+
+
         public List<Marca> ObtenerMarcas()
         {
             _MarcaDAL = new MarcasDAL();
