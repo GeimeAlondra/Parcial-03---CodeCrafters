@@ -198,13 +198,7 @@ namespace CapaVista
         }
        
 
-        private void button10_Click(object sender, EventArgs e)
-        {
-            //.
-            // codigo
-            //...
-            HideSubMenu();
-        }
+      
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -223,6 +217,17 @@ namespace CapaVista
         {
             lblHora.Text = DateTime.Now.ToString("h:mm:ss");
             lblDia.Text = DateTime.Now.ToString("dddd MMMM yyyy");
+        }
+
+        private void btnProveedor_Click(object sender, EventArgs e)
+        {
+            //abrir formulario MostrarProveedor
+            abrirFormulario(new MostrarProveedor());
+
+
+            // codigo
+            //...
+            HideSubMenu();
         }
     }
 }

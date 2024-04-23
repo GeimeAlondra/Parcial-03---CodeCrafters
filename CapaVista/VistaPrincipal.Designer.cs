@@ -33,7 +33,7 @@
             this.MenuSideBar = new System.Windows.Forms.Panel();
             this.panelTools = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnProveedor = new System.Windows.Forms.Button();
             this.btnMantenimientoMarcas = new System.Windows.Forms.Button();
             this.btnPanelGeneral = new System.Windows.Forms.Button();
             this.panelVentas = new System.Windows.Forms.Panel();
@@ -50,10 +50,10 @@
             this.paneLogo = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblDia = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.MenuSideBar.SuspendLayout();
             this.panelTools.SuspendLayout();
             this.panelVentas.SuspendLayout();
@@ -85,7 +85,7 @@
             // 
             this.panelTools.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.panelTools.Controls.Add(this.button5);
-            this.panelTools.Controls.Add(this.button10);
+            this.panelTools.Controls.Add(this.btnProveedor);
             this.panelTools.Controls.Add(this.btnMantenimientoMarcas);
             this.panelTools.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTools.Location = new System.Drawing.Point(0, 551);
@@ -110,22 +110,22 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button10
+            // btnProveedor
             // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button10.Location = new System.Drawing.Point(0, 40);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(212, 40);
-            this.button10.TabIndex = 3;
-            this.button10.Text = "button10";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.btnProveedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProveedor.FlatAppearance.BorderSize = 0;
+            this.btnProveedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProveedor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnProveedor.Location = new System.Drawing.Point(0, 40);
+            this.btnProveedor.Name = "btnProveedor";
+            this.btnProveedor.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnProveedor.Size = new System.Drawing.Size(212, 40);
+            this.btnProveedor.TabIndex = 3;
+            this.btnProveedor.Text = "Mantenimiento Proveedor";
+            this.btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProveedor.UseVisualStyleBackColor = true;
+            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
             // btnMantenimientoMarcas
             // 
@@ -383,16 +383,17 @@
             this.panelContainer.Size = new System.Drawing.Size(721, 600);
             this.panelContainer.TabIndex = 1;
             // 
-            // pictureBox1
+            // lblDia
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(231, 120);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(246, 118);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.lblDia.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblDia.AutoSize = true;
+            this.lblDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDia.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblDia.Location = new System.Drawing.Point(198, 353);
+            this.lblDia.Name = "lblDia";
+            this.lblDia.Size = new System.Drawing.Size(315, 37);
+            this.lblDia.TabIndex = 2;
+            this.lblDia.Text = "Domingo abril 2024";
             // 
             // lblHora
             // 
@@ -406,22 +407,21 @@
             this.lblHora.TabIndex = 1;
             this.lblHora.Text = "0:00:00";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(231, 120);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(246, 118);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lblDia
-            // 
-            this.lblDia.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblDia.AutoSize = true;
-            this.lblDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDia.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblDia.Location = new System.Drawing.Point(198, 353);
-            this.lblDia.Name = "lblDia";
-            this.lblDia.Size = new System.Drawing.Size(315, 37);
-            this.lblDia.TabIndex = 2;
-            this.lblDia.Text = "Domingo abril 2024";
             // 
             // VistaPrincipal
             // 
@@ -472,7 +472,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panelTools;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnProveedor;
         private System.Windows.Forms.Button btnMantenimientoMarcas;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer timer1;

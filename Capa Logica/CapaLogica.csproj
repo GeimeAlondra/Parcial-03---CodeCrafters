@@ -81,6 +81,7 @@
   <ItemGroup>
     <Compile Include="MarcasLOG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProveedorLOG.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
