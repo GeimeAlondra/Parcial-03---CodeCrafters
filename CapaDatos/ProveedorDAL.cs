@@ -11,6 +11,8 @@ namespace CapaDatos
     {
 
         Contexto _db;
+
+        // Guardar y actualizar Proveedor
         public int Guardar(Proveedor proveedor, int id = 0, bool esActualizacion = false)
         {
             _db = new Contexto();
@@ -37,7 +39,7 @@ namespace CapaDatos
             return resultado;
         }
 
-
+        // Ver Proveedor
         public List<Proveedor> Leer()
         {
             _db = new Contexto();
@@ -45,6 +47,7 @@ namespace CapaDatos
             return _db.Proveedores.ToList();
         }
 
+        // Eliminar Proveedor
         public int Eliminar(int Id)
         {
             _db = new Contexto();

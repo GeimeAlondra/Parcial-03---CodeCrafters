@@ -147,16 +147,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClienteDAL.cs" />
     <Compile Include="Contexto.cs" />
+    <Compile Include="EmpleadoDAL.cs" />
     <Compile Include="MarcasDAL.cs" />
     <Compile Include="Migrations\202404190052487_First_commits.cs" />
     <Compile Include="Migrations\202404190052487_First_commits.designer.cs">
       <DependentUpon>202404190052487_First_commits.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ProductoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorDAL.cs" />
     <Compile Include="SucursalDAL.cs" />
+    <Compile Include="VentaDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
