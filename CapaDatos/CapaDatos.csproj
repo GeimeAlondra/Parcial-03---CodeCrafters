@@ -155,6 +155,10 @@
     <Compile Include="Migrations\202404190052487_First_commits.designer.cs">
       <DependentUpon>202404190052487_First_commits.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202404250351280_ProductoEstado.cs" />
+    <Compile Include="Migrations\202404250351280_ProductoEstado.designer.cs">
+      <DependentUpon>202404250351280_ProductoEstado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -175,6 +179,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202404190052487_First_commits.resx">
       <DependentUpon>202404190052487_First_commits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202404250351280_ProductoEstado.resx">
+      <DependentUpon>202404250351280_ProductoEstado.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

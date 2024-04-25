@@ -11,7 +11,6 @@ namespace CapaDatos
     {
         Contexto _db;
 
-
         // Guardar y actualizar Producto
         public int Guardar(Producto producto, int id = 0, bool esActualizacion = false)
         {
@@ -39,13 +38,15 @@ namespace CapaDatos
             return resultado;
         }
 
-        //public List<Producto> Leer()
-        //{
-        //    _db = new Contexto();
+        // Ver Productos por Estado
+        public List<Producto> Leer()
+        {
+            _db = new Contexto();
 
-        //    return _db.Productos.Where(p => p.Estado == true).ToList();
-        //}
+            return _db.Productos.Where(p => p.Estado == true).ToList();
+        }
 
+        // Buscar Productos por ID
         public Producto LeerPorId(int id)
         {
             _db = new Contexto();

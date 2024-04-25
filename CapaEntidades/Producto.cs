@@ -30,10 +30,12 @@ namespace CapaEntidades
         public int ProductoStock { get; set; }
 
         [Required]
+        public bool Estado { get; set; }
+
+        [Required]
         public int CategoriaId { get; set; }
         [ForeignKey("CategoriaId")]
         public Categoria Categoria { get; set; }
-
 
         [Required]
         public int MarcaId { get; set; }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    internal class VentaDAL
+    public class VentaDAL
     {
         Contexto _db;
 
@@ -34,10 +34,10 @@ namespace CapaDatos
             return resultado;
         }
 
-        //public List<Venta> LeerVenta()
-        //{
-        //    _db = new Contexto();
-        //    return Contexto.Venta.Where(v => v.idVenta > 0).ToList();
-        //}
+        public List<Venta> LeerVenta()
+        {
+            _db = new Contexto();
+            return _db.Ventas.Where(v => v.VentaId > 0).ToList();
+        }
     }
 }

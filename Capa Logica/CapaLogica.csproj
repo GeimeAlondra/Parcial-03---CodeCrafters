@@ -84,6 +84,10 @@
     <Compile Include="ProveedorLOG.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{65b15fc9-4169-4c76-9c61-9347f63e057c}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj">
       <Project>{303DE622-A9ED-469E-966C-DE472F25405E}</Project>
       <Name>CapaEntidades</Name>
