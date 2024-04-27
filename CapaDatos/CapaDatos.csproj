@@ -149,6 +149,8 @@
   <ItemGroup>
     <Compile Include="ClienteDAL.cs" />
     <Compile Include="Contexto.cs" />
+    <Compile Include="DetallePedidoDAL.cs" />
+    <Compile Include="DetalleVentaDAL.cs" />
     <Compile Include="EmpleadoDAL.cs" />
     <Compile Include="MarcasDAL.cs" />
     <Compile Include="Migrations\202404190052487_First_commits.cs" />
