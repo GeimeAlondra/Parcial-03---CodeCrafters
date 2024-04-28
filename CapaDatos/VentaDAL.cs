@@ -11,6 +11,7 @@ namespace CapaDatos
     {
         Contexto _db;
 
+        // Guardar y actualizar Venta
         public int Guardar(Venta venta, int id = 0, bool esActualizacion = false)
         {
             _db = new Contexto();
@@ -34,6 +35,7 @@ namespace CapaDatos
             return resultado;
         }
 
+        // Ver Venta
         public List<Venta> LeerVenta()
         {
             _db = new Contexto();

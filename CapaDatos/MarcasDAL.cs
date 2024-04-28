@@ -10,6 +10,8 @@ namespace CapaDatos
     public class MarcasDAL
     {
         Contexto _db;
+
+        // Guardar y actualizar Marca
         public int Guardar(Marca marca, int id = 0, bool esActualizacion = false)
         {
             _db = new Contexto();
@@ -36,6 +38,7 @@ namespace CapaDatos
             return resultado;
         }
 
+        // Leer Marca
         public List<Marca> Leer()
         {
             _db = new Contexto();
@@ -43,6 +46,7 @@ namespace CapaDatos
             return _db.Marcas.ToList();
         }
 
+        // Eliminar Marca
         public int Eliminar(int Id)
         {
             _db = new Contexto();
