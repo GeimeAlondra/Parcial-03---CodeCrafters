@@ -23,14 +23,17 @@ namespace CapaDatos
 
                 _db.Entry(detallePedido).State = System.Data.Entity.EntityState.Modified;
                 _db.SaveChanges();
+
+                resultado = detallePedido.DetallePedidoId;
             }
             else
             {
                 _db.DetallePedidos.Add(detallePedido);
                 _db.SaveChanges();
+
+                resultado = detallePedido.DetallePedidoId;
             }
 
-            resultado = detallePedido.DetallePedidoId;
             return resultado;
         }
 
