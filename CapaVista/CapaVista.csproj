@@ -101,6 +101,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MostrarCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarCategorias.Designer.cs">
+      <DependentUpon>MostrarCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="MostrarMarcas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     <EmbeddedResource Include="Alertas\Alertas.resx">
       <DependentUpon>Alertas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MostrarCategorias.resx">
+      <DependentUpon>MostrarCategorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MostrarMarcas.resx">
       <DependentUpon>MostrarMarcas.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +153,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Prueb2.resx">
       <DependentUpon>Prueb2.cs</DependentUpon>
@@ -185,6 +195,9 @@
       <Project>{303de622-a9ed-469e-966c-de472f25405e}</Project>
       <Name>CapaEntidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categoria.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

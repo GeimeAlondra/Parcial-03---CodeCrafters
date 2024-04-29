@@ -229,5 +229,11 @@ namespace CapaVista
             //...
             HideSubMenu();
         }
+
+        private void btnMantenimientoCat_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new MostrarCategorias());
+            HideSubMenu();
+        }
     }
 }

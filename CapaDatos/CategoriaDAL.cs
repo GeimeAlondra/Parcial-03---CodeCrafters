@@ -63,5 +63,13 @@ namespace CapaDatos
 
         }
 
+
+        //Obtner por Id
+        public Categoria LeerPorId(int id)
+        {
+            _db = new Contexto();
+
+            return _db.Categorias.Find(id);
+        }
     }
 }
