@@ -79,10 +79,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoriaLOG.cs" />
+    <Compile Include="ClienteLOG.cs" />
+    <Compile Include="DetallePedidoLOG.cs" />
+    <Compile Include="DetalleVentaLOG.cs" />
+    <Compile Include="EmpleadoLOG.cs" />
     <Compile Include="MarcasLOG.cs" />
+    <Compile Include="ProductoLOG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorLOG.cs" />
+    <Compile Include="SucursalLOG.cs" />
+    <Compile Include="TipoEmpleadoLOG.cs" />
+    <Compile Include="VentaLOG.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">

@@ -15,6 +15,7 @@ namespace CapaDatos
         public int GuardarDetalleVenta(DetalleVenta detalleVenta, int id, bool esActualizacion = false)
         {
             _db = new Contexto();
+
             int resultado;
 
             if (esActualizacion)
@@ -23,14 +24,17 @@ namespace CapaDatos
 
                 _db.Entry(detalleVenta).State = System.Data.Entity.EntityState.Modified;
                 _db.SaveChanges();
+
+                resultado = detalleVenta.DetalleVentaId;
             }
             else
             {
                 _db.DetalleVentas.Add(detalleVenta);
                 _db.SaveChanges();
+
+                resultado = detalleVenta.DetalleVentaId;
             }
 
-            resultado = detalleVenta.DetalleVentaId;
             return resultado;
         }
 
