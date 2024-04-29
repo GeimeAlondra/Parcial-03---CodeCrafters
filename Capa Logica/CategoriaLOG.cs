@@ -19,7 +19,7 @@ namespace Capa_Logica
             return _CategoriaDAL.Guardar(categoria, id, esActualizacion);
         }
 
-        public int ActualizarCategoria(Categoria categoria, int id = 0, bool esActualizacion = false)
+        public int ActualizarCategoria(Categoria categoria, int id = 0, bool esActualizacion = true)
         {
             _CategoriaDAL = new CategoriaDAL();
 

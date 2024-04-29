@@ -79,6 +79,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriaLOG.cs" />
     <Compile Include="ClienteLOG.cs" />
     <Compile Include="DetallePedidoLOG.cs" />
     <Compile Include="DetalleVentaLOG.cs" />

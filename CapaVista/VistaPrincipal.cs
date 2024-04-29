@@ -221,18 +221,34 @@ namespace CapaVista
 
         private void btnProveedor_Click(object sender, EventArgs e)
         {
-            //abrir formulario MostrarProveedor
-            abrirFormulario(new MostrarProveedor());
+        }
 
+        private void btnMantenimientoCat_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new MostrarCategorias());
+            HideSubMenu();
+        }
+
+        private void btnMantenimientoMarca_Click(object sender, EventArgs e)
+        {
+            //.abriendo Formulario en el panel 
+            //abrirFormulario(new MostrarMarcas());
+            abrirFormulario(new MostrarMarcas());
 
             // codigo
             //...
             HideSubMenu();
         }
 
-        private void btnMantenimientoCat_Click(object sender, EventArgs e)
+        private void btnMantenimientoProveedor_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new MostrarCategorias());
+
+            //abrir formulario MostrarProveedor
+            abrirFormulario(new MostrarProveedor());
+
+
+            // codigo
+            //...
             HideSubMenu();
         }
     }
