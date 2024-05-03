@@ -113,6 +113,12 @@
     <Compile Include="MostrarMarcas.Designer.cs">
       <DependentUpon>MostrarMarcas.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarProducto.Designer.cs">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="MostrarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MostrarMarcas.resx">
       <DependentUpon>MostrarMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarProducto.resx">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MostrarProducto.resx">
       <DependentUpon>MostrarProducto.cs</DependentUpon>

@@ -28,163 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtDescripcionProducto = new System.Windows.Forms.TextBox();
-            this.txtPrecioProducto = new System.Windows.Forms.TextBox();
-            this.txtStockProducto = new System.Windows.Forms.TextBox();
-            this.checkEstadoProducto = new System.Windows.Forms.CheckBox();
-            this.cbCategoriaProducto = new System.Windows.Forms.ComboBox();
-            this.cbMarcaProducto = new System.Windows.Forms.ComboBox();
+            this.dvgProductos = new System.Windows.Forms.DataGridView();
             this.btnRegresar = new FontAwesome.Sharp.IconButton();
             this.btnActualizar = new FontAwesome.Sharp.IconButton();
-            this.dvgProductos = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbMarcaProducto = new System.Windows.Forms.ComboBox();
+            this.cbCategoriaProducto = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.checkEstadoActivo = new System.Windows.Forms.CheckBox();
+            this.checkEstadoInactivo = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dvgProductos)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // dvgProductos
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(37, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Registro de Producto";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(66, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nombre:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(38, 124);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Descripción:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(76, 195);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Precio:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(82, 246);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 16);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Stock:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(435, 63);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 16);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Estado:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(416, 120);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 16);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Categoria:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(435, 183);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 16);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Marca:";
-            // 
-            // txtDescripcionProducto
-            // 
-            this.txtDescripcionProducto.Location = new System.Drawing.Point(150, 106);
-            this.txtDescripcionProducto.Multiline = true;
-            this.txtDescripcionProducto.Name = "txtDescripcionProducto";
-            this.txtDescripcionProducto.Size = new System.Drawing.Size(222, 62);
-            this.txtDescripcionProducto.TabIndex = 9;
-            // 
-            // txtPrecioProducto
-            // 
-            this.txtPrecioProducto.Location = new System.Drawing.Point(150, 191);
-            this.txtPrecioProducto.Name = "txtPrecioProducto";
-            this.txtPrecioProducto.Size = new System.Drawing.Size(222, 20);
-            this.txtPrecioProducto.TabIndex = 10;
-            // 
-            // txtStockProducto
-            // 
-            this.txtStockProducto.Location = new System.Drawing.Point(150, 245);
-            this.txtStockProducto.Name = "txtStockProducto";
-            this.txtStockProducto.Size = new System.Drawing.Size(222, 20);
-            this.txtStockProducto.TabIndex = 11;
-            // 
-            // checkEstadoProducto
-            // 
-            this.checkEstadoProducto.AutoSize = true;
-            this.checkEstadoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkEstadoProducto.Location = new System.Drawing.Point(525, 64);
-            this.checkEstadoProducto.Name = "checkEstadoProducto";
-            this.checkEstadoProducto.Size = new System.Drawing.Size(62, 17);
-            this.checkEstadoProducto.TabIndex = 14;
-            this.checkEstadoProducto.Text = "Activo";
-            this.checkEstadoProducto.UseVisualStyleBackColor = true;
-            // 
-            // cbCategoriaProducto
-            // 
-            this.cbCategoriaProducto.FormattingEnabled = true;
-            this.cbCategoriaProducto.Location = new System.Drawing.Point(525, 119);
-            this.cbCategoriaProducto.Name = "cbCategoriaProducto";
-            this.cbCategoriaProducto.Size = new System.Drawing.Size(180, 21);
-            this.cbCategoriaProducto.TabIndex = 15;
-            // 
-            // cbMarcaProducto
-            // 
-            this.cbMarcaProducto.FormattingEnabled = true;
-            this.cbMarcaProducto.Location = new System.Drawing.Point(525, 178);
-            this.cbMarcaProducto.Name = "cbMarcaProducto";
-            this.cbMarcaProducto.Size = new System.Drawing.Size(180, 21);
-            this.cbMarcaProducto.TabIndex = 16;
+            this.dvgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgProductos.Location = new System.Drawing.Point(41, 182);
+            this.dvgProductos.Name = "dvgProductos";
+            this.dvgProductos.Size = new System.Drawing.Size(724, 236);
+            this.dvgProductos.TabIndex = 30;
             // 
             // btnRegresar
             // 
@@ -199,12 +66,12 @@
             this.btnRegresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRegresar.IconSize = 34;
             this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegresar.Location = new System.Drawing.Point(69, 451);
+            this.btnRegresar.Location = new System.Drawing.Point(655, 440);
             this.btnRegresar.MaximumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.MinimumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(110, 30);
-            this.btnRegresar.TabIndex = 28;
+            this.btnRegresar.TabIndex = 32;
             this.btnRegresar.Text = " &Regresar";
             this.btnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRegresar.UseVisualStyleBackColor = false;
@@ -222,88 +89,164 @@
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 34;
             this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(621, 451);
+            this.btnActualizar.Location = new System.Drawing.Point(41, 440);
             this.btnActualizar.MaximumSize = new System.Drawing.Size(115, 30);
             this.btnActualizar.MinimumSize = new System.Drawing.Size(115, 30);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(115, 30);
-            this.btnActualizar.TabIndex = 17;
-            this.btnActualizar.Text = "&Actualizar";
+            this.btnActualizar.TabIndex = 33;
+            this.btnActualizar.Text = "&Agregar";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnActualizar.UseVisualStyleBackColor = false;
             this.btnActualizar.Visible = false;
             // 
-            // dvgProductos
+            // groupBox1
             // 
-            this.dvgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgProductos.Location = new System.Drawing.Point(69, 287);
-            this.dvgProductos.Name = "dvgProductos";
-            this.dvgProductos.Size = new System.Drawing.Size(667, 143);
-            this.dvgProductos.TabIndex = 29;
+            this.groupBox1.Controls.Add(this.checkEstadoInactivo);
+            this.groupBox1.Controls.Add(this.checkEstadoActivo);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.cbCategoriaProducto);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.cbMarcaProducto);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtNombreProducto);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(41, 23);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(724, 136);
+            this.groupBox1.TabIndex = 34;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filtro de Productos";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(46, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nombre:";
             // 
             // txtNombreProducto
             // 
             this.txtNombreProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.txtNombreProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreProducto.ForeColor = System.Drawing.Color.White;
-            this.txtNombreProducto.Location = new System.Drawing.Point(150, 63);
+            this.txtNombreProducto.Location = new System.Drawing.Point(129, 30);
             this.txtNombreProducto.Name = "txtNombreProducto";
-            this.txtNombreProducto.Size = new System.Drawing.Size(222, 26);
-            this.txtNombreProducto.TabIndex = 36;
+            this.txtNombreProducto.Size = new System.Drawing.Size(180, 26);
+            this.txtNombreProducto.TabIndex = 37;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(58, 87);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 16);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Marca:";
+            // 
+            // cbMarcaProducto
+            // 
+            this.cbMarcaProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.cbMarcaProducto.FormattingEnabled = true;
+            this.cbMarcaProducto.Location = new System.Drawing.Point(129, 84);
+            this.cbMarcaProducto.Name = "cbMarcaProducto";
+            this.cbMarcaProducto.Size = new System.Drawing.Size(180, 24);
+            this.cbMarcaProducto.TabIndex = 39;
+            // 
+            // cbCategoriaProducto
+            // 
+            this.cbCategoriaProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.cbCategoriaProducto.FormattingEnabled = true;
+            this.cbCategoriaProducto.Location = new System.Drawing.Point(458, 32);
+            this.cbCategoriaProducto.Name = "cbCategoriaProducto";
+            this.cbCategoriaProducto.Size = new System.Drawing.Size(180, 24);
+            this.cbCategoriaProducto.TabIndex = 41;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(349, 33);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 16);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "Categoria:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(368, 87);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 16);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "Estado:";
+            // 
+            // checkEstadoActivo
+            // 
+            this.checkEstadoActivo.AutoSize = true;
+            this.checkEstadoActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEstadoActivo.Location = new System.Drawing.Point(458, 88);
+            this.checkEstadoActivo.Name = "checkEstadoActivo";
+            this.checkEstadoActivo.Size = new System.Drawing.Size(62, 17);
+            this.checkEstadoActivo.TabIndex = 43;
+            this.checkEstadoActivo.Text = "Activo";
+            this.checkEstadoActivo.UseVisualStyleBackColor = true;
+            // 
+            // checkEstadoInactivo
+            // 
+            this.checkEstadoInactivo.AutoSize = true;
+            this.checkEstadoInactivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkEstadoInactivo.Location = new System.Drawing.Point(535, 88);
+            this.checkEstadoInactivo.Name = "checkEstadoInactivo";
+            this.checkEstadoInactivo.Size = new System.Drawing.Size(72, 17);
+            this.checkEstadoInactivo.TabIndex = 44;
+            this.checkEstadoInactivo.Text = "Inactivo";
+            this.checkEstadoInactivo.UseVisualStyleBackColor = true;
             // 
             // MostrarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(800, 509);
-            this.Controls.Add(this.txtNombreProducto);
-            this.Controls.Add(this.dvgProductos);
-            this.Controls.Add(this.btnRegresar);
+            this.ClientSize = new System.Drawing.Size(800, 502);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.cbMarcaProducto);
-            this.Controls.Add(this.cbCategoriaProducto);
-            this.Controls.Add(this.checkEstadoProducto);
-            this.Controls.Add(this.txtStockProducto);
-            this.Controls.Add(this.txtPrecioProducto);
-            this.Controls.Add(this.txtDescripcionProducto);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.ForeColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.btnRegresar);
+            this.Controls.Add(this.dvgProductos);
             this.Name = "MostrarProducto";
             this.Text = "MostrarProducto";
             ((System.ComponentModel.ISupportInitialize)(this.dvgProductos)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtDescripcionProducto;
-        private System.Windows.Forms.TextBox txtPrecioProducto;
-        private System.Windows.Forms.TextBox txtStockProducto;
-        private System.Windows.Forms.CheckBox checkEstadoProducto;
-        private System.Windows.Forms.ComboBox cbCategoriaProducto;
-        private System.Windows.Forms.ComboBox cbMarcaProducto;
-        private FontAwesome.Sharp.IconButton btnActualizar;
-        private FontAwesome.Sharp.IconButton btnRegresar;
         private System.Windows.Forms.DataGridView dvgProductos;
+        private FontAwesome.Sharp.IconButton btnRegresar;
+        private FontAwesome.Sharp.IconButton btnActualizar;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombreProducto;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cbMarcaProducto;
+        private System.Windows.Forms.ComboBox cbCategoriaProducto;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox checkEstadoInactivo;
+        private System.Windows.Forms.CheckBox checkEstadoActivo;
     }
 }

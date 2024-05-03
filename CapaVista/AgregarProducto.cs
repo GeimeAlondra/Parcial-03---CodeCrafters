@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace CapaVista
 {
-    public partial class MostrarProducto : Form
+    public partial class AgregarProducto : Form
     {
-        public MostrarProducto()
+        public AgregarProducto()
         {
             InitializeComponent();
         }
+
     }
 }
