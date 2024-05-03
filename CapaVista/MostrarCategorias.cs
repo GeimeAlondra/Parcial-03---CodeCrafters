@@ -30,6 +30,8 @@ namespace CapaVista
             GuardarCategoria();
         }
 
+
+
         private void GuardarCategoria()
         {
             _CategoriaLOG = new CategoriaLOG();

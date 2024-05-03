@@ -43,7 +43,8 @@ namespace CapaDatos
         {
             _db = new Contexto();
 
-            return _db.Productos.Where(p => p.Estado == true).ToList();
+            return _db.Productos
+                .Where(p => p.Estado == true).ToList();
         }
 
         // Buscar Productos por ID
@@ -52,6 +53,21 @@ namespace CapaDatos
             _db = new Contexto();
 
             return _db.Productos.Find(id);
+        }
+
+        //Para llenar los combobox
+        public List<Marca> ObtenerMarcas()
+        {
+            _db = new Contexto();
+
+            return _db.Marcas.ToList();
+        }
+
+        public List<Categoria> ObtenerCategorias()
+        {
+            _db = new Contexto();
+
+            return _db.Categorias.ToList();
         }
     }
 }

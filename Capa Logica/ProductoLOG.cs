@@ -32,5 +32,27 @@ namespace Capa_Logica
 
             return _ProductoDAL.Leer();
         }
+
+        //obtner lo del combobox
+        public List<Categoria> ObtenerCategoria()
+        {
+            _ProductoDAL = new ProductoDAL();
+
+            return _ProductoDAL.ObtenerCategorias();
+        }
+
+        public List<Marca> ObtenerMarca()
+        {
+            _ProductoDAL = new ProductoDAL();
+
+            return _ProductoDAL.ObtenerMarcas();
+        }
+
+        public int ActualizarProducto(Producto producto, int id, bool esActualizacion)
+        {
+            _ProductoDAL = new ProductoDAL();
+
+            return _ProductoDAL.Guardar(producto, id, esActualizacion);
+        }
     }
 }

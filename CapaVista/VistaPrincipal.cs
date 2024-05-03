@@ -251,5 +251,12 @@ namespace CapaVista
             //...
             HideSubMenu();
         }
+
+        private void btnMantenimientoProductos_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new MostrarProducto());
+            //codigo extra
+            HideSubMenu();
+        }
     }
 }

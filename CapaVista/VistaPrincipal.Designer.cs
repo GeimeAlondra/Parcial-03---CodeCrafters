@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaPrincipal));
             this.MenuSideBar = new System.Windows.Forms.Panel();
             this.panelTools = new System.Windows.Forms.Panel();
+            this.btnMantenimientoProveedor = new FontAwesome.Sharp.IconButton();
+            this.btnMantenimientoMarca = new FontAwesome.Sharp.IconButton();
             this.btnMantenimientoCat = new FontAwesome.Sharp.IconButton();
             this.btnPanelGeneral = new System.Windows.Forms.Button();
             this.panelVentas = new System.Windows.Forms.Panel();
@@ -43,7 +45,7 @@
             this.panelMantenimientos = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMantenimiento = new System.Windows.Forms.Button();
             this.btnPrueba = new System.Windows.Forms.Button();
             this.paneLogo = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -52,8 +54,7 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnMantenimientoMarca = new FontAwesome.Sharp.IconButton();
-            this.btnMantenimientoProveedor = new FontAwesome.Sharp.IconButton();
+            this.btnMantenimientoProductos = new FontAwesome.Sharp.IconButton();
             this.MenuSideBar.SuspendLayout();
             this.panelTools.SuspendLayout();
             this.panelVentas.SuspendLayout();
@@ -88,10 +89,52 @@
             this.panelTools.Controls.Add(this.btnMantenimientoMarca);
             this.panelTools.Controls.Add(this.btnMantenimientoCat);
             this.panelTools.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTools.Location = new System.Drawing.Point(0, 551);
+            this.panelTools.Location = new System.Drawing.Point(0, 592);
             this.panelTools.Name = "panelTools";
             this.panelTools.Size = new System.Drawing.Size(212, 167);
             this.panelTools.TabIndex = 6;
+            // 
+            // btnMantenimientoProveedor
+            // 
+            this.btnMantenimientoProveedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMantenimientoProveedor.FlatAppearance.BorderSize = 0;
+            this.btnMantenimientoProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMantenimientoProveedor.ForeColor = System.Drawing.Color.White;
+            this.btnMantenimientoProveedor.IconChar = FontAwesome.Sharp.IconChar.TruckField;
+            this.btnMantenimientoProveedor.IconColor = System.Drawing.Color.PaleTurquoise;
+            this.btnMantenimientoProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMantenimientoProveedor.IconSize = 36;
+            this.btnMantenimientoProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMantenimientoProveedor.Location = new System.Drawing.Point(0, 80);
+            this.btnMantenimientoProveedor.Name = "btnMantenimientoProveedor";
+            this.btnMantenimientoProveedor.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnMantenimientoProveedor.Size = new System.Drawing.Size(212, 40);
+            this.btnMantenimientoProveedor.TabIndex = 7;
+            this.btnMantenimientoProveedor.Text = "Mantenimiento Proveedor";
+            this.btnMantenimientoProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMantenimientoProveedor.UseVisualStyleBackColor = true;
+            this.btnMantenimientoProveedor.Click += new System.EventHandler(this.btnMantenimientoProveedor_Click);
+            // 
+            // btnMantenimientoMarca
+            // 
+            this.btnMantenimientoMarca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMantenimientoMarca.FlatAppearance.BorderSize = 0;
+            this.btnMantenimientoMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMantenimientoMarca.ForeColor = System.Drawing.Color.White;
+            this.btnMantenimientoMarca.IconChar = FontAwesome.Sharp.IconChar.Copyright;
+            this.btnMantenimientoMarca.IconColor = System.Drawing.Color.PaleTurquoise;
+            this.btnMantenimientoMarca.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMantenimientoMarca.IconSize = 36;
+            this.btnMantenimientoMarca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMantenimientoMarca.Location = new System.Drawing.Point(0, 40);
+            this.btnMantenimientoMarca.Name = "btnMantenimientoMarca";
+            this.btnMantenimientoMarca.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btnMantenimientoMarca.Size = new System.Drawing.Size(212, 40);
+            this.btnMantenimientoMarca.TabIndex = 6;
+            this.btnMantenimientoMarca.Text = "Mantenimiento Marcas";
+            this.btnMantenimientoMarca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMantenimientoMarca.UseVisualStyleBackColor = true;
+            this.btnMantenimientoMarca.Click += new System.EventHandler(this.btnMantenimientoMarca_Click);
             // 
             // btnMantenimientoCat
             // 
@@ -119,7 +162,7 @@
             this.btnPanelGeneral.FlatAppearance.BorderSize = 0;
             this.btnPanelGeneral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPanelGeneral.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPanelGeneral.Location = new System.Drawing.Point(0, 506);
+            this.btnPanelGeneral.Location = new System.Drawing.Point(0, 547);
             this.btnPanelGeneral.Name = "btnPanelGeneral";
             this.btnPanelGeneral.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnPanelGeneral.Size = new System.Drawing.Size(212, 45);
@@ -137,7 +180,7 @@
             this.panelVentas.Controls.Add(this.button8);
             this.panelVentas.Controls.Add(this.button9);
             this.panelVentas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelVentas.Location = new System.Drawing.Point(0, 339);
+            this.panelVentas.Location = new System.Drawing.Point(0, 380);
             this.panelVentas.Name = "panelVentas";
             this.panelVentas.Size = new System.Drawing.Size(212, 167);
             this.panelVentas.TabIndex = 4;
@@ -216,7 +259,7 @@
             this.btnPrueba2.FlatAppearance.BorderSize = 0;
             this.btnPrueba2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrueba2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPrueba2.Location = new System.Drawing.Point(0, 294);
+            this.btnPrueba2.Location = new System.Drawing.Point(0, 335);
             this.btnPrueba2.Name = "btnPrueba2";
             this.btnPrueba2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnPrueba2.Size = new System.Drawing.Size(212, 45);
@@ -229,13 +272,14 @@
             // panelMantenimientos
             // 
             this.panelMantenimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelMantenimientos.Controls.Add(this.btnMantenimientoProductos);
             this.panelMantenimientos.Controls.Add(this.button3);
             this.panelMantenimientos.Controls.Add(this.button2);
-            this.panelMantenimientos.Controls.Add(this.button1);
+            this.panelMantenimientos.Controls.Add(this.btnMantenimiento);
             this.panelMantenimientos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMantenimientos.Location = new System.Drawing.Point(0, 158);
             this.panelMantenimientos.Name = "panelMantenimientos";
-            this.panelMantenimientos.Size = new System.Drawing.Size(212, 136);
+            this.panelMantenimientos.Size = new System.Drawing.Size(212, 177);
             this.panelMantenimientos.TabIndex = 2;
             // 
             // button3
@@ -278,26 +322,26 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnMantenimiento
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 100, 0);
-            this.button1.Size = new System.Drawing.Size(212, 40);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Insertar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnMantenimiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMantenimiento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMantenimiento.FlatAppearance.BorderSize = 0;
+            this.btnMantenimiento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnMantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMantenimiento.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMantenimiento.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMantenimiento.Image = ((System.Drawing.Image)(resources.GetObject("btnMantenimiento.Image")));
+            this.btnMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMantenimiento.Location = new System.Drawing.Point(0, 0);
+            this.btnMantenimiento.Name = "btnMantenimiento";
+            this.btnMantenimiento.Padding = new System.Windows.Forms.Padding(20, 0, 100, 0);
+            this.btnMantenimiento.Size = new System.Drawing.Size(212, 40);
+            this.btnMantenimiento.TabIndex = 2;
+            this.btnMantenimiento.Text = "Mostrar Productos";
+            this.btnMantenimiento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMantenimiento.UseVisualStyleBackColor = true;
+            this.btnMantenimiento.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnPrueba
             // 
@@ -342,6 +386,7 @@
             // 
             // panelContainer
             // 
+            this.panelContainer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.panelContainer.Controls.Add(this.lblDia);
             this.panelContainer.Controls.Add(this.lblHora);
@@ -349,7 +394,7 @@
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(229, 0);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(721, 600);
+            this.panelContainer.Size = new System.Drawing.Size(777, 600);
             this.panelContainer.TabIndex = 1;
             // 
             // lblDia
@@ -358,7 +403,7 @@
             this.lblDia.AutoSize = true;
             this.lblDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDia.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblDia.Location = new System.Drawing.Point(198, 353);
+            this.lblDia.Location = new System.Drawing.Point(226, 353);
             this.lblDia.Name = "lblDia";
             this.lblDia.Size = new System.Drawing.Size(315, 37);
             this.lblDia.TabIndex = 2;
@@ -370,7 +415,7 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblHora.Location = new System.Drawing.Point(227, 262);
+            this.lblHora.Location = new System.Drawing.Point(255, 262);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(255, 73);
             this.lblHora.TabIndex = 1;
@@ -380,7 +425,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(231, 120);
+            this.pictureBox1.Location = new System.Drawing.Point(259, 120);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(246, 118);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -392,54 +437,33 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnMantenimientoMarca
+            // btnMantenimientoProductos
             // 
-            this.btnMantenimientoMarca.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMantenimientoMarca.FlatAppearance.BorderSize = 0;
-            this.btnMantenimientoMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMantenimientoMarca.ForeColor = System.Drawing.Color.White;
-            this.btnMantenimientoMarca.IconChar = FontAwesome.Sharp.IconChar.Copyright;
-            this.btnMantenimientoMarca.IconColor = System.Drawing.Color.PaleTurquoise;
-            this.btnMantenimientoMarca.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMantenimientoMarca.IconSize = 36;
-            this.btnMantenimientoMarca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMantenimientoMarca.Location = new System.Drawing.Point(0, 40);
-            this.btnMantenimientoMarca.Name = "btnMantenimientoMarca";
-            this.btnMantenimientoMarca.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            this.btnMantenimientoMarca.Size = new System.Drawing.Size(212, 40);
-            this.btnMantenimientoMarca.TabIndex = 6;
-            this.btnMantenimientoMarca.Text = "Mantenimiento Marcas";
-            this.btnMantenimientoMarca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMantenimientoMarca.UseVisualStyleBackColor = true;
-            this.btnMantenimientoMarca.Click += new System.EventHandler(this.btnMantenimientoMarca_Click);
-            // 
-            // btnMantenimientoProveedor
-            // 
-            this.btnMantenimientoProveedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMantenimientoProveedor.FlatAppearance.BorderSize = 0;
-            this.btnMantenimientoProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMantenimientoProveedor.ForeColor = System.Drawing.Color.White;
-            this.btnMantenimientoProveedor.IconChar = FontAwesome.Sharp.IconChar.TruckField;
-            this.btnMantenimientoProveedor.IconColor = System.Drawing.Color.PaleTurquoise;
-            this.btnMantenimientoProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMantenimientoProveedor.IconSize = 36;
-            this.btnMantenimientoProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMantenimientoProveedor.Location = new System.Drawing.Point(0, 80);
-            this.btnMantenimientoProveedor.Name = "btnMantenimientoProveedor";
-            this.btnMantenimientoProveedor.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.btnMantenimientoProveedor.Size = new System.Drawing.Size(212, 40);
-            this.btnMantenimientoProveedor.TabIndex = 7;
-            this.btnMantenimientoProveedor.Text = "Mantenimiento Proveedor";
-            this.btnMantenimientoProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMantenimientoProveedor.UseVisualStyleBackColor = true;
-            this.btnMantenimientoProveedor.Click += new System.EventHandler(this.btnMantenimientoProveedor_Click);
+            this.btnMantenimientoProductos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMantenimientoProductos.FlatAppearance.BorderSize = 0;
+            this.btnMantenimientoProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMantenimientoProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMantenimientoProductos.ForeColor = System.Drawing.Color.White;
+            this.btnMantenimientoProductos.IconChar = FontAwesome.Sharp.IconChar.BoxesPacking;
+            this.btnMantenimientoProductos.IconColor = System.Drawing.Color.PaleTurquoise;
+            this.btnMantenimientoProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMantenimientoProductos.IconSize = 36;
+            this.btnMantenimientoProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMantenimientoProductos.Location = new System.Drawing.Point(0, 120);
+            this.btnMantenimientoProductos.Name = "btnMantenimientoProductos";
+            this.btnMantenimientoProductos.Size = new System.Drawing.Size(212, 40);
+            this.btnMantenimientoProductos.TabIndex = 6;
+            this.btnMantenimientoProductos.Text = "Mantenimiento Productos";
+            this.btnMantenimientoProductos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMantenimientoProductos.UseVisualStyleBackColor = true;
+            this.btnMantenimientoProductos.Click += new System.EventHandler(this.btnMantenimientoProductos_Click);
             // 
             // VistaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.ClientSize = new System.Drawing.Size(950, 600);
+            this.ClientSize = new System.Drawing.Size(1006, 600);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.MenuSideBar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -466,7 +490,7 @@
 
         private System.Windows.Forms.Panel MenuSideBar;
         private System.Windows.Forms.Panel panelMantenimientos;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMantenimiento;
         private System.Windows.Forms.Button btnPrueba;
         private System.Windows.Forms.FlowLayoutPanel paneLogo;
         private System.Windows.Forms.Panel panelVentas;
@@ -488,6 +512,7 @@
         private FontAwesome.Sharp.IconButton btnMantenimientoCat;
         private FontAwesome.Sharp.IconButton btnMantenimientoMarca;
         private FontAwesome.Sharp.IconButton btnMantenimientoProveedor;
+        private FontAwesome.Sharp.IconButton btnMantenimientoProductos;
     }
 }
 
