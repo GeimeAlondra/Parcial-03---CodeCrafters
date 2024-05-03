@@ -18,8 +18,6 @@ namespace CapaVista
         CategoriaLOG _CategoriaLOG;
         int _id = 0;
         public MostrarCategorias()
-
-
         {
             InitializeComponent();
             categoriaBindingSources.MoveLast();
@@ -37,19 +35,30 @@ namespace CapaVista
             _CategoriaLOG = new CategoriaLOG();
             try
             {
+
+                if (!ValidarCampos())
+                {
+                    return; // Si los campos no son válidos, salir del método
+                }
+
+
                 int resultado;
                 //debemo indicar si es una actualizacion o es un nuevo producto
                 if (_id > 0)
                 {
+                    categoriaBindingSources.EndEdit();
                     Categoria categoria;
                     categoria = (Categoria)categoriaBindingSources.Current;
                     resultado = _CategoriaLOG.ActualizarCategoria(categoria, _id,true);
                     if (resultado > 0)
                     {
+                        txtNombre.Clear();
                         MessageBox.Show("Categoria Actualizada con exito", "Tienda | Registro Categoria",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        this.Close();
+                        btnActualizarCategoria.Visible = false;
+                        btnGuardarCategoria.Visible = true;
+                        CargarCategoriaEnDataGridView();
+                        
                     }
                     else
                     {
@@ -70,8 +79,10 @@ namespace CapaVista
 
                     if (resultado > 0)
                     {
-                        MessageBox.Show("Categoria agregado con exito", "Tienda | Registro categoria",
+                        txtNombre.Clear();
+                        MessageBox.Show("Categoria agregada con exito", "Tienda | Registro categoria",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarCategoriaEnDataGridView();
                     }
                     else
                     {
@@ -79,11 +90,6 @@ namespace CapaVista
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-
-
-
-
-
 
             }
             catch (Exception ex)
@@ -97,34 +103,9 @@ namespace CapaVista
         }
         private void CargarCategoriaEnDataGridView()
         {
-            _CategoriaLOG = new CategoriaLOG();
-
-            try
-            {
-
-                dvgCategorias.DataSource = _CategoriaLOG.ObtenerCategorias();
-
-
-            }
-            catch(Exception ex)
-            {
-
-            }
+            _CategoriaLOG = new CategoriaLOG();           
+            dvgCategorias.DataSource = _CategoriaLOG.ObtenerCategorias();          
         }
-
-        private void CargarCamposCategoria()
-        {
-
-        }
-
-
-
-
-
-
-
-
-
 
         private bool ValidarCampos()
         {
@@ -144,7 +125,65 @@ namespace CapaVista
 
         private void dvgCategorias_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dvgCategorias.Columns[e.ColumnIndex].Name == "Editar")
+            {
+                //Esta linea de abajo creo que no esta haciendo nada pero me da miedo borrarla XD
+                _id= Convert.ToInt32(dvgCategorias.CurrentRow.Cells["CategoriaId"].Value.ToString());
+                //
+                
+                CargarDatos(_id);
+                btnGuardarCategoria.Visible = false;
+                btnActualizarCategoria.Visible = true;
 
+            }
+
+            if (dvgCategorias.Columns[e.ColumnIndex].Name == "Eliminar")
+            {
+                _id = Convert.ToInt32(dvgCategorias.CurrentRow.Cells["CategoriaId"].Value.ToString());
+                EliminarCategoria(_id);
+            }
+        }
+
+
+        private void CargarDatos(int id)
+        {
+            _CategoriaLOG = new CategoriaLOG();
+
+            categoriaBindingSources.DataSource = _CategoriaLOG.ObtenerPorId(id);
+
+        }
+
+        private void EliminarCategoria(int id)
+        {
+            _CategoriaLOG = new CategoriaLOG();
+            int resultado = _CategoriaLOG.EliminarCategoria(id);
+            if (resultado > 0)
+            {
+                MessageBox.Show("Categoria Eliminado con exito", "Tienda | Registro Categorias",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                CargarCategoriaEnDataGridView();
+            }
+            else
+            {
+                MessageBox.Show("No se logro Eliminar la Categoria", "Tienda | Registro Categorias",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            GuardarCategoria();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtNombre_Enter(object sender, EventArgs e)
+        {
+            plinea.BackColor = SystemColors.Window;
         }
     }
 }

@@ -32,9 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaPrincipal));
             this.MenuSideBar = new System.Windows.Forms.Panel();
             this.panelTools = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnProveedor = new System.Windows.Forms.Button();
-            this.btnMantenimientoMarcas = new System.Windows.Forms.Button();
+            this.btnMantenimientoCat = new FontAwesome.Sharp.IconButton();
             this.btnPanelGeneral = new System.Windows.Forms.Button();
             this.panelVentas = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -54,7 +52,8 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnMantenimientoCat = new FontAwesome.Sharp.IconButton();
+            this.btnMantenimientoMarca = new FontAwesome.Sharp.IconButton();
+            this.btnMantenimientoProveedor = new FontAwesome.Sharp.IconButton();
             this.MenuSideBar.SuspendLayout();
             this.panelTools.SuspendLayout();
             this.panelVentas.SuspendLayout();
@@ -85,66 +84,34 @@
             // panelTools
             // 
             this.panelTools.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelTools.Controls.Add(this.btnMantenimientoProveedor);
+            this.panelTools.Controls.Add(this.btnMantenimientoMarca);
             this.panelTools.Controls.Add(this.btnMantenimientoCat);
-            this.panelTools.Controls.Add(this.button5);
-            this.panelTools.Controls.Add(this.btnProveedor);
-            this.panelTools.Controls.Add(this.btnMantenimientoMarcas);
             this.panelTools.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTools.Location = new System.Drawing.Point(0, 551);
             this.panelTools.Name = "panelTools";
             this.panelTools.Size = new System.Drawing.Size(212, 167);
             this.panelTools.TabIndex = 6;
             // 
-            // button5
+            // btnMantenimientoCat
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(0, 80);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(212, 40);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Mantenimient";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // btnProveedor
-            // 
-            this.btnProveedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProveedor.FlatAppearance.BorderSize = 0;
-            this.btnProveedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProveedor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnProveedor.Location = new System.Drawing.Point(0, 40);
-            this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnProveedor.Size = new System.Drawing.Size(212, 40);
-            this.btnProveedor.TabIndex = 3;
-            this.btnProveedor.Text = "Mantenimiento Proveedor";
-            this.btnProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.UseVisualStyleBackColor = true;
-            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
-            // 
-            // btnMantenimientoMarcas
-            // 
-            this.btnMantenimientoMarcas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMantenimientoMarcas.FlatAppearance.BorderSize = 0;
-            this.btnMantenimientoMarcas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnMantenimientoMarcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMantenimientoMarcas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMantenimientoMarcas.Location = new System.Drawing.Point(0, 0);
-            this.btnMantenimientoMarcas.Name = "btnMantenimientoMarcas";
-            this.btnMantenimientoMarcas.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnMantenimientoMarcas.Size = new System.Drawing.Size(212, 40);
-            this.btnMantenimientoMarcas.TabIndex = 2;
-            this.btnMantenimientoMarcas.Text = "Mantenimiento Marcas";
-            this.btnMantenimientoMarcas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMantenimientoMarcas.UseVisualStyleBackColor = true;
-            this.btnMantenimientoMarcas.Click += new System.EventHandler(this.btnMantenimientoMarcas_Click);
+            this.btnMantenimientoCat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMantenimientoCat.FlatAppearance.BorderSize = 0;
+            this.btnMantenimientoCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMantenimientoCat.ForeColor = System.Drawing.Color.White;
+            this.btnMantenimientoCat.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
+            this.btnMantenimientoCat.IconColor = System.Drawing.Color.PaleTurquoise;
+            this.btnMantenimientoCat.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMantenimientoCat.IconSize = 36;
+            this.btnMantenimientoCat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMantenimientoCat.Location = new System.Drawing.Point(0, 0);
+            this.btnMantenimientoCat.Name = "btnMantenimientoCat";
+            this.btnMantenimientoCat.Size = new System.Drawing.Size(212, 40);
+            this.btnMantenimientoCat.TabIndex = 5;
+            this.btnMantenimientoCat.Text = "Mantenimiento Categorias";
+            this.btnMantenimientoCat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMantenimientoCat.UseVisualStyleBackColor = true;
+            this.btnMantenimientoCat.Click += new System.EventHandler(this.btnMantenimientoCat_Click);
             // 
             // btnPanelGeneral
             // 
@@ -425,25 +392,47 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnMantenimientoCat
+            // btnMantenimientoMarca
             // 
-            this.btnMantenimientoCat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMantenimientoCat.FlatAppearance.BorderSize = 0;
-            this.btnMantenimientoCat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMantenimientoCat.ForeColor = System.Drawing.Color.White;
-            this.btnMantenimientoCat.IconChar = FontAwesome.Sharp.IconChar.LayerGroup;
-            this.btnMantenimientoCat.IconColor = System.Drawing.Color.PaleTurquoise;
-            this.btnMantenimientoCat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMantenimientoCat.IconSize = 36;
-            this.btnMantenimientoCat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMantenimientoCat.Location = new System.Drawing.Point(0, 120);
-            this.btnMantenimientoCat.Name = "btnMantenimientoCat";
-            this.btnMantenimientoCat.Size = new System.Drawing.Size(212, 40);
-            this.btnMantenimientoCat.TabIndex = 5;
-            this.btnMantenimientoCat.Text = "Mantenimiento Categorias";
-            this.btnMantenimientoCat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMantenimientoCat.UseVisualStyleBackColor = true;
-            this.btnMantenimientoCat.Click += new System.EventHandler(this.btnMantenimientoCat_Click);
+            this.btnMantenimientoMarca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMantenimientoMarca.FlatAppearance.BorderSize = 0;
+            this.btnMantenimientoMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMantenimientoMarca.ForeColor = System.Drawing.Color.White;
+            this.btnMantenimientoMarca.IconChar = FontAwesome.Sharp.IconChar.Copyright;
+            this.btnMantenimientoMarca.IconColor = System.Drawing.Color.PaleTurquoise;
+            this.btnMantenimientoMarca.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMantenimientoMarca.IconSize = 36;
+            this.btnMantenimientoMarca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMantenimientoMarca.Location = new System.Drawing.Point(0, 40);
+            this.btnMantenimientoMarca.Name = "btnMantenimientoMarca";
+            this.btnMantenimientoMarca.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
+            this.btnMantenimientoMarca.Size = new System.Drawing.Size(212, 40);
+            this.btnMantenimientoMarca.TabIndex = 6;
+            this.btnMantenimientoMarca.Text = "Mantenimiento Marcas";
+            this.btnMantenimientoMarca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMantenimientoMarca.UseVisualStyleBackColor = true;
+            this.btnMantenimientoMarca.Click += new System.EventHandler(this.btnMantenimientoMarca_Click);
+            // 
+            // btnMantenimientoProveedor
+            // 
+            this.btnMantenimientoProveedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMantenimientoProveedor.FlatAppearance.BorderSize = 0;
+            this.btnMantenimientoProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMantenimientoProveedor.ForeColor = System.Drawing.Color.White;
+            this.btnMantenimientoProveedor.IconChar = FontAwesome.Sharp.IconChar.TruckField;
+            this.btnMantenimientoProveedor.IconColor = System.Drawing.Color.PaleTurquoise;
+            this.btnMantenimientoProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMantenimientoProveedor.IconSize = 36;
+            this.btnMantenimientoProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMantenimientoProveedor.Location = new System.Drawing.Point(0, 80);
+            this.btnMantenimientoProveedor.Name = "btnMantenimientoProveedor";
+            this.btnMantenimientoProveedor.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnMantenimientoProveedor.Size = new System.Drawing.Size(212, 40);
+            this.btnMantenimientoProveedor.TabIndex = 7;
+            this.btnMantenimientoProveedor.Text = "Mantenimiento Proveedor";
+            this.btnMantenimientoProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMantenimientoProveedor.UseVisualStyleBackColor = true;
+            this.btnMantenimientoProveedor.Click += new System.EventHandler(this.btnMantenimientoProveedor_Click);
             // 
             // VistaPrincipal
             // 
@@ -493,13 +482,12 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panelTools;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button btnProveedor;
-        private System.Windows.Forms.Button btnMantenimientoMarcas;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblDia;
         private FontAwesome.Sharp.IconButton btnMantenimientoCat;
+        private FontAwesome.Sharp.IconButton btnMantenimientoMarca;
+        private FontAwesome.Sharp.IconButton btnMantenimientoProveedor;
     }
 }
 
