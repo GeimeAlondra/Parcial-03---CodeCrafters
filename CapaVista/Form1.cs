@@ -16,5 +16,10 @@ namespace CapaVista
         {
             InitializeComponent();
         }
+
+        internal void LlenarDataGridView()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

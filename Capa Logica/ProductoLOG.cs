@@ -26,11 +26,11 @@ namespace Capa_Logica
             return _ProductoDAL.LeerPorId(codigo);
         }
 
-        public List<Producto> ObtenerProductos()
+        public List<Producto> ObtenerProductos(bool inactivos = false)
         {
             _ProductoDAL = new ProductoDAL();
 
-            return _ProductoDAL.Leer();
+            return _ProductoDAL.Leer(inactivos);
         }
 
         //obtner lo del combobox
@@ -54,5 +54,15 @@ namespace Capa_Logica
 
             return _ProductoDAL.Guardar(producto, id, esActualizacion);
         }
+
+        public int EliminarProducto(int id)
+        {
+            _ProductoDAL = new ProductoDAL();
+
+            return _ProductoDAL.Eliminar(id);
+
+        }
+
+
     }
 }

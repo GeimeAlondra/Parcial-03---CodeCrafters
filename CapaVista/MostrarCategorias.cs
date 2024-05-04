@@ -187,5 +187,16 @@ namespace CapaVista
         {
             plinea.BackColor = SystemColors.Window;
         }
+
+       
+
+
+
+
+
+
+
+
+
     }
 }

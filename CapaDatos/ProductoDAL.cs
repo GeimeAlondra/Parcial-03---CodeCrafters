@@ -10,6 +10,23 @@ namespace CapaDatos
     public class ProductoDAL
     {
         Contexto _db;
+        public int Eliminar(int id)
+        {
+
+            _db = new Contexto();
+            int resultado = 0;
+            var producto = _db.Productos.Find(id);
+            if (producto != null)
+            {
+                producto.Estado = false;
+                _db.SaveChanges();
+                resultado = producto.ProductoId;
+            }
+
+            return resultado;
+        }
+
+
 
         // Guardar y actualizar Producto
         public int Guardar(Producto producto, int id = 0, bool esActualizacion = false)
@@ -39,12 +56,17 @@ namespace CapaDatos
         }
 
         // Ver Productos por Estado
-        public List<Producto> Leer()
+        public List<Producto> Leer(bool inactivos = false)
         {
             _db = new Contexto();
-
-            return _db.Productos
-                .Where(p => p.Estado == true).ToList();
+            if (inactivos)
+            {
+                return _db.Productos.Where(p => p.Estado == false).ToList();
+            }
+            else
+            {
+                return _db.Productos.Where(p => p.Estado == true).ToList();
+            }
         }
 
         // Buscar Productos por ID

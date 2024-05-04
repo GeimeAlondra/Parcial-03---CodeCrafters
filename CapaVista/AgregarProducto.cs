@@ -13,16 +13,14 @@ using System.Windows.Forms;
 
 namespace CapaVista
 {
-    public partial class AgregarProducto : Form
+    public partial class AgregarProducto :Form
     {
         ProductoLOG _ProductoLOG;
         int _id = 0;
-        
+     
         public AgregarProducto(int id = 0)
         {
             InitializeComponent();
-            
-
             _id = id;
             if (_id > 0)
             {
@@ -46,6 +44,14 @@ namespace CapaVista
 
             
         }
+
+        public event EventHandler LlenarDataGridViewRequested;
+
+        private void OnLlenarDataGridViewRequested()
+        {
+            LlenarDataGridViewRequested?.Invoke(this, EventArgs.Empty);
+        }
+
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -84,9 +90,9 @@ namespace CapaVista
             cbCategoriaProducto.SelectedIndex = 0;
 
         }
+        
 
-
-    private void GuardarProducto()
+        private void GuardarProducto()
         {
             _ProductoLOG = new ProductoLOG();
             try
@@ -115,8 +121,6 @@ namespace CapaVista
                         MessageBox.Show("Producto Actualizado con exito", "Tienda | Registro Producto",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         
-                        
-          
                         this.Close();
                         
 
@@ -159,6 +163,7 @@ namespace CapaVista
                         cbMarcaProducto.SelectedItem = null;
                         MessageBox.Show("Producto agregado con exito", "Tienda | Registro Producto",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
                     }
                     else
                     {
@@ -223,6 +228,20 @@ namespace CapaVista
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
             GuardarProducto();
+        }
+
+        private void btnAgregarCategoria_Click(object sender, EventArgs e)
+        {
+            MostrarCategorias objMostraCat = new MostrarCategorias();
+            objMostraCat.ShowDialog();
+            ObtenerCategorias();
+        }
+
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
+        {
+            MostrarMarcas objMostraMarca = new MostrarMarcas();
+            objMostraMarca.ShowDialog();
+            ObtenerMarcas();
         }
     }
 }
