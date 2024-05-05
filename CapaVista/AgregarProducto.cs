@@ -37,12 +37,9 @@ namespace CapaVista
             {
                 productobindingSource.MoveLast();
                 productobindingSource.AddNew();
-
                 ObtenerMarcas();
                 ObtenerCategorias();
-            }
-
-            
+            }            
         }
 
         public event EventHandler LlenarDataGridViewRequested;
@@ -65,8 +62,6 @@ namespace CapaVista
 
         private void ObtenerMarcas()
         {
-
-
             _ProductoLOG = new ProductoLOG();
             List<Marca> marcas = _ProductoLOG.ObtenerMarca();
             marcas.Insert(0, new Marca { MarcaId = 0, MarcaNombre = "===Seleccionar===" });
@@ -74,7 +69,6 @@ namespace CapaVista
             cbMarcaProducto.DisplayMember = "MarcaNombre"; // Propiedad de la entidad Marca para mostrar en el ComboBox
             cbMarcaProducto.ValueMember = "MarcaId";
             cbMarcaProducto.SelectedIndex = 0;
-
         }
 
 

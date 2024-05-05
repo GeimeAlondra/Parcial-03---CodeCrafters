@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MostrarProducto));
             this.btnRegresar = new FontAwesome.Sharp.IconButton();
             this.btnAgregarProducto = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkEstadoInactivo = new System.Windows.Forms.RadioButton();
+            this.checkEstadoActivo = new System.Windows.Forms.RadioButton();
             this.cbMarcaProducto = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cbCategoriaProducto = new System.Windows.Forms.ComboBox();
@@ -48,15 +50,13 @@
             this.ProductoDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductoPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductoStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoriaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarcaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkEstadoActivo = new System.Windows.Forms.RadioButton();
-            this.checkEstadoInactivo = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
@@ -132,12 +132,42 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtro de Productos";
             // 
+            // checkEstadoInactivo
+            // 
+            this.checkEstadoInactivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkEstadoInactivo.AutoSize = true;
+            this.checkEstadoInactivo.Location = new System.Drawing.Point(588, 86);
+            this.checkEstadoInactivo.Name = "checkEstadoInactivo";
+            this.checkEstadoInactivo.Size = new System.Drawing.Size(84, 22);
+            this.checkEstadoInactivo.TabIndex = 46;
+            this.checkEstadoInactivo.TabStop = true;
+            this.checkEstadoInactivo.Text = "Inactivo";
+            this.checkEstadoInactivo.UseVisualStyleBackColor = true;
+            this.checkEstadoInactivo.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // checkEstadoActivo
+            // 
+            this.checkEstadoActivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkEstadoActivo.AutoSize = true;
+            this.checkEstadoActivo.Checked = true;
+            this.checkEstadoActivo.Location = new System.Drawing.Point(502, 86);
+            this.checkEstadoActivo.Name = "checkEstadoActivo";
+            this.checkEstadoActivo.Size = new System.Drawing.Size(72, 22);
+            this.checkEstadoActivo.TabIndex = 45;
+            this.checkEstadoActivo.TabStop = true;
+            this.checkEstadoActivo.Text = "Activo";
+            this.checkEstadoActivo.UseVisualStyleBackColor = true;
+            this.checkEstadoActivo.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // cbMarcaProducto
             // 
             this.cbMarcaProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbMarcaProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.cbMarcaProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbMarcaProducto.ForeColor = System.Drawing.Color.White;
             this.cbMarcaProducto.FormattingEnabled = true;
             this.cbMarcaProducto.Location = new System.Drawing.Point(500, 40);
             this.cbMarcaProducto.Margin = new System.Windows.Forms.Padding(0);
@@ -146,6 +176,7 @@
             this.cbMarcaProducto.Name = "cbMarcaProducto";
             this.cbMarcaProducto.Size = new System.Drawing.Size(180, 26);
             this.cbMarcaProducto.TabIndex = 39;
+            this.cbMarcaProducto.SelectedIndexChanged += new System.EventHandler(this.cbMarcaProducto_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -166,6 +197,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.cbCategoriaProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.cbCategoriaProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbCategoriaProducto.ForeColor = System.Drawing.Color.White;
             this.cbCategoriaProducto.FormattingEnabled = true;
             this.cbCategoriaProducto.Location = new System.Drawing.Point(104, 80);
             this.cbCategoriaProducto.Margin = new System.Windows.Forms.Padding(0);
@@ -174,6 +206,7 @@
             this.cbCategoriaProducto.Name = "cbCategoriaProducto";
             this.cbCategoriaProducto.Size = new System.Drawing.Size(180, 26);
             this.cbCategoriaProducto.TabIndex = 41;
+            this.cbCategoriaProducto.SelectedIndexChanged += new System.EventHandler(this.cbCategoriaProducto_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -214,6 +247,7 @@
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(180, 26);
             this.txtNombreProducto.TabIndex = 37;
+            this.txtNombreProducto.TextChanged += new System.EventHandler(this.txtNombreProducto_TextChanged);
             // 
             // label2
             // 
@@ -237,14 +271,14 @@
             this.dgvProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvProductos.ColumnHeadersHeight = 22;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -253,12 +287,12 @@
             this.ProductoDescripcion,
             this.ProductoPrecio,
             this.ProductoStock,
+            this.Categoria,
+            this.Marca,
             this.CategoriaId,
             this.MarcaId,
             this.Editar,
             this.Eliminar,
-            this.Categoria,
-            this.Marca,
             this.Estado});
             this.dgvProductos.EnableHeadersVisualStyles = false;
             this.dgvProductos.GridColor = System.Drawing.Color.SteelBlue;
@@ -266,26 +300,27 @@
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvProductos.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductos.Size = new System.Drawing.Size(697, 220);
             this.dgvProductos.TabIndex = 35;
             this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
+            this.dgvProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductos_CellFormatting);
             // 
             // ProductoId
             // 
@@ -310,7 +345,7 @@
             this.ProductoDescripcion.Name = "ProductoDescripcion";
             this.ProductoDescripcion.ReadOnly = true;
             this.ProductoDescripcion.Visible = false;
-            this.ProductoDescripcion.Width = 102;
+            this.ProductoDescripcion.Width = 104;
             // 
             // ProductoPrecio
             // 
@@ -328,13 +363,30 @@
             this.ProductoStock.ReadOnly = true;
             this.ProductoStock.Width = 64;
             // 
+            // Categoria
+            // 
+            this.Categoria.DataPropertyName = "Categoria";
+            this.Categoria.HeaderText = "Categoria";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            this.Categoria.Width = 89;
+            // 
+            // Marca
+            // 
+            this.Marca.DataPropertyName = "Marca";
+            this.Marca.HeaderText = "Marca";
+            this.Marca.Name = "Marca";
+            this.Marca.ReadOnly = true;
+            this.Marca.Width = 68;
+            // 
             // CategoriaId
             // 
             this.CategoriaId.DataPropertyName = "CategoriaId";
             this.CategoriaId.HeaderText = "Categoria";
             this.CategoriaId.Name = "CategoriaId";
             this.CategoriaId.ReadOnly = true;
-            this.CategoriaId.Width = 89;
+            this.CategoriaId.Visible = false;
+            this.CategoriaId.Width = 91;
             // 
             // MarcaId
             // 
@@ -342,7 +394,8 @@
             this.MarcaId.HeaderText = "Marca";
             this.MarcaId.Name = "MarcaId";
             this.MarcaId.ReadOnly = true;
-            this.MarcaId.Width = 68;
+            this.MarcaId.Visible = false;
+            this.MarcaId.Width = 70;
             // 
             // Editar
             // 
@@ -362,24 +415,6 @@
             this.Eliminar.ReadOnly = true;
             this.Eliminar.Width = 59;
             // 
-            // Categoria
-            // 
-            this.Categoria.DataPropertyName = "Categoria";
-            this.Categoria.HeaderText = "cat";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            this.Categoria.Visible = false;
-            this.Categoria.Width = 48;
-            // 
-            // Marca
-            // 
-            this.Marca.DataPropertyName = "Marca";
-            this.Marca.HeaderText = "marc";
-            this.Marca.Name = "Marca";
-            this.Marca.ReadOnly = true;
-            this.Marca.Visible = false;
-            this.Marca.Width = 60;
-            // 
             // Estado
             // 
             this.Estado.DataPropertyName = "Estado";
@@ -387,41 +422,13 @@
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
             this.Estado.Visible = false;
-            this.Estado.Width = 73;
-            // 
-            // checkEstadoActivo
-            // 
-            this.checkEstadoActivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkEstadoActivo.AutoSize = true;
-            this.checkEstadoActivo.Checked = true;
-            this.checkEstadoActivo.Location = new System.Drawing.Point(502, 86);
-            this.checkEstadoActivo.Name = "checkEstadoActivo";
-            this.checkEstadoActivo.Size = new System.Drawing.Size(72, 22);
-            this.checkEstadoActivo.TabIndex = 45;
-            this.checkEstadoActivo.TabStop = true;
-            this.checkEstadoActivo.Text = "Activo";
-            this.checkEstadoActivo.UseVisualStyleBackColor = true;
-            this.checkEstadoActivo.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // checkEstadoInactivo
-            // 
-            this.checkEstadoInactivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkEstadoInactivo.AutoSize = true;
-            this.checkEstadoInactivo.Location = new System.Drawing.Point(588, 86);
-            this.checkEstadoInactivo.Name = "checkEstadoInactivo";
-            this.checkEstadoInactivo.Size = new System.Drawing.Size(84, 22);
-            this.checkEstadoInactivo.TabIndex = 46;
-            this.checkEstadoInactivo.TabStop = true;
-            this.checkEstadoInactivo.Text = "Inactivo";
-            this.checkEstadoInactivo.UseVisualStyleBackColor = true;
-            this.checkEstadoInactivo.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.Estado.Width = 75;
             // 
             // MostrarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(722, 561);
             this.Controls.Add(this.dgvProductos);
@@ -450,19 +457,19 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.RadioButton checkEstadoInactivo;
+        private System.Windows.Forms.RadioButton checkEstadoActivo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductoId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductoNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductoDescripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductoPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductoStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoriaId;
         private System.Windows.Forms.DataGridViewTextBoxColumn MarcaId;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.RadioButton checkEstadoInactivo;
-        private System.Windows.Forms.RadioButton checkEstadoActivo;
     }
 }

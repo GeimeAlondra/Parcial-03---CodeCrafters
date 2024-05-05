@@ -63,6 +63,18 @@ namespace Capa_Logica
 
         }
 
+        public List<Producto> FiltroCategoria(int categoriaValue,bool inactivos = false)
+        {
+            _ProductoDAL = new ProductoDAL();
 
+            return _ProductoDAL.FiltroCategorias(categoriaValue,inactivos);
+        }
+
+        public List<Producto> FiltroMarca(int categoriaValue, bool inactivos = false)
+        {
+            _ProductoDAL = new ProductoDAL();
+
+            return _ProductoDAL.FiltroMarca(categoriaValue, inactivos);
+        }
     }
 }

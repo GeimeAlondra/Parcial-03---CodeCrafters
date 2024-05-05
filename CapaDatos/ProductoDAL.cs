@@ -1,6 +1,7 @@
 ﻿using CapaEntidades;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,11 +62,17 @@ namespace CapaDatos
             _db = new Contexto();
             if (inactivos)
             {
-                return _db.Productos.Where(p => p.Estado == false).ToList();
+                return _db.Productos
+                    .Include(p => p.Categoria) 
+                    .Include(p => p.Marca)
+                    .Where(p => p.Estado == false).ToList();
             }
             else
             {
-                return _db.Productos.Where(p => p.Estado == true).ToList();
+                return _db.Productos
+                    .Include(p => p.Categoria)
+                    .Include(p => p.Marca)
+                    .Where(p => p.Estado == true).ToList();
             }
         }
 
@@ -91,5 +98,45 @@ namespace CapaDatos
 
             return _db.Categorias.ToList();
         }
+
+        public List<Producto> FiltroCategorias(int id ,bool inactivos)
+        {
+            _db = new Contexto();
+            if (inactivos) {
+                return _db.Productos
+                    .Include(p => p.Categoria)
+                    .Include(p => p.Marca)
+                    .Where(p => p.CategoriaId == id && p.Estado == false ).ToList();
+            }
+            else
+            {
+                return _db.Productos
+                    .Include(p => p.Categoria)
+                    .Include(p => p.Marca)
+                    .Where(p => p.CategoriaId == id &&p.Estado == true).ToList();
+            }
+
+        }
+
+        public List<Producto> FiltroMarca(int id, bool inactivos)
+        {
+            _db = new Contexto();
+            if (inactivos)
+            {
+                return _db.Productos
+                    .Include(p => p.Categoria)
+                    .Include(p => p.Marca)
+                    .Where(p => p.MarcaId == id && p.Estado == false).ToList();
+            }
+            else
+            {
+                return _db.Productos
+                    .Include(p => p.Categoria)
+                    .Include(p => p.Marca)
+                    .Where(p => p.MarcaId == id && p.Estado == true).ToList();
+            }
+
+        }
+
     }
 }
