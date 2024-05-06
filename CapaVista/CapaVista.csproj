@@ -107,6 +107,18 @@
     <Compile Include="MostrarCategorias.Designer.cs">
       <DependentUpon>MostrarCategorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="MostrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarCliente.Designer.cs">
+      <DependentUpon>MostrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarEmpleado.Designer.cs">
+      <DependentUpon>MostrarEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="MostrarMarcas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +143,18 @@
     <Compile Include="MostrarProveedor.Designer.cs">
       <DependentUpon>MostrarProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="MostrarSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarSucursal.Designer.cs">
+      <DependentUpon>MostrarSucursal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarTipoEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarTipoEmpleado.Designer.cs">
+      <DependentUpon>MostrarTipoEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Prueb2.cs">
@@ -151,6 +175,12 @@
     <EmbeddedResource Include="MostrarCategorias.resx">
       <DependentUpon>MostrarCategorias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MostrarCliente.resx">
+      <DependentUpon>MostrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarEmpleado.resx">
+      <DependentUpon>MostrarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MostrarMarcas.resx">
       <DependentUpon>MostrarMarcas.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +192,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MostrarProveedor.resx">
       <DependentUpon>MostrarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarSucursal.resx">
+      <DependentUpon>MostrarSucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarTipoEmpleado.resx">
+      <DependentUpon>MostrarTipoEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
