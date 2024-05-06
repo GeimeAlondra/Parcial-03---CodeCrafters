@@ -10,13 +10,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media.TextFormatting;
 
 namespace CapaVista
 {
     public partial class MostrarProducto : Form
     { 
         int _id = 0;
-
+        private DataTable dataTable;
         ProductoLOG _ProductoLOG;
         public MostrarProducto()
         {
@@ -210,8 +211,27 @@ namespace CapaVista
 
         private void txtNombreProducto_TextChanged(object sender, EventArgs e)
         {
-           
+            FiltroPorNombre();
+       
         }
-    
+
+        private void FiltroPorNombre()
+        {
+            _ProductoLOG = new ProductoLOG();
+            string nombre = txtNombreProducto.Text;
+            if (checkEstadoActivo.Checked)
+            {
+
+                dgvProductos.DataSource = _ProductoLOG.FiltroNombre(nombre);
+
+            }
+            else if (checkEstadoInactivo.Checked)
+            {
+
+                dgvProductos.DataSource = _ProductoLOG.FiltroNombre(nombre, true);
+            }
+            cbCategoriaProducto.SelectedIndex = 0;
+            cbMarcaProducto.SelectedIndex = 0;
+        }
     }
 }

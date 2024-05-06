@@ -138,5 +138,25 @@ namespace CapaDatos
 
         }
 
+        public List<Producto> FiltroNombre(string nombre, bool inactivos)
+        {
+            _db = new Contexto();
+            if (inactivos)
+            {
+                return _db.Productos
+                    .Include(p => p.Categoria)
+                    .Include(p => p.Marca)
+                    .Where(p => p.ProductoNombre.Contains(nombre) && p.Estado == false).ToList();
+            }
+            else
+            {
+                return _db.Productos
+                    .Include(p => p.Categoria)
+                    .Include(p => p.Marca)
+                    .Where(p => p.ProductoNombre.Contains(nombre) && p.Estado == true).ToList();
+            }
+
+        }
+
     }
 }
