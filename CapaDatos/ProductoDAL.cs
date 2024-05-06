@@ -154,7 +154,9 @@ namespace CapaDatos
                     .Include(p => p.Categoria)
                     .Include(p => p.Marca)
                     .Where(p => p.ProductoNombre.Contains(nombre) && p.Estado == true).ToList();
-            }
+            } 
+
+
 
         }
 
