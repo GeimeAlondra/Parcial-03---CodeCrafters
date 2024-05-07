@@ -62,5 +62,12 @@ namespace CapaDatos
             return resultado;
 
         }
+
+        public Empleado LeerPorId(int id)
+        {
+            _db = new Contexto();
+
+            return _db.Empleados.Find(id);
+        }
     }
 }

@@ -40,7 +40,7 @@
             this.panelVentas = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnMantenimientoCliente = new System.Windows.Forms.Button();
             this.btnMantenimientoSucursal = new System.Windows.Forms.Button();
             this.btnPrueba2 = new System.Windows.Forms.Button();
             this.panelMantenimientos = new System.Windows.Forms.Panel();
@@ -200,7 +200,7 @@
             this.panelVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.panelVentas.Controls.Add(this.button6);
             this.panelVentas.Controls.Add(this.button7);
-            this.panelVentas.Controls.Add(this.button8);
+            this.panelVentas.Controls.Add(this.btnMantenimientoCliente);
             this.panelVentas.Controls.Add(this.btnMantenimientoSucursal);
             this.panelVentas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelVentas.Location = new System.Drawing.Point(0, 380);
@@ -242,22 +242,22 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
+            // btnMantenimientoCliente
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Location = new System.Drawing.Point(0, 40);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(212, 40);
-            this.button8.TabIndex = 3;
-            this.button8.Text = "button8";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.btnMantenimientoCliente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMantenimientoCliente.FlatAppearance.BorderSize = 0;
+            this.btnMantenimientoCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnMantenimientoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMantenimientoCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMantenimientoCliente.Location = new System.Drawing.Point(0, 40);
+            this.btnMantenimientoCliente.Name = "btnMantenimientoCliente";
+            this.btnMantenimientoCliente.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnMantenimientoCliente.Size = new System.Drawing.Size(212, 40);
+            this.btnMantenimientoCliente.TabIndex = 3;
+            this.btnMantenimientoCliente.Text = "Mantenimiento Cliente";
+            this.btnMantenimientoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMantenimientoCliente.UseVisualStyleBackColor = true;
+            this.btnMantenimientoCliente.Click += new System.EventHandler(this.btnMantenimientoCliente_Click);
             // 
             // btnMantenimientoSucursal
             // 
@@ -519,7 +519,7 @@
         private System.Windows.Forms.Panel panelVentas;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnMantenimientoCliente;
         private System.Windows.Forms.Button btnMantenimientoSucursal;
         private System.Windows.Forms.Button btnPrueba2;
         private System.Windows.Forms.Button btnPanelGeneral;

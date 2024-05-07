@@ -62,5 +62,12 @@ namespace CapaDatos
             return resultado;
 
         }
+
+        public Cliente LeerPorId(int id)
+        {
+            _db = new Contexto();
+
+            return _db.Clientes.Find(id);
+        }
     }
 }

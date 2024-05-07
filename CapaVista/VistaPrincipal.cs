@@ -113,14 +113,6 @@ namespace CapaVista
             showSubMenu(panelVentas);
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            //.
-            // codigo
-            //...
-            HideSubMenu();
-        }
-
         private void button7_Click(object sender, EventArgs e)
         {
             //.
@@ -260,6 +252,12 @@ namespace CapaVista
         private void btnMantenimientoSucursal_Click(object sender, EventArgs e)
         {
             abrirFormulario(new MostrarSucursal());
+            HideSubMenu();
+        }
+
+        private void btnMantenimientoCliente_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new MostrarCliente());
             HideSubMenu();
         }
     }

@@ -19,6 +19,13 @@ namespace Capa_Logica
             return _ClienteDAL.Guardar(cliente, id, esActualizacion);
         }
 
+        public int ActualizarCliente(Cliente cliente, int id = 0, bool esActualizacion = true)
+        {
+            _ClienteDAL = new ClienteDAL();
+
+            return _ClienteDAL.Guardar(cliente, id, esActualizacion);
+        }
+
         public int EliminarCliente(int Id)
         {
             _ClienteDAL = new ClienteDAL();
@@ -32,6 +39,13 @@ namespace Capa_Logica
             _ClienteDAL = new ClienteDAL();
 
             return _ClienteDAL.Leer();
+        }
+
+        public Cliente ObtenerPorId(int id)
+        {
+            _ClienteDAL = new ClienteDAL();
+
+            return _ClienteDAL.LeerPorId(id);
         }
     }
 }

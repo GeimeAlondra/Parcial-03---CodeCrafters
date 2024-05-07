@@ -19,6 +19,13 @@ namespace Capa_Logica
             return _EmpleadoDAL.Guardar(empleado, id, esActualizacion);
         }
 
+        public int ActualizarEmpleado(Empleado empleado, int id = 0, bool esActualizacion = true)
+        {
+            _EmpleadoDAL = new EmpleadoDAL();
+
+            return _EmpleadoDAL.Guardar(empleado, id, esActualizacion);
+        }
+
         public int EliminarEmpleado(int Id)
         {
             _EmpleadoDAL = new EmpleadoDAL();
@@ -31,6 +38,13 @@ namespace Capa_Logica
             _EmpleadoDAL = new EmpleadoDAL();
 
             return _EmpleadoDAL.Leer();
+        }
+
+        public Empleado ObtenerPorId(int id)
+        {
+            _EmpleadoDAL = new EmpleadoDAL();
+
+            return _EmpleadoDAL.LeerPorId(id);
         }
     }
 }
