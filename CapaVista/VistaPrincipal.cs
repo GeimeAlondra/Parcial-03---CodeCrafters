@@ -203,10 +203,6 @@ namespace CapaVista
             lblDia.Text = DateTime.Now.ToString("dddd MMMM yyyy");
         }
 
-        private void btnProveedor_Click(object sender, EventArgs e)
-        {
-        }
-
         private void btnMantenimientoCat_Click(object sender, EventArgs e)
         {
             abrirFormulario(new MostrarCategorias());

@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MostrarTipoEmpleado));
             this.label2 = new System.Windows.Forms.Label();
             this.txtCargo = new System.Windows.Forms.TextBox();
+            this.tipoEmpleadoBindingSources = new System.Windows.Forms.BindingSource(this.components);
             this.btnActualizarTipoEmpleado = new FontAwesome.Sharp.IconButton();
             this.btnRegresar = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tipoEmpleadoBindingSources = new System.Windows.Forms.BindingSource(this.components);
             this.btnGuardarTipoEmpleado = new FontAwesome.Sharp.IconButton();
             this.dvgTipoEmpleado = new System.Windows.Forms.DataGridView();
             this.TipoEmpleadoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoEmpleadoCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tipoEmpleadoBindingSources)).BeginInit();
@@ -67,6 +67,10 @@
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(229, 20);
             this.txtCargo.TabIndex = 19;
+            // 
+            // tipoEmpleadoBindingSources
+            // 
+            this.tipoEmpleadoBindingSources.DataSource = typeof(CapaEntidades.TipoEmpleado);
             // 
             // btnActualizarTipoEmpleado
             // 
@@ -139,10 +143,6 @@
             this.label3.TabIndex = 24;
             this.label3.Text = "Cargo:";
             // 
-            // tipoEmpleadoBindingSources
-            // 
-            this.tipoEmpleadoBindingSources.DataSource = typeof(CapaEntidades.TipoEmpleado);
-            // 
             // btnGuardarTipoEmpleado
             // 
             this.btnGuardarTipoEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -179,43 +179,43 @@
             this.dvgTipoEmpleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dvgTipoEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dvgTipoEmpleado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgTipoEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgTipoEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dvgTipoEmpleado.ColumnHeadersHeight = 22;
             this.dvgTipoEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dvgTipoEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TipoEmpleadoId,
-            this.TipoEmpleadoCargo,
+            this.Cargo,
             this.Editar,
             this.Eliminar});
             this.dvgTipoEmpleado.EnableHeadersVisualStyles = false;
             this.dvgTipoEmpleado.GridColor = System.Drawing.Color.SteelBlue;
-            this.dvgTipoEmpleado.Location = new System.Drawing.Point(71, 212);
+            this.dvgTipoEmpleado.Location = new System.Drawing.Point(82, 218);
             this.dvgTipoEmpleado.Name = "dvgTipoEmpleado";
             this.dvgTipoEmpleado.ReadOnly = true;
             this.dvgTipoEmpleado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgTipoEmpleado.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgTipoEmpleado.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dvgTipoEmpleado.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dvgTipoEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dvgTipoEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dvgTipoEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgTipoEmpleado.Size = new System.Drawing.Size(559, 220);
             this.dvgTipoEmpleado.TabIndex = 26;
@@ -228,12 +228,12 @@
             this.TipoEmpleadoId.Name = "TipoEmpleadoId";
             this.TipoEmpleadoId.ReadOnly = true;
             // 
-            // TipoEmpleadoCargo
+            // Cargo
             // 
-            this.TipoEmpleadoCargo.DataPropertyName = "TipoEmpleadoCargo";
-            this.TipoEmpleadoCargo.HeaderText = "Cargo";
-            this.TipoEmpleadoCargo.Name = "TipoEmpleadoCargo";
-            this.TipoEmpleadoCargo.ReadOnly = true;
+            this.Cargo.DataPropertyName = "Cargo";
+            this.Cargo.HeaderText = "Cargo";
+            this.Cargo.Name = "Cargo";
+            this.Cargo.ReadOnly = true;
             // 
             // Editar
             // 
@@ -285,7 +285,7 @@
         private FontAwesome.Sharp.IconButton btnGuardarTipoEmpleado;
         private System.Windows.Forms.DataGridView dvgTipoEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoEmpleadoId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoEmpleadoCargo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
     }
