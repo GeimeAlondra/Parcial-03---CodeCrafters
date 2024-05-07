@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MostrarSucursal));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,7 +40,6 @@
             this.txtDireccionSucursal = new System.Windows.Forms.TextBox();
             this.btnRegresar = new FontAwesome.Sharp.IconButton();
             this.btnActualizarSucursal = new FontAwesome.Sharp.IconButton();
-            this.sucursalBindingSources = new System.Windows.Forms.BindingSource(this.components);
             this.btnGuardarSucursal = new FontAwesome.Sharp.IconButton();
             this.dvgSucursal = new System.Windows.Forms.DataGridView();
             this.SucursalId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,8 +47,9 @@
             this.SucursalDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.sucursalBindingSources)).BeginInit();
+            this.sucursalBindingSources = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dvgSucursal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sucursalBindingSources)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -154,10 +154,6 @@
             this.btnActualizarSucursal.Visible = false;
             this.btnActualizarSucursal.Click += new System.EventHandler(this.btnActualizarSucursal_Click);
             // 
-            // sucursalBindingSources
-            // 
-            this.sucursalBindingSources.DataSource = typeof(CapaEntidades.Sucursal);
-            // 
             // btnGuardarSucursal
             // 
             this.btnGuardarSucursal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -193,15 +189,15 @@
             this.dvgSucursal.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dvgSucursal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dvgSucursal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dvgSucursal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgSucursal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dvgSucursal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgSucursal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dvgSucursal.ColumnHeadersHeight = 22;
             this.dvgSucursal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dvgSucursal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -212,25 +208,28 @@
             this.Eliminar});
             this.dvgSucursal.EnableHeadersVisualStyles = false;
             this.dvgSucursal.GridColor = System.Drawing.Color.SteelBlue;
-            this.dvgSucursal.Location = new System.Drawing.Point(59, 246);
+            this.dvgSucursal.Location = new System.Drawing.Point(59, 231);
             this.dvgSucursal.Name = "dvgSucursal";
             this.dvgSucursal.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgSucursal.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dvgSucursal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgSucursal.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dvgSucursal.RowHeadersVisible = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            this.dvgSucursal.RowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.dvgSucursal.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dvgSucursal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dvgSucursal.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dvgSucursal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dvgSucursal.Size = new System.Drawing.Size(579, 200);
-            this.dvgSucursal.TabIndex = 27;
+            this.dvgSucursal.TabIndex = 35;
             this.dvgSucursal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgSucursal_CellContentClick);
             // 
             // SucursalId
@@ -270,10 +269,15 @@
             this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // sucursalBindingSources
+            // 
+            this.sucursalBindingSources.DataSource = typeof(CapaEntidades.Sucursal);
+            // 
             // MostrarSucursal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(705, 561);
             this.Controls.Add(this.dvgSucursal);
@@ -287,8 +291,8 @@
             this.Controls.Add(this.btnGuardarSucursal);
             this.Name = "MostrarSucursal";
             this.Text = "MostrarSucursal";
-            ((System.ComponentModel.ISupportInitialize)(this.sucursalBindingSources)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgSucursal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sucursalBindingSources)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
