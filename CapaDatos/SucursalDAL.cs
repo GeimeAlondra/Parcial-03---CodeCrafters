@@ -62,5 +62,12 @@ namespace CapaDatos
             return resultado;
 
         }
+
+        public Sucursal LeerPorId(int id)
+        {
+            _db = new Contexto();
+
+            return _db.Sucursales.Find(id);
+        }
     }
 }

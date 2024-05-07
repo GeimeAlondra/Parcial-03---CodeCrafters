@@ -19,6 +19,13 @@ namespace Capa_Logica
             return _SucursalDAL.Guardar(sucursal, id, esActualizacion);
         }
 
+        public int ActualizarSucursal(Sucursal sucursal, int id = 0, bool esActualizacion = true)
+        {
+            _SucursalDAL = new SucursalDAL();
+
+            return _SucursalDAL.Guardar(sucursal, id, esActualizacion);
+        }
+
         public int EliminarSucursal(int Id)
         {
             _SucursalDAL = new SucursalDAL();
@@ -32,6 +39,12 @@ namespace Capa_Logica
             _SucursalDAL = new SucursalDAL();
 
             return _SucursalDAL.Leer();
+        }
+
+        public Sucursal ObtenerPorId(int id)
+        {
+            _SucursalDAL = new SucursalDAL();
+            return _SucursalDAL.LeerPorId(id);
         }
     }
 }

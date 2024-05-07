@@ -63,5 +63,13 @@ namespace CapaDatos
 
         }
 
+        //Obtner por Id
+        public TipoEmpleado LeerPorId(int id)
+        {
+            _db = new Contexto();
+
+            return _db.TipoEmpleados.Find(id);
+        }
+
     }
 }

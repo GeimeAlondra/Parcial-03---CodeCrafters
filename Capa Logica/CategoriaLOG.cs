@@ -26,10 +26,6 @@ namespace Capa_Logica
             return _CategoriaDAL.Guardar(categoria, id, esActualizacion);
         }
 
-
-
-
-
         public int EliminarCategoria(int Id)
         {
             _CategoriaDAL = new CategoriaDAL();
