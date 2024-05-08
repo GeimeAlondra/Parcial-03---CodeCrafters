@@ -40,8 +40,6 @@
             this.panelVentas = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.btnMantenimientoCliente = new System.Windows.Forms.Button();
-            this.btnMantenimientoSucursal = new System.Windows.Forms.Button();
             this.btnPrueba2 = new System.Windows.Forms.Button();
             this.panelMantenimientos = new System.Windows.Forms.Panel();
             this.btnMantenimientoProductos = new FontAwesome.Sharp.IconButton();
@@ -56,6 +54,8 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnMantenimientoClientes = new FontAwesome.Sharp.IconButton();
+            this.btnMantenimientoSucursales = new FontAwesome.Sharp.IconButton();
             this.MenuSideBar.SuspendLayout();
             this.panelTools.SuspendLayout();
             this.panelVentas.SuspendLayout();
@@ -91,7 +91,7 @@
             this.panelTools.Controls.Add(this.btnMantenimientoMarca);
             this.panelTools.Controls.Add(this.btnMantenimientoCat);
             this.panelTools.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTools.Location = new System.Drawing.Point(0, 592);
+            this.panelTools.Location = new System.Drawing.Point(0, 585);
             this.panelTools.Name = "panelTools";
             this.panelTools.Size = new System.Drawing.Size(212, 167);
             this.panelTools.TabIndex = 6;
@@ -114,6 +114,7 @@
             this.btnMantenimientoCargo.TabIndex = 8;
             this.btnMantenimientoCargo.Text = "Mantenimiento Cargo";
             this.btnMantenimientoCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMantenimientoCargo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMantenimientoCargo.UseVisualStyleBackColor = true;
             this.btnMantenimientoCargo.Click += new System.EventHandler(this.btnMantenimientoCargo_Click);
             // 
@@ -185,7 +186,7 @@
             this.btnPanelGeneral.FlatAppearance.BorderSize = 0;
             this.btnPanelGeneral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPanelGeneral.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPanelGeneral.Location = new System.Drawing.Point(0, 547);
+            this.btnPanelGeneral.Location = new System.Drawing.Point(0, 540);
             this.btnPanelGeneral.Name = "btnPanelGeneral";
             this.btnPanelGeneral.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnPanelGeneral.Size = new System.Drawing.Size(212, 45);
@@ -198,14 +199,14 @@
             // panelVentas
             // 
             this.panelVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelVentas.Controls.Add(this.btnMantenimientoSucursales);
+            this.panelVentas.Controls.Add(this.btnMantenimientoClientes);
             this.panelVentas.Controls.Add(this.button6);
             this.panelVentas.Controls.Add(this.button7);
-            this.panelVentas.Controls.Add(this.btnMantenimientoCliente);
-            this.panelVentas.Controls.Add(this.btnMantenimientoSucursal);
             this.panelVentas.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelVentas.Location = new System.Drawing.Point(0, 380);
             this.panelVentas.Name = "panelVentas";
-            this.panelVentas.Size = new System.Drawing.Size(212, 167);
+            this.panelVentas.Size = new System.Drawing.Size(212, 160);
             this.panelVentas.TabIndex = 4;
             // 
             // button6
@@ -215,7 +216,7 @@
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(0, 120);
+            this.button6.Location = new System.Drawing.Point(0, 40);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(212, 40);
@@ -232,7 +233,7 @@
             this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(0, 80);
+            this.button7.Location = new System.Drawing.Point(0, 0);
             this.button7.Name = "button7";
             this.button7.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button7.Size = new System.Drawing.Size(212, 40);
@@ -241,40 +242,6 @@
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // btnMantenimientoCliente
-            // 
-            this.btnMantenimientoCliente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMantenimientoCliente.FlatAppearance.BorderSize = 0;
-            this.btnMantenimientoCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnMantenimientoCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMantenimientoCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMantenimientoCliente.Location = new System.Drawing.Point(0, 40);
-            this.btnMantenimientoCliente.Name = "btnMantenimientoCliente";
-            this.btnMantenimientoCliente.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnMantenimientoCliente.Size = new System.Drawing.Size(212, 40);
-            this.btnMantenimientoCliente.TabIndex = 3;
-            this.btnMantenimientoCliente.Text = "Mantenimiento Cliente";
-            this.btnMantenimientoCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMantenimientoCliente.UseVisualStyleBackColor = true;
-            this.btnMantenimientoCliente.Click += new System.EventHandler(this.btnMantenimientoCliente_Click);
-            // 
-            // btnMantenimientoSucursal
-            // 
-            this.btnMantenimientoSucursal.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMantenimientoSucursal.FlatAppearance.BorderSize = 0;
-            this.btnMantenimientoSucursal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnMantenimientoSucursal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMantenimientoSucursal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMantenimientoSucursal.Location = new System.Drawing.Point(0, 0);
-            this.btnMantenimientoSucursal.Name = "btnMantenimientoSucursal";
-            this.btnMantenimientoSucursal.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnMantenimientoSucursal.Size = new System.Drawing.Size(212, 40);
-            this.btnMantenimientoSucursal.TabIndex = 2;
-            this.btnMantenimientoSucursal.Text = "Mantenimiento Sucursal";
-            this.btnMantenimientoSucursal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMantenimientoSucursal.UseVisualStyleBackColor = true;
-            this.btnMantenimientoSucursal.Click += new System.EventHandler(this.btnMantenimientoSucursal_Click);
             // 
             // btnPrueba2
             // 
@@ -481,6 +448,50 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnMantenimientoClientes
+            // 
+            this.btnMantenimientoClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMantenimientoClientes.FlatAppearance.BorderSize = 0;
+            this.btnMantenimientoClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMantenimientoClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMantenimientoClientes.ForeColor = System.Drawing.Color.White;
+            this.btnMantenimientoClientes.IconChar = FontAwesome.Sharp.IconChar.UserCheck;
+            this.btnMantenimientoClientes.IconColor = System.Drawing.Color.PaleTurquoise;
+            this.btnMantenimientoClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMantenimientoClientes.IconSize = 36;
+            this.btnMantenimientoClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMantenimientoClientes.Location = new System.Drawing.Point(0, 80);
+            this.btnMantenimientoClientes.Name = "btnMantenimientoClientes";
+            this.btnMantenimientoClientes.Size = new System.Drawing.Size(212, 40);
+            this.btnMantenimientoClientes.TabIndex = 7;
+            this.btnMantenimientoClientes.Text = "Mantenimiento Cliente";
+            this.btnMantenimientoClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMantenimientoClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMantenimientoClientes.UseVisualStyleBackColor = true;
+            this.btnMantenimientoClientes.Click += new System.EventHandler(this.btnMantenimientoClientes_Click);
+            // 
+            // btnMantenimientoSucursales
+            // 
+            this.btnMantenimientoSucursales.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMantenimientoSucursales.FlatAppearance.BorderSize = 0;
+            this.btnMantenimientoSucursales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMantenimientoSucursales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMantenimientoSucursales.ForeColor = System.Drawing.Color.White;
+            this.btnMantenimientoSucursales.IconChar = FontAwesome.Sharp.IconChar.BuildingCircleCheck;
+            this.btnMantenimientoSucursales.IconColor = System.Drawing.Color.PaleTurquoise;
+            this.btnMantenimientoSucursales.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMantenimientoSucursales.IconSize = 36;
+            this.btnMantenimientoSucursales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMantenimientoSucursales.Location = new System.Drawing.Point(0, 120);
+            this.btnMantenimientoSucursales.Name = "btnMantenimientoSucursales";
+            this.btnMantenimientoSucursales.Size = new System.Drawing.Size(212, 40);
+            this.btnMantenimientoSucursales.TabIndex = 8;
+            this.btnMantenimientoSucursales.Text = "Mantenimiento Sucursal";
+            this.btnMantenimientoSucursales.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMantenimientoSucursales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMantenimientoSucursales.UseVisualStyleBackColor = true;
+            this.btnMantenimientoSucursales.Click += new System.EventHandler(this.btnMantenimientoSucursales_Click);
+            // 
             // VistaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -519,8 +530,6 @@
         private System.Windows.Forms.Panel panelVentas;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button btnMantenimientoCliente;
-        private System.Windows.Forms.Button btnMantenimientoSucursal;
         private System.Windows.Forms.Button btnPrueba2;
         private System.Windows.Forms.Button btnPanelGeneral;
         private System.Windows.Forms.Panel panelContainer;
@@ -537,6 +546,8 @@
         private FontAwesome.Sharp.IconButton btnMantenimientoProveedor;
         private FontAwesome.Sharp.IconButton btnMantenimientoProductos;
         private FontAwesome.Sharp.IconButton btnMantenimientoCargo;
+        private FontAwesome.Sharp.IconButton btnMantenimientoClientes;
+        private FontAwesome.Sharp.IconButton btnMantenimientoSucursales;
     }
 }
 

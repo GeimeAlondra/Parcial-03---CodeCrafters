@@ -245,15 +245,15 @@ namespace CapaVista
             HideSubMenu();
         }
 
-        private void btnMantenimientoSucursal_Click(object sender, EventArgs e)
+        private void btnMantenimientoClientes_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new MostrarSucursal());
+            abrirFormulario(new MostrarCliente());
             HideSubMenu();
         }
 
-        private void btnMantenimientoCliente_Click(object sender, EventArgs e)
+        private void btnMantenimientoSucursales_Click(object sender, EventArgs e)
         {
-            abrirFormulario(new MostrarCliente());
+            abrirFormulario(new MostrarSucursal());
             HideSubMenu();
         }
     }
