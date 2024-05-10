@@ -32,12 +32,6 @@ namespace CapaEntidades
         public Empleado Empleado { get; set; }
 
 
-        [Required]
-        public int SucursalId { get; set; }
-        [ForeignKey("SucursalId")]
-        public Sucursal Sucursal { get; set; }
-
-
         public List<DetalleVenta> DetalleVenta { get; set; }
 
 

@@ -64,7 +64,7 @@ namespace CapaVista
         {
             _ProductoLOG = new ProductoLOG();
             List<Marca> marcas = _ProductoLOG.ObtenerMarca();
-            marcas.Insert(0, new Marca { MarcaId = 0, MarcaNombre = "===Seleccionar===" });
+            marcas.Insert(0, new Marca { MarcaId = 0, MarcaNombre = "---Seleccionar---" });
             cbMarcaProducto.DataSource = marcas;
             cbMarcaProducto.DisplayMember = "MarcaNombre"; // Propiedad de la entidad Marca para mostrar en el ComboBox
             cbMarcaProducto.ValueMember = "MarcaId";
@@ -76,7 +76,7 @@ namespace CapaVista
         {
             _ProductoLOG = new ProductoLOG();
             List<Categoria> categorias = _ProductoLOG.ObtenerCategoria();           
-            categorias.Insert(0, new Categoria { CategoriaId = 0, CategoriaNombre = "===Seleccionar===" });
+            categorias.Insert(0, new Categoria { CategoriaId = 0, CategoriaNombre = "---Seleccionar---" });
             cbCategoriaProducto.DataSource = categorias;
             //productobindingSource.DataSource = categorias;
             cbCategoriaProducto.DisplayMember = "CategoriaNombre"; // Propiedad de la entidad Marca para mostrar en el ComboBox

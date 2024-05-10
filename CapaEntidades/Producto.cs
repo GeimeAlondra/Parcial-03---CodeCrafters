@@ -42,9 +42,10 @@ namespace CapaEntidades
         [ForeignKey("MarcaId")]
         public Marca Marca { get; set; }
 
-
-
-
+        [Required]
+        public int ProveedorId { get; set; }
+        [ForeignKey("ProveedorId")]
+        public Proveedor Proveedor { get; set; }
 
     }
 }

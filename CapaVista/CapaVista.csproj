@@ -89,6 +89,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarEmpleado.Designer.cs">
+      <DependentUpon>AgregarEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Alertas\Alertas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,12 +149,6 @@
     <Compile Include="MostrarProveedor.Designer.cs">
       <DependentUpon>MostrarProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="MostrarSucursal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MostrarSucursal.Designer.cs">
-      <DependentUpon>MostrarSucursal.cs</DependentUpon>
-    </Compile>
     <Compile Include="MostrarTipoEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +169,9 @@
     <Compile Include="VistaPrincipal.Designer.cs">
       <DependentUpon>VistaPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AgregarEmpleado.resx">
+      <DependentUpon>AgregarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Alertas\Alertas.resx">
       <DependentUpon>Alertas.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,9 +195,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MostrarProveedor.resx">
       <DependentUpon>MostrarProveedor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MostrarSucursal.resx">
-      <DependentUpon>MostrarSucursal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MostrarTipoEmpleado.resx">
       <DependentUpon>MostrarTipoEmpleado.cs</DependentUpon>

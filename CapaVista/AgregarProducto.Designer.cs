@@ -38,6 +38,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtDescripcionProducto = new System.Windows.Forms.TextBox();
+            this.productobindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtPrecioProducto = new System.Windows.Forms.TextBox();
             this.txtStockProducto = new System.Windows.Forms.TextBox();
             this.checkEstadoProducto = new System.Windows.Forms.CheckBox();
@@ -48,7 +49,6 @@
             this.btnGuardarProducto = new FontAwesome.Sharp.IconButton();
             this.btnAgregarMarca = new System.Windows.Forms.Button();
             this.btnAgregarCategoria = new System.Windows.Forms.Button();
-            this.productobindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.productobindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +57,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(254, 9);
+            this.label1.Location = new System.Drawing.Point(245, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(207, 24);
             this.label1.TabIndex = 0;
@@ -152,6 +152,10 @@
             this.txtDescripcionProducto.Size = new System.Drawing.Size(353, 84);
             this.txtDescripcionProducto.TabIndex = 9;
             // 
+            // productobindingSource
+            // 
+            this.productobindingSource.DataSource = typeof(CapaEntidades.Producto);
+            // 
             // txtPrecioProducto
             // 
             this.txtPrecioProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
@@ -234,7 +238,7 @@
             this.btnRegresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRegresar.IconSize = 34;
             this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegresar.Location = new System.Drawing.Point(510, 444);
+            this.btnRegresar.Location = new System.Drawing.Point(449, 444);
             this.btnRegresar.MaximumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.MinimumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.Name = "btnRegresar";
@@ -258,7 +262,7 @@
             this.btnGuardarProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarProducto.IconSize = 34;
             this.btnGuardarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarProducto.Location = new System.Drawing.Point(101, 447);
+            this.btnGuardarProducto.Location = new System.Drawing.Point(125, 444);
             this.btnGuardarProducto.MaximumSize = new System.Drawing.Size(115, 30);
             this.btnGuardarProducto.MinimumSize = new System.Drawing.Size(115, 30);
             this.btnGuardarProducto.Name = "btnGuardarProducto";
@@ -291,10 +295,6 @@
             this.btnAgregarCategoria.Text = "Agregar Categoria";
             this.btnAgregarCategoria.UseVisualStyleBackColor = false;
             this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
-            // 
-            // productobindingSource
-            // 
-            this.productobindingSource.DataSource = typeof(CapaEntidades.Producto);
             // 
             // AgregarProducto
             // 

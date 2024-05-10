@@ -46,5 +46,13 @@ namespace Capa_Logica
 
             return _EmpleadoDAL.LeerPorId(id);
         }
+
+        // Combo box
+        public List<TipoEmpleado> ObtenerTipoEmpleado()
+        {
+            _EmpleadoDAL = new EmpleadoDAL();
+
+            return _EmpleadoDAL.ObtenerTipoEmpleados();
+        }
     }
 }

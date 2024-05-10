@@ -69,5 +69,13 @@ namespace CapaDatos
 
             return _db.Empleados.Find(id);
         }
+
+        //Para llenar los combobox
+        public List<TipoEmpleado> ObtenerTipoEmpleados()
+        {
+            _db = new Contexto();
+
+            return _db.TipoEmpleados.ToList();
+        }
     }
 }

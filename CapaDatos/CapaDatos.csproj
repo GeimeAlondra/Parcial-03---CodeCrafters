@@ -150,27 +150,17 @@
     <Compile Include="CategoriaDAL.cs" />
     <Compile Include="ClienteDAL.cs" />
     <Compile Include="Contexto.cs" />
-    <Compile Include="DetallePedidoDAL.cs" />
     <Compile Include="DetalleVentaDAL.cs" />
     <Compile Include="EmpleadoDAL.cs" />
     <Compile Include="MarcasDAL.cs" />
-    <Compile Include="Migrations\202404190052487_First_commits.cs" />
-    <Compile Include="Migrations\202404190052487_First_commits.designer.cs">
-      <DependentUpon>202404190052487_First_commits.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202404250351280_ProductoEstado.cs" />
-    <Compile Include="Migrations\202404250351280_ProductoEstado.designer.cs">
-      <DependentUpon>202404250351280_ProductoEstado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202404270413035_NombreDeLaMigracion.cs" />
-    <Compile Include="Migrations\202404270413035_NombreDeLaMigracion.designer.cs">
-      <DependentUpon>202404270413035_NombreDeLaMigracion.cs</DependentUpon>
+    <Compile Include="Migrations\202405100113121_Nueva.cs" />
+    <Compile Include="Migrations\202405100113121_Nueva.designer.cs">
+      <DependentUpon>202405100113121_Nueva.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorDAL.cs" />
-    <Compile Include="SucursalDAL.cs" />
     <Compile Include="TipoEmpleadoDAL.cs" />
     <Compile Include="VentaDAL.cs" />
   </ItemGroup>
@@ -185,14 +175,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202404190052487_First_commits.resx">
-      <DependentUpon>202404190052487_First_commits.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404250351280_ProductoEstado.resx">
-      <DependentUpon>202404250351280_ProductoEstado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202404270413035_NombreDeLaMigracion.resx">
-      <DependentUpon>202404270413035_NombreDeLaMigracion.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202405100113121_Nueva.resx">
+      <DependentUpon>202405100113121_Nueva.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

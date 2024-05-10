@@ -31,7 +31,5 @@ namespace CapaEntidades
         
         public int ProveedorTelefono { get; set; }
 
-
-        public List<DetallePedido> DetallePedido { get; set; }
     }
 }

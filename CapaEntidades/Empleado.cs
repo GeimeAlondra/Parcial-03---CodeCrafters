@@ -37,11 +37,6 @@ namespace CapaEntidades
         [ForeignKey("TipoEmpleadoId")]
         public TipoEmpleado TipoEmpleado { get; set; }
 
-        [Required]
-        public int SucursalId { get; set; }
-        [ForeignKey("SucursalId")]
-        public Sucursal Sucursal { get; set; }
-
 
 
     }
