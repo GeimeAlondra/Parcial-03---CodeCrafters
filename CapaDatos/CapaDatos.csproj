@@ -157,6 +157,10 @@
     <Compile Include="Migrations\202405100113121_Nueva.designer.cs">
       <DependentUpon>202405100113121_Nueva.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202405100138086_Estados.cs" />
+    <Compile Include="Migrations\202405100138086_Estados.designer.cs">
+      <DependentUpon>202405100138086_Estados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -177,6 +181,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202405100113121_Nueva.resx">
       <DependentUpon>202405100113121_Nueva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405100138086_Estados.resx">
+      <DependentUpon>202405100138086_Estados.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -17,5 +17,6 @@ namespace CapaEntidades
         [Required]
         [MaxLength(100)]
         public string MarcaNombre { get; set; }
+
     }
 }

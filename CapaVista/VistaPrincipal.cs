@@ -251,10 +251,6 @@ namespace CapaVista
             HideSubMenu();
         }
 
-        private void btnMantenimientoSucursales_Click(object sender, EventArgs e)
-        {
-            abrirFormulario(new MostrarSucursal());
-            HideSubMenu();
-        }
+      
     }
 }

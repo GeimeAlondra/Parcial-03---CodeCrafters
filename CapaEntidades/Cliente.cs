@@ -35,10 +35,7 @@ namespace CapaEntidades
         [Required]
         public int ClienteTelefono{ get; set; }
 
-
-        
-
-
-
+        [Required]
+        public bool Estado { get; set; }
     }
 }

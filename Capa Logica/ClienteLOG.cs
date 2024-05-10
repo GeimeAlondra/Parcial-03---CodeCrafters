@@ -34,11 +34,11 @@ namespace Capa_Logica
         }
 
 
-        public List<Cliente> ObtenerCliente()
+        public List<Cliente> ObtenerCliente(bool inactivos = false)
         {
             _ClienteDAL = new ClienteDAL();
 
-            return _ClienteDAL.Leer();
+            return _ClienteDAL.Leer(inactivos);
         }
 
         public Cliente ObtenerPorId(int id)

@@ -33,6 +33,9 @@ namespace CapaEntidades
         public string EmpleadoFechaNacimiento { get; set; }
 
         [Required]
+        public bool Estado { get; set; }
+
+        [Required]
         public int TipoEmpleadoId { get; set; }
         [ForeignKey("TipoEmpleadoId")]
         public TipoEmpleado TipoEmpleado { get; set; }

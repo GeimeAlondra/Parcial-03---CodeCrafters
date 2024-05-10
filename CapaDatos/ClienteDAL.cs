@@ -39,26 +39,33 @@ namespace CapaDatos
         }
 
         // Ver Cliente
-        public List<Cliente> Leer()
+        public List<Cliente> Leer(bool inactivos = false)
         {
             _db = new Contexto();
-
-            return _db.Clientes.ToList();
+            if (inactivos)
+            {
+                return _db.Clientes.Where(p => p.Estado == false).ToList();
+            }
+            else
+            {
+                return _db.Clientes.Where(p => p.Estado == true).ToList();
+            }
         }
 
         // Eliminar Cliente
         public int Eliminar(int Id)
         {
             _db = new Contexto();
-            int resultado;
+            int resultado = 0;
 
             var cliente = _db.Clientes.Find(Id);
             if (cliente != null)
             {
-                _db.Clientes.Remove(cliente);
+                cliente.Estado = false;
                 _db.SaveChanges();
+                resultado = cliente.ClienteId;
             }
-            resultado = cliente.ClienteId;
+           
             return resultado;
 
         }
@@ -69,5 +76,7 @@ namespace CapaDatos
 
             return _db.Clientes.Find(id);
         }
+
+
     }
 }

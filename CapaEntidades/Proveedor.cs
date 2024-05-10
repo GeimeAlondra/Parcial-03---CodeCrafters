@@ -28,8 +28,9 @@ namespace CapaEntidades
         public string ProveedorDireccion { get; set; }
 
         [Required]
-        
         public int ProveedorTelefono { get; set; }
 
+        [Required]
+        public bool Estado { get; set; }
     }
 }
