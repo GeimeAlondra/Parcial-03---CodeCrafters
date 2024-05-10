@@ -92,7 +92,6 @@ namespace CapaVista
                     MessageBox.Show("No se logro Eliminar el producto", "Tienda | Registro Productos",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
         }
 
@@ -233,5 +232,7 @@ namespace CapaVista
             cbCategoriaProducto.SelectedIndex = 0;
             cbMarcaProducto.SelectedIndex = 0;
         }
+
+       
     }
 }

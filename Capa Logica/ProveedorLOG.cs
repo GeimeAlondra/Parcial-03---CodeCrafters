@@ -10,11 +10,16 @@ namespace Capa_Logica
 {
     public class ProveedorLOG
     {
-
-
         ProveedorDAL _ProveedorDAL;
 
         public int GuardarProveedor(Proveedor proveedor, int id = 0, bool esActualizacion = false)
+        {
+            _ProveedorDAL = new ProveedorDAL();
+
+            return _ProveedorDAL.Guardar(proveedor, id, esActualizacion);
+        }
+
+        public int ActualizarProveedor(Proveedor proveedor, int id, bool esActualizacion)
         {
             _ProveedorDAL = new ProveedorDAL();
 
@@ -28,14 +33,19 @@ namespace Capa_Logica
             return _ProveedorDAL.Eliminar(Id);
         }
 
-
-        public List<Proveedor> ObtenerProveedor()
+        public List<Proveedor> ObtenerProveedor(bool inactivos = false)
         {
             _ProveedorDAL = new ProveedorDAL();
 
-            return _ProveedorDAL.Leer();
+            return _ProveedorDAL.Leer(inactivos);
         }
 
+        public Proveedor ObtenerProveedorPorId(int codigo)
+        {
+            _ProveedorDAL = new ProveedorDAL();
+
+            return _ProveedorDAL.LeerPorId(codigo);
+        }
 
     }
 }

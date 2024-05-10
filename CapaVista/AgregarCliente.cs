@@ -24,7 +24,7 @@ namespace CapaVista
             _id = id;
             if (_id > 0)
             {
-                this.Text = "Tienda|Edicion de Productos";
+                this.Text = "Tienda|Edicion de Clientes";
                 //Cambiar el boton
                 btnGuardarCliente.Text = "Actualizar";
                 btnGuardarCliente.BackColor = Color.FromArgb(82, 190, 128);

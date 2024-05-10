@@ -21,9 +21,10 @@ namespace CapaVista
         {
             InitializeComponent();
 
-            clienteBindingSources.MoveLast();
-            clienteBindingSources.AddNew();
+            //clientebindingSource.MoveLast();
+            //clientebindingSource.AddNew();
             CargarClienteEnDataGridView();
+            llenarDataGridView();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -36,9 +37,7 @@ namespace CapaVista
             _ClienteLOG = new ClienteLOG();
             if (checkEstadoActivo.Checked)
             {
-
                 dvgCliente.DataSource = _ClienteLOG.ObtenerCliente();
-
             }
             else if (checkEstadoInactivo.Checked)
             {

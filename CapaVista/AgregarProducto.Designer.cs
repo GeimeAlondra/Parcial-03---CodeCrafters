@@ -49,6 +49,9 @@
             this.btnGuardarProducto = new FontAwesome.Sharp.IconButton();
             this.btnAgregarMarca = new System.Windows.Forms.Button();
             this.btnAgregarCategoria = new System.Windows.Forms.Button();
+            this.btnAgregarProveedor = new System.Windows.Forms.Button();
+            this.cbProveedorProducto = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.productobindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +60,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(245, 9);
+            this.label1.Location = new System.Drawing.Point(246, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(207, 24);
             this.label1.TabIndex = 0;
@@ -90,7 +93,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(122, 229);
+            this.label4.Location = new System.Drawing.Point(122, 209);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 16);
             this.label4.TabIndex = 3;
@@ -101,7 +104,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(375, 226);
+            this.label5.Location = new System.Drawing.Point(375, 206);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 16);
             this.label5.TabIndex = 4;
@@ -112,7 +115,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(116, 268);
+            this.label6.Location = new System.Drawing.Point(116, 248);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 16);
             this.label6.TabIndex = 5;
@@ -123,7 +126,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(97, 325);
+            this.label7.Location = new System.Drawing.Point(97, 294);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 16);
             this.label7.TabIndex = 6;
@@ -134,7 +137,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(116, 388);
+            this.label8.Location = new System.Drawing.Point(116, 357);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 16);
             this.label8.TabIndex = 7;
@@ -149,7 +152,7 @@
             this.txtDescripcionProducto.Location = new System.Drawing.Point(206, 113);
             this.txtDescripcionProducto.Multiline = true;
             this.txtDescripcionProducto.Name = "txtDescripcionProducto";
-            this.txtDescripcionProducto.Size = new System.Drawing.Size(353, 84);
+            this.txtDescripcionProducto.Size = new System.Drawing.Size(353, 68);
             this.txtDescripcionProducto.TabIndex = 9;
             // 
             // productobindingSource
@@ -162,7 +165,7 @@
             this.txtPrecioProducto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productobindingSource, "ProductoPrecio", true));
             this.txtPrecioProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecioProducto.ForeColor = System.Drawing.Color.White;
-            this.txtPrecioProducto.Location = new System.Drawing.Point(206, 225);
+            this.txtPrecioProducto.Location = new System.Drawing.Point(206, 205);
             this.txtPrecioProducto.Name = "txtPrecioProducto";
             this.txtPrecioProducto.Size = new System.Drawing.Size(148, 22);
             this.txtPrecioProducto.TabIndex = 10;
@@ -173,7 +176,7 @@
             this.txtStockProducto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productobindingSource, "ProductoStock", true));
             this.txtStockProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStockProducto.ForeColor = System.Drawing.Color.White;
-            this.txtStockProducto.Location = new System.Drawing.Point(436, 225);
+            this.txtStockProducto.Location = new System.Drawing.Point(436, 205);
             this.txtStockProducto.Name = "txtStockProducto";
             this.txtStockProducto.Size = new System.Drawing.Size(123, 22);
             this.txtStockProducto.TabIndex = 11;
@@ -183,7 +186,7 @@
             this.checkEstadoProducto.AutoSize = true;
             this.checkEstadoProducto.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.productobindingSource, "Estado", true));
             this.checkEstadoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkEstadoProducto.Location = new System.Drawing.Point(206, 269);
+            this.checkEstadoProducto.Location = new System.Drawing.Point(206, 249);
             this.checkEstadoProducto.Name = "checkEstadoProducto";
             this.checkEstadoProducto.Size = new System.Drawing.Size(69, 20);
             this.checkEstadoProducto.TabIndex = 14;
@@ -197,7 +200,7 @@
             this.cbCategoriaProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategoriaProducto.ForeColor = System.Drawing.SystemColors.Window;
             this.cbCategoriaProducto.FormattingEnabled = true;
-            this.cbCategoriaProducto.Location = new System.Drawing.Point(206, 324);
+            this.cbCategoriaProducto.Location = new System.Drawing.Point(206, 293);
             this.cbCategoriaProducto.Name = "cbCategoriaProducto";
             this.cbCategoriaProducto.Size = new System.Drawing.Size(180, 24);
             this.cbCategoriaProducto.TabIndex = 15;
@@ -209,7 +212,7 @@
             this.cbMarcaProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMarcaProducto.ForeColor = System.Drawing.SystemColors.Window;
             this.cbMarcaProducto.FormattingEnabled = true;
-            this.cbMarcaProducto.Location = new System.Drawing.Point(206, 383);
+            this.cbMarcaProducto.Location = new System.Drawing.Point(206, 352);
             this.cbMarcaProducto.Name = "cbMarcaProducto";
             this.cbMarcaProducto.Size = new System.Drawing.Size(180, 24);
             this.cbMarcaProducto.TabIndex = 16;
@@ -238,7 +241,7 @@
             this.btnRegresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRegresar.IconSize = 34;
             this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegresar.Location = new System.Drawing.Point(449, 444);
+            this.btnRegresar.Location = new System.Drawing.Point(449, 467);
             this.btnRegresar.MaximumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.MinimumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.Name = "btnRegresar";
@@ -262,7 +265,7 @@
             this.btnGuardarProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarProducto.IconSize = 34;
             this.btnGuardarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarProducto.Location = new System.Drawing.Point(125, 444);
+            this.btnGuardarProducto.Location = new System.Drawing.Point(125, 467);
             this.btnGuardarProducto.MaximumSize = new System.Drawing.Size(115, 30);
             this.btnGuardarProducto.MinimumSize = new System.Drawing.Size(115, 30);
             this.btnGuardarProducto.Name = "btnGuardarProducto";
@@ -276,7 +279,7 @@
             // btnAgregarMarca
             // 
             this.btnAgregarMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnAgregarMarca.Location = new System.Drawing.Point(436, 381);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(436, 350);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.Size = new System.Drawing.Size(123, 23);
             this.btnAgregarMarca.TabIndex = 37;
@@ -288,7 +291,7 @@
             // 
             this.btnAgregarCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btnAgregarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCategoria.Location = new System.Drawing.Point(436, 322);
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(436, 291);
             this.btnAgregarCategoria.Name = "btnAgregarCategoria";
             this.btnAgregarCategoria.Size = new System.Drawing.Size(123, 23);
             this.btnAgregarCategoria.TabIndex = 38;
@@ -296,12 +299,48 @@
             this.btnAgregarCategoria.UseVisualStyleBackColor = false;
             this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
             // 
+            // btnAgregarProveedor
+            // 
+            this.btnAgregarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnAgregarProveedor.Location = new System.Drawing.Point(436, 407);
+            this.btnAgregarProveedor.Name = "btnAgregarProveedor";
+            this.btnAgregarProveedor.Size = new System.Drawing.Size(123, 23);
+            this.btnAgregarProveedor.TabIndex = 41;
+            this.btnAgregarProveedor.Text = "Agregar Proveedor";
+            this.btnAgregarProveedor.UseVisualStyleBackColor = false;
+            // 
+            // cbProveedorProducto
+            // 
+            this.cbProveedorProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.cbProveedorProducto.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productobindingSource, "MarcaId", true));
+            this.cbProveedorProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbProveedorProducto.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbProveedorProducto.FormattingEnabled = true;
+            this.cbProveedorProducto.Location = new System.Drawing.Point(206, 409);
+            this.cbProveedorProducto.Name = "cbProveedorProducto";
+            this.cbProveedorProducto.Size = new System.Drawing.Size(180, 24);
+            this.cbProveedorProducto.TabIndex = 40;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label9.Location = new System.Drawing.Point(86, 414);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 16);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "Proveedor:";
+            // 
             // AgregarProducto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(715, 509);
+            this.Controls.Add(this.btnAgregarProveedor);
+            this.Controls.Add(this.cbProveedorProducto);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnAgregarCategoria);
             this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.txtNombreProducto);
@@ -353,5 +392,8 @@
         private System.Windows.Forms.Button btnAgregarMarca;
         private System.Windows.Forms.Button btnAgregarCategoria;
         private System.Windows.Forms.BindingSource productobindingSource;
+        private System.Windows.Forms.Button btnAgregarProveedor;
+        private System.Windows.Forms.ComboBox cbProveedorProducto;
+        private System.Windows.Forms.Label label9;
     }
 }

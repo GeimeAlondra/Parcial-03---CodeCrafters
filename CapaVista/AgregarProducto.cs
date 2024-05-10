@@ -71,7 +71,6 @@ namespace CapaVista
             cbMarcaProducto.SelectedIndex = 0;
         }
 
-
         private void ObtenerCategorias()
         {
             _ProductoLOG = new ProductoLOG();
@@ -82,10 +81,8 @@ namespace CapaVista
             cbCategoriaProducto.DisplayMember = "CategoriaNombre"; // Propiedad de la entidad Marca para mostrar en el ComboBox
             cbCategoriaProducto.ValueMember = "CategoriaId";
             cbCategoriaProducto.SelectedIndex = 0;
-
         }
         
-
         private void GuardarProducto()
         {
             _ProductoLOG = new ProductoLOG();

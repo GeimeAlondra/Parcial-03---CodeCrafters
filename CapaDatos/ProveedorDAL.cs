@@ -47,23 +47,41 @@ namespace CapaDatos
             return _db.Proveedores.ToList();
         }
 
+        // Ver Proveedores por Estado
+        public List<Proveedor> Leer(bool inactivos = false)
+        {
+            _db = new Contexto();
+            if (inactivos)
+            {
+                return _db.Proveedores.Where(p => p.Estado == false).ToList();
+            }
+            else
+            {
+                return _db.Proveedores.Where(p => p.Estado == true).ToList();
+            }
+        }
+
+        // Buscar Proveedores por ID
+        public Proveedor LeerPorId(int id)
+        {
+            _db = new Contexto();
+
+            return _db.Proveedores.Find(id);
+        }
+
         // Eliminar Proveedor
         public int Eliminar(int Id)
         {
             _db = new Contexto();
-            int resultado;
-
+            int resultado = 0;
             var proveedor = _db.Proveedores.Find(Id);
             if (proveedor != null)
             {
-                _db.Proveedores.Remove(proveedor);
+                proveedor.Estado = true;
                 _db.SaveChanges();
+                resultado = proveedor.ProveedorId;
             }
-            resultado = proveedor.ProveedorId;
             return resultado;
-
         }
-
-
     }
 }

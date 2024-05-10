@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -45,7 +44,6 @@
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.clienteBindingSources = new System.Windows.Forms.BindingSource(this.components);
             this.btnRegresar = new FontAwesome.Sharp.IconButton();
             this.btnAgregarCliente = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -55,7 +53,6 @@
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvgCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSources)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -197,10 +194,6 @@
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewImageColumn2.Width = 89;
-            // 
-            // clienteBindingSources
-            // 
-            this.clienteBindingSources.DataSource = typeof(CapaEntidades.Cliente);
             // 
             // btnRegresar
             // 
@@ -345,7 +338,6 @@
             this.Name = "MostrarCliente";
             this.Text = "MostrarCliente";
             ((System.ComponentModel.ISupportInitialize)(this.dvgCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSources)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -354,7 +346,6 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dvgCliente;
-        private System.Windows.Forms.BindingSource clienteBindingSources;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClienteId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClienteProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClienteApellido;
