@@ -181,6 +181,7 @@ namespace CapaDatos
                 return _db.Productos
                     .Include(p => p.Categoria)
                     .Include(p => p.Marca)
+                    .Include(p => p.Proveedor)
                     .Where(p => p.ProductoNombre.Contains(nombre) && p.Estado == false).ToList();
             }
             else
@@ -188,6 +189,7 @@ namespace CapaDatos
                 return _db.Productos
                     .Include(p => p.Categoria)
                     .Include(p => p.Marca)
+                    .Include(p => p.Proveedor)
                     .Where(p => p.ProductoNombre.Contains(nombre) && p.Estado == true).ToList();
             } 
 
