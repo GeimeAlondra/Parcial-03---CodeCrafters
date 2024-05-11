@@ -24,6 +24,7 @@ namespace CapaVista
             InitializeComponent();
             ObtenerCategorias();
             ObtenerMarcas();
+            ObtenerProveedores();
             llenarDataGridView();
         }
     private void btnActualizar_Click(object sender, EventArgs e)
@@ -49,6 +50,7 @@ namespace CapaVista
             }
             cbCategoriaProducto.SelectedIndex = 0;
             cbMarcaProducto.SelectedIndex = 0;
+            cbProveedorProducto.SelectedIndex = 0;
         }
 
         private void AbrirFormulario2()
@@ -95,8 +97,6 @@ namespace CapaVista
             }
         }
 
-      
-
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             llenarDataGridView();
@@ -127,6 +127,14 @@ namespace CapaVista
                         e.Value = marca.MarcaNombre;
                     }
                 }
+                else if (dgvProductos.Columns[e.ColumnIndex].Name == "Proveedor")
+                {
+                    var proveedor = dgvProductos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value as Proveedor; // Reemplaza "Proveedor" por el nombre de la clase del proveedor
+                    if (proveedor != null)
+                    {
+                        e.Value = proveedor.ProveedorNombre;
+                    }
+                }
             }
         }
 
@@ -135,7 +143,7 @@ namespace CapaVista
         {
             _ProductoLOG = new ProductoLOG();
             List<Categoria> categorias = _ProductoLOG.ObtenerCategoria();
-            categorias.Insert(0, new Categoria { CategoriaId = 0, CategoriaNombre = "===Seleccionar===" });
+            categorias.Insert(0, new Categoria { CategoriaId = 0, CategoriaNombre = "---Seleccionar---" });
             cbCategoriaProducto.DataSource = categorias;
             //productobindingSource.DataSource = categorias;
             cbCategoriaProducto.DisplayMember = "CategoriaNombre"; // Propiedad de la entidad Marca para mostrar en el ComboBox
@@ -147,14 +155,23 @@ namespace CapaVista
         {
             _ProductoLOG = new ProductoLOG();
             List<Marca> marcas = _ProductoLOG.ObtenerMarca();
-            marcas.Insert(0, new Marca { MarcaId = 0, MarcaNombre = "===Seleccionar===" });
+            marcas.Insert(0, new Marca { MarcaId = 0, MarcaNombre = "---Seleccionar---" });
             cbMarcaProducto.DataSource = marcas;
             cbMarcaProducto.DisplayMember = "MarcaNombre"; // Propiedad de la entidad Marca para mostrar en el ComboBox
             cbMarcaProducto.ValueMember = "MarcaId";
             cbMarcaProducto.SelectedIndex = 0;
         }
 
-
+        private void ObtenerProveedores()
+        {
+            _ProductoLOG = new ProductoLOG();
+            List<Proveedor> proveedors = _ProductoLOG.ObtenerProveedor();
+            proveedors.Insert(0, new Proveedor { ProveedorId = 0, ProveedorNombre = "---Seleccionar---" });
+            cbProveedorProducto.DataSource = proveedors;
+            cbProveedorProducto.DisplayMember = "ProveedorNombre";
+            cbProveedorProducto.ValueMember = "ProveedorId";
+            cbProveedorProducto.SelectedIndex = 0;
+        }
 
         private void cbCategoriaProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -208,6 +225,32 @@ namespace CapaVista
             }
         }
 
+        private void cbProveedorProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bool inactivos = false;
+            if (checkEstadoActivo.Checked)
+            {
+                inactivos = false;
+            }
+            else if (checkEstadoInactivo.Checked)
+            {
+                inactivos = true;
+            }
+            Proveedor ProveedorSeleccionado = (Proveedor)cbProveedorProducto.SelectedItem;
+
+            if (ProveedorSeleccionado != null)
+            {
+                int valorId = ProveedorSeleccionado.ProveedorId;
+
+                _ProductoLOG = new ProductoLOG();
+                dgvProductos.DataSource = _ProductoLOG.FiltroProveedor(valorId, inactivos);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un Proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void txtNombreProducto_TextChanged(object sender, EventArgs e)
         {
             FiltroPorNombre();
@@ -233,6 +276,6 @@ namespace CapaVista
             cbMarcaProducto.SelectedIndex = 0;
         }
 
-       
+      
     }
 }

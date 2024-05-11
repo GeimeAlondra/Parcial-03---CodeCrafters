@@ -31,6 +31,7 @@ namespace CapaVista
                 //
                 ObtenerMarcas();
                 ObtenerCategorias();
+                ObtenerProveedores();
                 CargarElementos(_id);
             }
             else
@@ -39,6 +40,7 @@ namespace CapaVista
                 productobindingSource.AddNew();
                 ObtenerMarcas();
                 ObtenerCategorias();
+                ObtenerProveedores();
             }            
         }
 
@@ -77,18 +79,27 @@ namespace CapaVista
             List<Categoria> categorias = _ProductoLOG.ObtenerCategoria();           
             categorias.Insert(0, new Categoria { CategoriaId = 0, CategoriaNombre = "---Seleccionar---" });
             cbCategoriaProducto.DataSource = categorias;
-            //productobindingSource.DataSource = categorias;
-            cbCategoriaProducto.DisplayMember = "CategoriaNombre"; // Propiedad de la entidad Marca para mostrar en el ComboBox
+            cbCategoriaProducto.DisplayMember = "CategoriaNombre"; 
             cbCategoriaProducto.ValueMember = "CategoriaId";
             cbCategoriaProducto.SelectedIndex = 0;
         }
-        
+
+        private void ObtenerProveedores()
+        {
+            _ProductoLOG = new ProductoLOG();
+            List<Proveedor> proveedors = _ProductoLOG.ObtenerProveedor();
+            proveedors.Insert(0, new Proveedor { ProveedorId = 0, ProveedorNombre = "---Seleccionar---" });
+            cbProveedorProducto.DataSource = proveedors;
+            cbProveedorProducto.DisplayMember = "ProveedorNombre"; 
+            cbProveedorProducto.ValueMember = "ProveedorId";
+            cbProveedorProducto.SelectedIndex = 0;
+        }
+
         private void GuardarProducto()
         {
             _ProductoLOG = new ProductoLOG();
             try
             {
-
                 if (!ValidarCampos())
                 {
                     return; // Si los campos no son válidos, salir del método
@@ -109,13 +120,11 @@ namespace CapaVista
                         txtStockProducto.Clear();
                         cbCategoriaProducto.SelectedItem = null;
                         cbMarcaProducto.SelectedItem = null;
+                        cbProveedorProducto.SelectedItem = null;
                         MessageBox.Show("Producto Actualizado con exito", "Tienda | Registro Producto",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         
                         this.Close();
-                        
-
-
                     }
                     else
                     {
@@ -152,6 +161,7 @@ namespace CapaVista
                         txtStockProducto.Clear();
                         cbCategoriaProducto.SelectedItem = null;
                         cbMarcaProducto.SelectedItem = null;
+                        cbProveedorProducto.SelectedItem = null;
                         MessageBox.Show("Producto agregado con exito", "Tienda | Registro Producto",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
@@ -170,7 +180,6 @@ namespace CapaVista
                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
 
         private bool ValidarCampos()
         {
@@ -205,11 +214,17 @@ namespace CapaVista
                 camposValidos = false;
             }
 
-            
             if (cbMarcaProducto.SelectedItem == null)
             {
                 MessageBox.Show("Debes seleccionar una marca válida.", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cbMarcaProducto.Focus();
+                camposValidos = false;
+            }
+
+            if (cbProveedorProducto.SelectedItem == null)
+            {
+                MessageBox.Show("Debes seleccionar un proveedor válido.", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cbProveedorProducto.Focus();
                 camposValidos = false;
             }
 
@@ -233,6 +248,13 @@ namespace CapaVista
             MostrarMarcas objMostraMarca = new MostrarMarcas();
             objMostraMarca.ShowDialog();
             ObtenerMarcas();
+        }
+
+        private void btnAgregarProveedor_Click(object sender, EventArgs e)
+        {
+            MostrarProveedor objMostrarProveedor = new MostrarProveedor();
+            objMostrarProveedor.ShowDialog();
+            ObtenerProveedores();
         }
     }
 }

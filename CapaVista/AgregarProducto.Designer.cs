@@ -45,13 +45,13 @@
             this.cbCategoriaProducto = new System.Windows.Forms.ComboBox();
             this.cbMarcaProducto = new System.Windows.Forms.ComboBox();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
-            this.btnRegresar = new FontAwesome.Sharp.IconButton();
-            this.btnGuardarProducto = new FontAwesome.Sharp.IconButton();
             this.btnAgregarMarca = new System.Windows.Forms.Button();
             this.btnAgregarCategoria = new System.Windows.Forms.Button();
             this.btnAgregarProveedor = new System.Windows.Forms.Button();
             this.cbProveedorProducto = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnRegresar = new FontAwesome.Sharp.IconButton();
+            this.btnGuardarProducto = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.productobindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -228,6 +228,63 @@
             this.txtNombreProducto.Size = new System.Drawing.Size(353, 26);
             this.txtNombreProducto.TabIndex = 36;
             // 
+            // btnAgregarMarca
+            // 
+            this.btnAgregarMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnAgregarMarca.Location = new System.Drawing.Point(436, 350);
+            this.btnAgregarMarca.Name = "btnAgregarMarca";
+            this.btnAgregarMarca.Size = new System.Drawing.Size(123, 23);
+            this.btnAgregarMarca.TabIndex = 37;
+            this.btnAgregarMarca.Text = "Agregar Marca";
+            this.btnAgregarMarca.UseVisualStyleBackColor = false;
+            this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
+            // 
+            // btnAgregarCategoria
+            // 
+            this.btnAgregarCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnAgregarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(436, 291);
+            this.btnAgregarCategoria.Name = "btnAgregarCategoria";
+            this.btnAgregarCategoria.Size = new System.Drawing.Size(123, 23);
+            this.btnAgregarCategoria.TabIndex = 38;
+            this.btnAgregarCategoria.Text = "Agregar Categoria";
+            this.btnAgregarCategoria.UseVisualStyleBackColor = false;
+            this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
+            // 
+            // btnAgregarProveedor
+            // 
+            this.btnAgregarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnAgregarProveedor.Location = new System.Drawing.Point(436, 407);
+            this.btnAgregarProveedor.Name = "btnAgregarProveedor";
+            this.btnAgregarProveedor.Size = new System.Drawing.Size(123, 23);
+            this.btnAgregarProveedor.TabIndex = 41;
+            this.btnAgregarProveedor.Text = "Agregar Proveedor";
+            this.btnAgregarProveedor.UseVisualStyleBackColor = false;
+            this.btnAgregarProveedor.Click += new System.EventHandler(this.btnAgregarProveedor_Click);
+            // 
+            // cbProveedorProducto
+            // 
+            this.cbProveedorProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.cbProveedorProducto.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productobindingSource, "ProveedorId", true));
+            this.cbProveedorProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbProveedorProducto.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbProveedorProducto.FormattingEnabled = true;
+            this.cbProveedorProducto.Location = new System.Drawing.Point(206, 409);
+            this.cbProveedorProducto.Name = "cbProveedorProducto";
+            this.cbProveedorProducto.Size = new System.Drawing.Size(180, 24);
+            this.cbProveedorProducto.TabIndex = 40;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label9.Location = new System.Drawing.Point(86, 414);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 16);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "Proveedor:";
+            // 
             // btnRegresar
             // 
             this.btnRegresar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -275,62 +332,6 @@
             this.btnGuardarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardarProducto.UseVisualStyleBackColor = false;
             this.btnGuardarProducto.Click += new System.EventHandler(this.btnGuardarProducto_Click);
-            // 
-            // btnAgregarMarca
-            // 
-            this.btnAgregarMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnAgregarMarca.Location = new System.Drawing.Point(436, 350);
-            this.btnAgregarMarca.Name = "btnAgregarMarca";
-            this.btnAgregarMarca.Size = new System.Drawing.Size(123, 23);
-            this.btnAgregarMarca.TabIndex = 37;
-            this.btnAgregarMarca.Text = "Agregar Marca";
-            this.btnAgregarMarca.UseVisualStyleBackColor = false;
-            this.btnAgregarMarca.Click += new System.EventHandler(this.btnAgregarMarca_Click);
-            // 
-            // btnAgregarCategoria
-            // 
-            this.btnAgregarCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnAgregarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCategoria.Location = new System.Drawing.Point(436, 291);
-            this.btnAgregarCategoria.Name = "btnAgregarCategoria";
-            this.btnAgregarCategoria.Size = new System.Drawing.Size(123, 23);
-            this.btnAgregarCategoria.TabIndex = 38;
-            this.btnAgregarCategoria.Text = "Agregar Categoria";
-            this.btnAgregarCategoria.UseVisualStyleBackColor = false;
-            this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);
-            // 
-            // btnAgregarProveedor
-            // 
-            this.btnAgregarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnAgregarProveedor.Location = new System.Drawing.Point(436, 407);
-            this.btnAgregarProveedor.Name = "btnAgregarProveedor";
-            this.btnAgregarProveedor.Size = new System.Drawing.Size(123, 23);
-            this.btnAgregarProveedor.TabIndex = 41;
-            this.btnAgregarProveedor.Text = "Agregar Proveedor";
-            this.btnAgregarProveedor.UseVisualStyleBackColor = false;
-            // 
-            // cbProveedorProducto
-            // 
-            this.cbProveedorProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.cbProveedorProducto.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productobindingSource, "MarcaId", true));
-            this.cbProveedorProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbProveedorProducto.ForeColor = System.Drawing.SystemColors.Window;
-            this.cbProveedorProducto.FormattingEnabled = true;
-            this.cbProveedorProducto.Location = new System.Drawing.Point(206, 409);
-            this.cbProveedorProducto.Name = "cbProveedorProducto";
-            this.cbProveedorProducto.Size = new System.Drawing.Size(180, 24);
-            this.cbProveedorProducto.TabIndex = 40;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(86, 414);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 16);
-            this.label9.TabIndex = 39;
-            this.label9.Text = "Proveedor:";
             // 
             // AgregarProducto
             // 

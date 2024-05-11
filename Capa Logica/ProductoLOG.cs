@@ -48,6 +48,13 @@ namespace Capa_Logica
             return _ProductoDAL.ObtenerMarcas();
         }
 
+        public List<Proveedor> ObtenerProveedor()
+        {
+            _ProductoDAL = new ProductoDAL();
+
+            return _ProductoDAL.ObtenerProveedores();
+        }
+
         public int ActualizarProducto(Producto producto, int id, bool esActualizacion)
         {
             _ProductoDAL = new ProductoDAL();
@@ -75,6 +82,13 @@ namespace Capa_Logica
             _ProductoDAL = new ProductoDAL();
 
             return _ProductoDAL.FiltroMarca(categoriaValue, inactivos);
+        }
+
+        public List<Producto> FiltroProveedor(int categoriaValue, bool inactivos = false)
+        {
+            _ProductoDAL = new ProductoDAL();
+
+            return _ProductoDAL.FiltroProveedor(categoriaValue, inactivos);
         }
 
         public List<Producto> FiltroNombre(string nombre, bool inactivos = false)

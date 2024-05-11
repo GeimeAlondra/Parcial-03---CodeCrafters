@@ -65,6 +65,7 @@ namespace CapaDatos
                 return _db.Productos
                     .Include(p => p.Categoria) 
                     .Include(p => p.Marca)
+                    .Include(p => p.Proveedor)
                     .Where(p => p.Estado == false).ToList();
             }
             else
@@ -72,6 +73,7 @@ namespace CapaDatos
                 return _db.Productos
                     .Include(p => p.Categoria)
                     .Include(p => p.Marca)
+                    .Include(p => p.Proveedor)
                     .Where(p => p.Estado == true).ToList();
             }
         }
@@ -99,6 +101,13 @@ namespace CapaDatos
             return _db.Categorias.ToList();
         }
 
+        public List<Proveedor> ObtenerProveedores()
+        {
+            _db = new Contexto();
+
+            return _db.Proveedores.ToList();
+        }
+
         public List<Producto> FiltroCategorias(int id ,bool inactivos)
         {
             _db = new Contexto();
@@ -106,6 +115,7 @@ namespace CapaDatos
                 return _db.Productos
                     .Include(p => p.Categoria)
                     .Include(p => p.Marca)
+                    .Include(p => p.Proveedor)
                     .Where(p => p.CategoriaId == id && p.Estado == false ).ToList();
             }
             else
@@ -113,6 +123,7 @@ namespace CapaDatos
                 return _db.Productos
                     .Include(p => p.Categoria)
                     .Include(p => p.Marca)
+                    .Include(p => p.Proveedor)
                     .Where(p => p.CategoriaId == id &&p.Estado == true).ToList();
             }
 
@@ -126,6 +137,7 @@ namespace CapaDatos
                 return _db.Productos
                     .Include(p => p.Categoria)
                     .Include(p => p.Marca)
+                    .Include(p => p.Proveedor)
                     .Where(p => p.MarcaId == id && p.Estado == false).ToList();
             }
             else
@@ -133,7 +145,30 @@ namespace CapaDatos
                 return _db.Productos
                     .Include(p => p.Categoria)
                     .Include(p => p.Marca)
+                    .Include(p => p.Proveedor)
                     .Where(p => p.MarcaId == id && p.Estado == true).ToList();
+            }
+
+        }
+
+        public List<Producto> FiltroProveedor(int id, bool inactivos)
+        {
+            _db = new Contexto();
+            if (inactivos)
+            {
+                return _db.Productos
+                    .Include(p => p.Categoria)
+                    .Include(p => p.Marca)
+                    .Include(p => p.Proveedor)
+                    .Where(p => p.ProveedorId == id && p.Estado == false).ToList();
+            }
+            else
+            {
+                return _db.Productos
+                    .Include(p => p.Categoria)
+                    .Include(p => p.Marca)
+                    .Include(p => p.Proveedor)
+                    .Where(p => p.ProveedorId == id && p.Estado == true).ToList();
             }
 
         }
