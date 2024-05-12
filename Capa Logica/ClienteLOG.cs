@@ -47,5 +47,12 @@ namespace Capa_Logica
 
             return _ClienteDAL.LeerPorId(id);
         }
+
+        public List<Cliente> FiltroNombre(string nombre, bool inactivos = false)
+        {
+            _ClienteDAL = new ClienteDAL();
+
+            return _ClienteDAL.FiltroNombre(nombre, inactivos);
+        }
     }
 }

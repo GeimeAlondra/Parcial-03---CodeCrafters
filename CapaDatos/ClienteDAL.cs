@@ -77,6 +77,17 @@ namespace CapaDatos
             return _db.Clientes.Find(id);
         }
 
-
+        public List<Cliente> FiltroNombre(string nombre, bool inactivos)
+        {
+            _db = new Contexto();
+            if (inactivos)
+            {
+                return _db.Clientes.Where(c => c.ClienteNombre.Contains(nombre) && c.Estado == false).ToList();
+            }
+            else
+            {
+                return _db.Clientes.Where(c => c.ClienteNombre.Contains(nombre) && c.Estado == true).ToList();
+            }
+        }
     }
 }

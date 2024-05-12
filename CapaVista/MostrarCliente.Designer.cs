@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MostrarCliente));
             this.dvgCliente = new System.Windows.Forms.DataGridView();
             this.ClienteId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,14 +68,14 @@
             this.dvgCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dvgCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dvgCliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dvgCliente.ColumnHeadersHeight = 22;
             this.dvgCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dvgCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -90,24 +90,24 @@
             this.Eliminar});
             this.dvgCliente.EnableHeadersVisualStyles = false;
             this.dvgCliente.GridColor = System.Drawing.Color.SteelBlue;
-            this.dvgCliente.Location = new System.Drawing.Point(24, 194);
+            this.dvgCliente.Location = new System.Drawing.Point(24, 224);
             this.dvgCliente.Name = "dvgCliente";
             this.dvgCliente.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgCliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgCliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dvgCliente.RowHeadersVisible = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            this.dvgCliente.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            this.dvgCliente.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dvgCliente.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dvgCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgCliente.Size = new System.Drawing.Size(698, 280);
+            this.dvgCliente.Size = new System.Drawing.Size(698, 250);
             this.dvgCliente.TabIndex = 42;
             this.dvgCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgCliente_CellContentClick);
             // 
@@ -257,7 +257,7 @@
             this.groupBox1.Location = new System.Drawing.Point(24, 58);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox1.Size = new System.Drawing.Size(698, 97);
+            this.groupBox1.Size = new System.Drawing.Size(698, 120);
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtro de Clientes";
@@ -267,13 +267,14 @@
             this.checkEstadoInactivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkEstadoInactivo.AutoSize = true;
-            this.checkEstadoInactivo.Location = new System.Drawing.Point(568, 40);
+            this.checkEstadoInactivo.Location = new System.Drawing.Point(545, 68);
             this.checkEstadoInactivo.Name = "checkEstadoInactivo";
             this.checkEstadoInactivo.Size = new System.Drawing.Size(84, 22);
             this.checkEstadoInactivo.TabIndex = 46;
             this.checkEstadoInactivo.TabStop = true;
             this.checkEstadoInactivo.Text = "Inactivo";
             this.checkEstadoInactivo.UseVisualStyleBackColor = true;
+            this.checkEstadoInactivo.CheckedChanged += new System.EventHandler(this.checkEstadoInactivo_CheckedChanged);
             // 
             // checkEstadoActivo
             // 
@@ -281,13 +282,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkEstadoActivo.AutoSize = true;
             this.checkEstadoActivo.Checked = true;
-            this.checkEstadoActivo.Location = new System.Drawing.Point(482, 40);
+            this.checkEstadoActivo.Location = new System.Drawing.Point(545, 40);
             this.checkEstadoActivo.Name = "checkEstadoActivo";
             this.checkEstadoActivo.Size = new System.Drawing.Size(72, 22);
             this.checkEstadoActivo.TabIndex = 45;
             this.checkEstadoActivo.TabStop = true;
             this.checkEstadoActivo.Text = "Activo";
             this.checkEstadoActivo.UseVisualStyleBackColor = true;
+            this.checkEstadoActivo.CheckedChanged += new System.EventHandler(this.checkEstadoActivo_CheckedChanged);
             // 
             // label6
             // 
@@ -296,7 +298,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(415, 42);
+            this.label6.Location = new System.Drawing.Point(500, 44);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 16);
             this.label6.TabIndex = 42;
@@ -312,8 +314,9 @@
             this.txtNombreCliente.Location = new System.Drawing.Point(104, 40);
             this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(0);
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(180, 26);
+            this.txtNombreCliente.Size = new System.Drawing.Size(177, 26);
             this.txtNombreCliente.TabIndex = 37;
+            this.txtNombreCliente.TextChanged += new System.EventHandler(this.txtNombreCliente_TextChanged);
             // 
             // label2
             // 

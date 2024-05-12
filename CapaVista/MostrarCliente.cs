@@ -100,5 +100,37 @@ namespace CapaVista
         {
             AbrirFormulario2();
         }
+
+        private void txtNombreCliente_TextChanged(object sender, EventArgs e)
+        {
+            FiltroPorNombre();
+        }
+
+        private void FiltroPorNombre()
+        {
+            _ClienteLOG = new ClienteLOG();
+            string nombre = txtNombreCliente.Text;
+            if (checkEstadoActivo.Checked)
+            {
+
+                dvgCliente.DataSource = _ClienteLOG.FiltroNombre(nombre);
+
+            }
+            else if (checkEstadoInactivo.Checked)
+            {
+
+                dvgCliente.DataSource = _ClienteLOG.FiltroNombre(nombre, true);
+            }
+        }
+
+        private void checkEstadoActivo_CheckedChanged(object sender, EventArgs e)
+        {
+            llenarDataGridView();
+        }
+
+        private void checkEstadoInactivo_CheckedChanged(object sender, EventArgs e)
+        {
+            llenarDataGridView();
+        }
     }
 }
