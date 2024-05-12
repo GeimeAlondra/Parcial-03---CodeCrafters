@@ -27,7 +27,8 @@ namespace CapaVista
             ObtenerProveedores();
             llenarDataGridView();
         }
-    private void btnActualizar_Click(object sender, EventArgs e)
+
+        private void btnActualizar_Click(object sender, EventArgs e)
         {
             AgregarProducto agregarProducto = new AgregarProducto(); // Crear una instancia del formulario que deseas mostrar
             agregarProducto.ShowDialog();
@@ -275,7 +276,5 @@ namespace CapaVista
             cbCategoriaProducto.SelectedIndex = 0;
             cbMarcaProducto.SelectedIndex = 0;
         }
-
-      
     }
 }

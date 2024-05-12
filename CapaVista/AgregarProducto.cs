@@ -187,21 +187,21 @@ namespace CapaVista
 
             if (string.IsNullOrEmpty(txtNombreProducto.Text))
             {
-                MessageBox.Show("Se requiere el nombre del Producto \\n\\n !!Este Campo es Obligatorio!!", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere el nombre del Producto \\n\\n !Este Campo es Obligatorio!", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNombreProducto.Focus();
                 camposValidos = false;
             }
 
             if (string.IsNullOrEmpty(txtDescripcionProducto.Text))
             {
-                MessageBox.Show("Se requiere la descripción del Producto \\n\\n !!Este Campo es Obligatorio!!", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere la descripción del Producto \\n\\n !Este Campo es Obligatorio!", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtDescripcionProducto.Focus();
                 camposValidos = false;
             }
 
             if (string.IsNullOrEmpty(txtPrecioProducto.Text))
             {
-                MessageBox.Show("Se requiere el precio del Producto \\n\\n !!Este Campo es Obligatorio!!", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere el precio del Producto \\n\\n !Este Campo es Obligatorio!", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtPrecioProducto.Focus();
                 camposValidos = false;
             }

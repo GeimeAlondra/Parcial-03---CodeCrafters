@@ -33,11 +33,11 @@ namespace Capa_Logica
             return _EmpleadoDAL.Eliminar(Id);
         }
 
-        public List<Empleado> ObtenerEmpleado()
+        public List<Empleado> ObtenerEmpleado(bool inactivos = false)
         {
             _EmpleadoDAL = new EmpleadoDAL();
 
-            return _EmpleadoDAL.Leer();
+            return _EmpleadoDAL.Leer(inactivos);
         }
 
         public Empleado ObtenerPorId(int id)
@@ -53,6 +53,20 @@ namespace Capa_Logica
             _EmpleadoDAL = new EmpleadoDAL();
 
             return _EmpleadoDAL.ObtenerTipoEmpleados();
+        }
+
+        public List<Empleado> FiltroTipoEmpleado(int categoriaValue, bool inactivos = false)
+        {
+            _EmpleadoDAL = new EmpleadoDAL();
+
+            return _EmpleadoDAL.FiltroTipoEmpleados(categoriaValue, inactivos);
+        }
+
+        public List<Empleado> FiltroNombre(string nombre, bool inactivos = false)
+        {
+            _EmpleadoDAL = new EmpleadoDAL();
+
+            return _EmpleadoDAL.FiltroNombre(nombre, inactivos);
         }
     }
 }

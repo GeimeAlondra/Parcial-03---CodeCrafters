@@ -48,37 +48,33 @@ namespace CapaVista
             bool camposValidos = true;
             if (string.IsNullOrEmpty(txtNombreProveedor.Text))
             {
-                MessageBox.Show("Se requiere el nombre del proveedor \n\n !!Este Campo es Obligatorio!!", "Tienda | Registro Proveedor",
+                MessageBox.Show("Se requiere el nombre del proveedor \n\n !Este Campo es Obligatorio!", "Tienda | Registro Proveedor",
                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNombreProveedor.Focus();
-                //plinea.BackColor = Color.LightCoral;
                 camposValidos = false;
             }
 
             if (string.IsNullOrEmpty(txtCorreoProveedor.Text))
             {
-                MessageBox.Show("Se requiere el correo del proveedor \n\n !!Este Campo es Obligatorio!!", "Tienda | Registro Proveedor",
+                MessageBox.Show("Se requiere el correo del proveedor \n\n !Este Campo es Obligatorio!", "Tienda | Registro Proveedor",
                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtCorreoProveedor.Focus();
-                //plinea.BackColor = Color.LightCoral;
                 camposValidos = false;
             }
 
             if (string.IsNullOrEmpty(txtDireccionProveedor.Text))
             {
-                MessageBox.Show("Se requiere la direccion del proveedor \n\n !!Este Campo es Obligatorio!!", "Tienda | Registro Proveedor",
+                MessageBox.Show("Se requiere la direccion del proveedor \n\n !Este Campo es Obligatorio!", "Tienda | Registro Proveedor",
                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtDireccionProveedor.Focus();
-                //plinea.BackColor = Color.LightCoral;
                 camposValidos = false;
             }
 
             if (string.IsNullOrEmpty(txtTelefonoProveedor.Text))
             {
-                MessageBox.Show("Se requiere el telefono del proveedor\n\n !!Este Campo es Obligatorio!!", "Tienda | Registro Proveedor",
+                MessageBox.Show("Se requiere el telefono del proveedor\n\n !Este Campo es Obligatorio!", "Tienda | Registro Proveedor",
                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtTelefonoProveedor.Focus();
-                //plinea.BackColor = Color.LightCoral;
                 camposValidos = false;
             }
             return camposValidos;
@@ -89,15 +85,13 @@ namespace CapaVista
             _ProveedorLOG = new ProveedorLOG();
             try
             {
-
                 if (!ValidarCampos())
                 {
                     return; 
                 }
-
                 int resultado;
 
-                //debemo indicar si es una actualizacion o es un nuevo producto
+                //debemos indicar si es una actualizacion o es un nuevo producto
                 if (_id > 0)
                 {
                     proveedorbindingSource.EndEdit();
@@ -110,31 +104,31 @@ namespace CapaVista
                         txtCorreoProveedor.Clear();
                         txtDireccionProveedor.Clear();
                         txtTelefonoProveedor.Clear();
-                        MessageBox.Show("Proveedor actualizado con exito", "Tienda | Registro Proveedor",
+                        MessageBox.Show("Proveedor Actualizado con exito", "Tienda | Registro Proveedor",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("No se logro actualizar el Proveedor", "Tienda | Registro Proveedor",
+                        MessageBox.Show("No se logro Actualizar el Proveedor", "Tienda | Registro Proveedor",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    //if (!checkEstadoProveedor.Checked)
-                    //{
-                    //    var dialogo = MessageBox.Show("¿Esta seguro que desea guardar el proveedor inactivo", "Tienda | Registro Proveedores",
-                    //                    MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (!checkEstadoProveedor.Checked)
+                    {
+                        var dialogo = MessageBox.Show("¿Esta seguro que desea guardar el proveedor inactivo", "Tienda | Registro Proveedores",
+                                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-                    //    if (dialogo != DialogResult.Yes)
-                    //    {
-                    //        MessageBox.Show("Seleccione el cuadro Estado como activo", "Tienda | Registro Proveedores",
-                    //            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //        return;
-                    //    }
-                    //}
+                        if (dialogo != DialogResult.Yes)
+                        {
+                            MessageBox.Show("Seleccione el cuadro Estado como activo", "Tienda | Registro Proveedores",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+                    }
                     proveedorbindingSource.EndEdit();
 
                     Proveedor proveedor;
@@ -150,7 +144,6 @@ namespace CapaVista
                         txtTelefonoProveedor.Clear();
                         MessageBox.Show("Proveedor agregado con exito", "Tienda | Registro Proveedor",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
-                  
                         this.Close();
                     }
                     else

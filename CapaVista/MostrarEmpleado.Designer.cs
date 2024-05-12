@@ -33,27 +33,26 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MostrarEmpleado));
             this.dvgEmpleado = new System.Windows.Forms.DataGridView();
-            this.ClienteId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClienteProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ApellidoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClienteDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmpleadoSalario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmpleadoFechaNac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmpleadoCargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmpleadoSucursal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnAgregarEmpleado = new FontAwesome.Sharp.IconButton();
             this.btnRegresar = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbSucursalEmpleado = new System.Windows.Forms.ComboBox();
+            this.checkEstadoInactivo = new System.Windows.Forms.RadioButton();
+            this.checkEstadoActivo = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
             this.cbCargoEmpleado = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.EmpleadoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpleadoNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpleadoApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpleadoDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoEmpleadoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvgEmpleado)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -81,19 +80,17 @@
             this.dvgEmpleado.ColumnHeadersHeight = 22;
             this.dvgEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dvgEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ClienteId,
-            this.ClienteProveedor,
-            this.ApellidoCliente,
-            this.ClienteDireccion,
-            this.EmpleadoSalario,
-            this.EmpleadoFechaNac,
-            this.EmpleadoCargo,
-            this.EmpleadoSucursal,
+            this.EmpleadoId,
+            this.EmpleadoNombre,
+            this.EmpleadoApellido,
+            this.EmpleadoDireccion,
+            this.TipoEmpleadoId,
+            this.TipoEmpleado,
             this.Editar,
             this.Eliminar});
             this.dvgEmpleado.EnableHeadersVisualStyles = false;
             this.dvgEmpleado.GridColor = System.Drawing.Color.SteelBlue;
-            this.dvgEmpleado.Location = new System.Drawing.Point(21, 185);
+            this.dvgEmpleado.Location = new System.Drawing.Point(21, 189);
             this.dvgEmpleado.Name = "dvgEmpleado";
             this.dvgEmpleado.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -110,77 +107,10 @@
             this.dvgEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dvgEmpleado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dvgEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgEmpleado.Size = new System.Drawing.Size(678, 284);
+            this.dvgEmpleado.Size = new System.Drawing.Size(678, 280);
             this.dvgEmpleado.TabIndex = 63;
-            // 
-            // ClienteId
-            // 
-            this.ClienteId.DataPropertyName = "ClienteId";
-            this.ClienteId.HeaderText = "Id";
-            this.ClienteId.Name = "ClienteId";
-            this.ClienteId.ReadOnly = true;
-            // 
-            // ClienteProveedor
-            // 
-            this.ClienteProveedor.DataPropertyName = "ClienteNombre";
-            this.ClienteProveedor.HeaderText = "Nombre";
-            this.ClienteProveedor.Name = "ClienteProveedor";
-            this.ClienteProveedor.ReadOnly = true;
-            // 
-            // ApellidoCliente
-            // 
-            this.ApellidoCliente.HeaderText = "Apellido";
-            this.ApellidoCliente.Name = "ApellidoCliente";
-            this.ApellidoCliente.ReadOnly = true;
-            // 
-            // ClienteDireccion
-            // 
-            this.ClienteDireccion.DataPropertyName = "ClienteDireccion";
-            this.ClienteDireccion.HeaderText = "Direccion";
-            this.ClienteDireccion.Name = "ClienteDireccion";
-            this.ClienteDireccion.ReadOnly = true;
-            // 
-            // EmpleadoSalario
-            // 
-            this.EmpleadoSalario.DataPropertyName = "EmpleadoSalario";
-            this.EmpleadoSalario.HeaderText = "Salario";
-            this.EmpleadoSalario.Name = "EmpleadoSalario";
-            this.EmpleadoSalario.ReadOnly = true;
-            // 
-            // EmpleadoFechaNac
-            // 
-            this.EmpleadoFechaNac.DataPropertyName = "EmpleadoFechaNac";
-            this.EmpleadoFechaNac.HeaderText = "Telefono";
-            this.EmpleadoFechaNac.Name = "EmpleadoFechaNac";
-            this.EmpleadoFechaNac.ReadOnly = true;
-            // 
-            // EmpleadoCargo
-            // 
-            this.EmpleadoCargo.HeaderText = "Cargo";
-            this.EmpleadoCargo.Name = "EmpleadoCargo";
-            this.EmpleadoCargo.ReadOnly = true;
-            // 
-            // EmpleadoSucursal
-            // 
-            this.EmpleadoSucursal.HeaderText = "Sucursal";
-            this.EmpleadoSucursal.Name = "EmpleadoSucursal";
-            this.EmpleadoSucursal.ReadOnly = true;
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dvgEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgEmpleado_CellContentClick);
+            this.dvgEmpleado.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dvgEmpleado_CellFormatting);
             // 
             // dataGridViewImageColumn1
             // 
@@ -222,6 +152,7 @@
             this.btnAgregarEmpleado.Text = "&Agregar";
             this.btnAgregarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAgregarEmpleado.UseVisualStyleBackColor = false;
+            this.btnAgregarEmpleado.Click += new System.EventHandler(this.btnAgregarEmpleado_Click);
             // 
             // btnRegresar
             // 
@@ -251,8 +182,9 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.cbSucursalEmpleado);
+            this.groupBox1.Controls.Add(this.checkEstadoInactivo);
+            this.groupBox1.Controls.Add(this.checkEstadoActivo);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cbCargoEmpleado);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtNombreEmpleado);
@@ -262,26 +194,52 @@
             this.groupBox1.Location = new System.Drawing.Point(21, 32);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox1.Size = new System.Drawing.Size(678, 126);
+            this.groupBox1.Size = new System.Drawing.Size(678, 131);
             this.groupBox1.TabIndex = 66;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtro de Empleados";
             // 
-            // cbSucursalEmpleado
+            // checkEstadoInactivo
             // 
-            this.cbSucursalEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.checkEstadoInactivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbSucursalEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.cbSucursalEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbSucursalEmpleado.ForeColor = System.Drawing.Color.White;
-            this.cbSucursalEmpleado.FormattingEnabled = true;
-            this.cbSucursalEmpleado.Location = new System.Drawing.Point(445, 40);
-            this.cbSucursalEmpleado.Margin = new System.Windows.Forms.Padding(0);
-            this.cbSucursalEmpleado.MaximumSize = new System.Drawing.Size(180, 0);
-            this.cbSucursalEmpleado.MinimumSize = new System.Drawing.Size(180, 0);
-            this.cbSucursalEmpleado.Name = "cbSucursalEmpleado";
-            this.cbSucursalEmpleado.Size = new System.Drawing.Size(180, 26);
-            this.cbSucursalEmpleado.TabIndex = 39;
+            this.checkEstadoInactivo.AutoSize = true;
+            this.checkEstadoInactivo.Location = new System.Drawing.Point(544, 68);
+            this.checkEstadoInactivo.Name = "checkEstadoInactivo";
+            this.checkEstadoInactivo.Size = new System.Drawing.Size(84, 22);
+            this.checkEstadoInactivo.TabIndex = 49;
+            this.checkEstadoInactivo.TabStop = true;
+            this.checkEstadoInactivo.Text = "Inactivo";
+            this.checkEstadoInactivo.UseVisualStyleBackColor = true;
+            this.checkEstadoInactivo.CheckedChanged += new System.EventHandler(this.checkEstadoInactivo_CheckedChanged);
+            // 
+            // checkEstadoActivo
+            // 
+            this.checkEstadoActivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkEstadoActivo.AutoSize = true;
+            this.checkEstadoActivo.Checked = true;
+            this.checkEstadoActivo.Location = new System.Drawing.Point(544, 40);
+            this.checkEstadoActivo.Name = "checkEstadoActivo";
+            this.checkEstadoActivo.Size = new System.Drawing.Size(72, 22);
+            this.checkEstadoActivo.TabIndex = 48;
+            this.checkEstadoActivo.TabStop = true;
+            this.checkEstadoActivo.Text = "Activo";
+            this.checkEstadoActivo.UseVisualStyleBackColor = true;
+            this.checkEstadoActivo.CheckedChanged += new System.EventHandler(this.checkEstadoActivo_CheckedChanged);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(499, 44);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 16);
+            this.label6.TabIndex = 47;
+            this.label6.Text = "Estado:";
             // 
             // cbCargoEmpleado
             // 
@@ -291,13 +249,14 @@
             this.cbCargoEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbCargoEmpleado.ForeColor = System.Drawing.Color.White;
             this.cbCargoEmpleado.FormattingEnabled = true;
-            this.cbCargoEmpleado.Location = new System.Drawing.Point(124, 80);
+            this.cbCargoEmpleado.Location = new System.Drawing.Point(124, 86);
             this.cbCargoEmpleado.Margin = new System.Windows.Forms.Padding(0);
             this.cbCargoEmpleado.MaximumSize = new System.Drawing.Size(180, 0);
             this.cbCargoEmpleado.MinimumSize = new System.Drawing.Size(180, 0);
             this.cbCargoEmpleado.Name = "cbCargoEmpleado";
             this.cbCargoEmpleado.Size = new System.Drawing.Size(180, 26);
             this.cbCargoEmpleado.TabIndex = 41;
+            this.cbCargoEmpleado.SelectedIndexChanged += new System.EventHandler(this.cbCargoEmpleado_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -305,7 +264,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(65, 88);
+            this.label7.Location = new System.Drawing.Point(63, 91);
             this.label7.MaximumSize = new System.Drawing.Size(79, 16);
             this.label7.MinimumSize = new System.Drawing.Size(79, 16);
             this.label7.Name = "label7";
@@ -325,6 +284,7 @@
             this.txtNombreEmpleado.Name = "txtNombreEmpleado";
             this.txtNombreEmpleado.Size = new System.Drawing.Size(180, 26);
             this.txtNombreEmpleado.TabIndex = 37;
+            this.txtNombreEmpleado.TextChanged += new System.EventHandler(this.txtNombreEmpleado_TextChanged);
             // 
             // label2
             // 
@@ -336,19 +296,64 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre:";
             // 
-            // label1
+            // EmpleadoId
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(363, 45);
-            this.label1.MaximumSize = new System.Drawing.Size(79, 16);
-            this.label1.MinimumSize = new System.Drawing.Size(79, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 16);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "Sucursal:";
+            this.EmpleadoId.DataPropertyName = "EmpleadoId";
+            this.EmpleadoId.HeaderText = "Id";
+            this.EmpleadoId.Name = "EmpleadoId";
+            this.EmpleadoId.ReadOnly = true;
+            // 
+            // EmpleadoNombre
+            // 
+            this.EmpleadoNombre.DataPropertyName = "EmpleadoNombre";
+            this.EmpleadoNombre.HeaderText = "Nombre";
+            this.EmpleadoNombre.Name = "EmpleadoNombre";
+            this.EmpleadoNombre.ReadOnly = true;
+            // 
+            // EmpleadoApellido
+            // 
+            this.EmpleadoApellido.DataPropertyName = "EmpleadoApellido";
+            this.EmpleadoApellido.HeaderText = "Apellido";
+            this.EmpleadoApellido.Name = "EmpleadoApellido";
+            this.EmpleadoApellido.ReadOnly = true;
+            // 
+            // EmpleadoDireccion
+            // 
+            this.EmpleadoDireccion.DataPropertyName = "EmpleadoDireccion";
+            this.EmpleadoDireccion.HeaderText = "Direccion";
+            this.EmpleadoDireccion.Name = "EmpleadoDireccion";
+            this.EmpleadoDireccion.ReadOnly = true;
+            // 
+            // TipoEmpleadoId
+            // 
+            this.TipoEmpleadoId.DataPropertyName = "TipoEmpleadoId";
+            this.TipoEmpleadoId.HeaderText = "Cargo";
+            this.TipoEmpleadoId.Name = "TipoEmpleadoId";
+            this.TipoEmpleadoId.ReadOnly = true;
+            this.TipoEmpleadoId.Visible = false;
+            // 
+            // TipoEmpleado
+            // 
+            this.TipoEmpleado.DataPropertyName = "TipoEmpleado";
+            this.TipoEmpleado.HeaderText = "Cargo";
+            this.TipoEmpleado.Name = "TipoEmpleado";
+            this.TipoEmpleado.ReadOnly = true;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // MostrarEmpleado
             // 
@@ -372,26 +377,25 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dvgEmpleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteProveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteDireccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmpleadoSalario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmpleadoFechaNac;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmpleadoCargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmpleadoSucursal;
-        private System.Windows.Forms.DataGridViewImageColumn Editar;
-        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private FontAwesome.Sharp.IconButton btnAgregarEmpleado;
         private FontAwesome.Sharp.IconButton btnRegresar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbSucursalEmpleado;
         private System.Windows.Forms.ComboBox cbCargoEmpleado;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNombreEmpleado;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton checkEstadoInactivo;
+        private System.Windows.Forms.RadioButton checkEstadoActivo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpleadoId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpleadoNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpleadoApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmpleadoDireccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoEmpleadoId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoEmpleado;
+        private System.Windows.Forms.DataGridViewImageColumn Editar;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
     }
 }

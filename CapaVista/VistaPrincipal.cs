@@ -251,6 +251,16 @@ namespace CapaVista
             HideSubMenu();
         }
 
-      
+        private void btnMantenimientoProveedor_Click_1(object sender, EventArgs e)
+        {
+            abrirFormulario(new MostrarProveedor());
+            HideSubMenu();
+        }
+
+        private void btnManetenimientoEmpleado_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new MostrarEmpleado());
+            HideSubMenu();
+        }
     }
 }

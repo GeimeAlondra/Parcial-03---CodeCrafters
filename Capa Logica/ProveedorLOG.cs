@@ -47,5 +47,11 @@ namespace Capa_Logica
             return _ProveedorDAL.LeerPorId(codigo);
         }
 
+        public List<Proveedor> FiltroNombre(string nombre, bool inactivos = false)
+        {
+            _ProveedorDAL = new ProveedorDAL();
+
+            return _ProveedorDAL.FiltroNombre(nombre, inactivos);
+        }
     }
 }

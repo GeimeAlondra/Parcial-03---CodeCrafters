@@ -37,7 +37,7 @@
             this.btnMantenimientoCat = new FontAwesome.Sharp.IconButton();
             this.btnPanelGeneral = new System.Windows.Forms.Button();
             this.panelVentas = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnManetenimientoEmpleado = new FontAwesome.Sharp.IconButton();
             this.btnMantenimientoProveedor = new FontAwesome.Sharp.IconButton();
             this.btnMantenimientoClientes = new FontAwesome.Sharp.IconButton();
             this.button7 = new System.Windows.Forms.Button();
@@ -172,7 +172,7 @@
             // panelVentas
             // 
             this.panelVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelVentas.Controls.Add(this.iconButton1);
+            this.panelVentas.Controls.Add(this.btnManetenimientoEmpleado);
             this.panelVentas.Controls.Add(this.btnMantenimientoProveedor);
             this.panelVentas.Controls.Add(this.btnMantenimientoClientes);
             this.panelVentas.Controls.Add(this.button7);
@@ -182,25 +182,26 @@
             this.panelVentas.Size = new System.Drawing.Size(229, 149);
             this.panelVentas.TabIndex = 4;
             // 
-            // iconButton1
+            // btnManetenimientoEmpleado
             // 
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.UserTie;
-            this.iconButton1.IconColor = System.Drawing.Color.PaleTurquoise;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 35;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 112);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.iconButton1.Size = new System.Drawing.Size(229, 32);
-            this.iconButton1.TabIndex = 10;
-            this.iconButton1.Text = "Registrar Empleado";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.btnManetenimientoEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManetenimientoEmpleado.FlatAppearance.BorderSize = 0;
+            this.btnManetenimientoEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManetenimientoEmpleado.ForeColor = System.Drawing.Color.White;
+            this.btnManetenimientoEmpleado.IconChar = FontAwesome.Sharp.IconChar.UserTie;
+            this.btnManetenimientoEmpleado.IconColor = System.Drawing.Color.PaleTurquoise;
+            this.btnManetenimientoEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnManetenimientoEmpleado.IconSize = 35;
+            this.btnManetenimientoEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManetenimientoEmpleado.Location = new System.Drawing.Point(0, 112);
+            this.btnManetenimientoEmpleado.Name = "btnManetenimientoEmpleado";
+            this.btnManetenimientoEmpleado.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnManetenimientoEmpleado.Size = new System.Drawing.Size(229, 32);
+            this.btnManetenimientoEmpleado.TabIndex = 10;
+            this.btnManetenimientoEmpleado.Text = "Registrar Empleado";
+            this.btnManetenimientoEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnManetenimientoEmpleado.UseVisualStyleBackColor = true;
+            this.btnManetenimientoEmpleado.Click += new System.EventHandler(this.btnManetenimientoEmpleado_Click);
             // 
             // btnMantenimientoProveedor
             // 
@@ -221,6 +222,7 @@
             this.btnMantenimientoProveedor.Text = "Registrar  Proveedor";
             this.btnMantenimientoProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMantenimientoProveedor.UseVisualStyleBackColor = true;
+            this.btnMantenimientoProveedor.Click += new System.EventHandler(this.btnMantenimientoProveedor_Click_1);
             // 
             // btnMantenimientoClientes
             // 
@@ -451,7 +453,7 @@
         private FontAwesome.Sharp.IconButton btnMantenimientoProductos;
         private FontAwesome.Sharp.IconButton btnMantenimientoCargo;
         private FontAwesome.Sharp.IconButton btnMantenimientoClientes;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnManetenimientoEmpleado;
         private FontAwesome.Sharp.IconButton btnMantenimientoProveedor;
     }
 }

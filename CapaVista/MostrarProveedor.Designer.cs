@@ -303,6 +303,7 @@
             this.txtNombreProveedor.Name = "txtNombreProveedor";
             this.txtNombreProveedor.Size = new System.Drawing.Size(180, 26);
             this.txtNombreProveedor.TabIndex = 37;
+            this.txtNombreProveedor.TextChanged += new System.EventHandler(this.txtNombreProveedor_TextChanged);
             // 
             // label2
             // 

@@ -21,16 +21,14 @@ namespace CapaVista
         public MostrarProveedor()
         {
             InitializeComponent();
-
-            //proveedorbindingSource.MoveLast();
-            //proveedorbindingSource.AddNew();
-            CargarProveedorEnDataGridView();
             llenarDataGridView();
+            CargarProveedorEnDataGridView();
         }
 
         private void llenarDataGridView()
         {
             _ProveedorLOG = new ProveedorLOG();
+
             if (checkEstadoActivo.Checked)
             {
                 dgvProveedor.DataSource = _ProveedorLOG.ObtenerProveedor();
@@ -59,18 +57,6 @@ namespace CapaVista
         {
             _ProveedorLOG = new ProveedorLOG();
             dgvProveedor.DataSource = _ProveedorLOG.ObtenerProveedor();
-        }
-
-   
-
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnAgregarProveedor_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario2();
         }
 
         private void dgvProveedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -103,14 +89,46 @@ namespace CapaVista
             }
         }
 
-        //private void checkEstadoActivo_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    llenarDataGridView();
-        //}
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
-        //private void checkEstadoInactivo_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    llenarDataGridView();
-        //}
+        private void btnAgregarProveedor_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario2();
+        }
+
+        private void txtNombreProveedor_TextChanged(object sender, EventArgs e)
+        {
+            FiltroPorNombre();
+        }
+
+        private void FiltroPorNombre()
+        {
+            _ProveedorLOG = new ProveedorLOG();
+            string nombre = txtNombreProveedor.Text;
+            if (checkEstadoActivo.Checked)
+            {
+
+                dgvProveedor.DataSource = _ProveedorLOG.FiltroNombre(nombre);
+
+            }
+            else if (checkEstadoInactivo.Checked)
+            {
+
+                dgvProveedor.DataSource = _ProveedorLOG.FiltroNombre(nombre, true);
+            }
+        }
+
+        private void checkEstadoActivo_CheckedChanged(object sender, EventArgs e)
+        {
+            llenarDataGridView();
+        }
+
+        private void checkEstadoInactivo_CheckedChanged(object sender, EventArgs e)
+        {
+            llenarDataGridView();
+        }
     }
 }

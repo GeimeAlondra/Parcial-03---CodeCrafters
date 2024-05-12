@@ -74,6 +74,7 @@ namespace CapaDatos
         {
             _db = new Contexto();
             int resultado = 0;
+
             var proveedor = _db.Proveedores.Find(Id);
             if (proveedor != null)
             {
@@ -81,7 +82,21 @@ namespace CapaDatos
                 _db.SaveChanges();
                 resultado = proveedor.ProveedorId;
             }
+
             return resultado;
+        }
+
+        public List<Proveedor> FiltroNombre(string nombre, bool inactivos)
+        {
+            _db = new Contexto();
+            if (inactivos)
+            {
+                return _db.Proveedores.Where(p => p.ProveedorNombre.Contains(nombre) && p.Estado == false).ToList();
+            }
+            else
+            {
+                return _db.Proveedores.Where(p => p.ProveedorNombre.Contains(nombre) && p.Estado == true).ToList();
+            }
         }
     }
 }
