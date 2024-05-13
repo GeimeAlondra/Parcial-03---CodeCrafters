@@ -164,6 +164,7 @@ namespace CapaVista
         private void btnGuardarProveedor_Click(object sender, EventArgs e)
         {
             GuardarProveedor();
+            OnLlenarDataGridViewRequested();
         }
 
         public event EventHandler LlenarDataGridViewRequested;

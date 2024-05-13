@@ -33,6 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MostrarEmpleado));
             this.dvgEmpleado = new System.Windows.Forms.DataGridView();
+            this.EmpleadoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpleadoNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpleadoApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpleadoDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoEmpleadoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Salario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnAgregarEmpleado = new FontAwesome.Sharp.IconButton();
@@ -45,17 +56,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.EmpleadoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmpleadoNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmpleadoApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmpleadoDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoEmpleadoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Salario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvgEmpleado)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -115,8 +115,101 @@
             this.dvgEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgEmpleado.Size = new System.Drawing.Size(594, 280);
             this.dvgEmpleado.TabIndex = 63;
-            this.dvgEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgEmpleado_CellContentClick);
+            this.dvgEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgEmpleado_CellContentClick_1);
             this.dvgEmpleado.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dvgEmpleado_CellFormatting);
+            // 
+            // EmpleadoId
+            // 
+            this.EmpleadoId.DataPropertyName = "EmpleadoId";
+            this.EmpleadoId.HeaderText = "Id";
+            this.EmpleadoId.Name = "EmpleadoId";
+            this.EmpleadoId.ReadOnly = true;
+            this.EmpleadoId.Width = 41;
+            // 
+            // EmpleadoNombre
+            // 
+            this.EmpleadoNombre.DataPropertyName = "EmpleadoNombre";
+            this.EmpleadoNombre.HeaderText = "Nombre";
+            this.EmpleadoNombre.Name = "EmpleadoNombre";
+            this.EmpleadoNombre.ReadOnly = true;
+            this.EmpleadoNombre.Width = 76;
+            // 
+            // EmpleadoApellido
+            // 
+            this.EmpleadoApellido.DataPropertyName = "EmpleadoApellido";
+            this.EmpleadoApellido.HeaderText = "Apellido";
+            this.EmpleadoApellido.Name = "EmpleadoApellido";
+            this.EmpleadoApellido.ReadOnly = true;
+            this.EmpleadoApellido.Width = 75;
+            // 
+            // EmpleadoDireccion
+            // 
+            this.EmpleadoDireccion.DataPropertyName = "EmpleadoDireccion";
+            this.EmpleadoDireccion.HeaderText = "Direccion";
+            this.EmpleadoDireccion.Name = "EmpleadoDireccion";
+            this.EmpleadoDireccion.ReadOnly = true;
+            this.EmpleadoDireccion.Width = 83;
+            // 
+            // TipoEmpleadoId
+            // 
+            this.TipoEmpleadoId.DataPropertyName = "TipoEmpleadoId";
+            this.TipoEmpleadoId.HeaderText = "Cargo";
+            this.TipoEmpleadoId.Name = "TipoEmpleadoId";
+            this.TipoEmpleadoId.ReadOnly = true;
+            this.TipoEmpleadoId.Visible = false;
+            this.TipoEmpleadoId.Width = 65;
+            // 
+            // TipoEmpleado
+            // 
+            this.TipoEmpleado.DataPropertyName = "TipoEmpleado";
+            this.TipoEmpleado.HeaderText = "Cargo";
+            this.TipoEmpleado.Name = "TipoEmpleado";
+            this.TipoEmpleado.ReadOnly = true;
+            this.TipoEmpleado.Width = 64;
+            // 
+            // FechaNacimiento
+            // 
+            this.FechaNacimiento.DataPropertyName = "EmpleadoFechaNacimiento";
+            this.FechaNacimiento.HeaderText = "Fecha Nacimiento";
+            this.FechaNacimiento.Name = "FechaNacimiento";
+            this.FechaNacimiento.ReadOnly = true;
+            this.FechaNacimiento.Width = 131;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Width = 44;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Eliminar.Width = 77;
+            // 
+            // Salario
+            // 
+            this.Salario.DataPropertyName = "EmpleadoSalario";
+            this.Salario.HeaderText = "Salario";
+            this.Salario.Name = "Salario";
+            this.Salario.ReadOnly = true;
+            this.Salario.Visible = false;
+            this.Salario.Width = 71;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Visible = false;
+            this.Estado.Width = 70;
             // 
             // dataGridViewImageColumn1
             // 
@@ -301,99 +394,6 @@
             this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre:";
-            // 
-            // EmpleadoId
-            // 
-            this.EmpleadoId.DataPropertyName = "EmpleadoId";
-            this.EmpleadoId.HeaderText = "Id";
-            this.EmpleadoId.Name = "EmpleadoId";
-            this.EmpleadoId.ReadOnly = true;
-            this.EmpleadoId.Width = 41;
-            // 
-            // EmpleadoNombre
-            // 
-            this.EmpleadoNombre.DataPropertyName = "EmpleadoNombre";
-            this.EmpleadoNombre.HeaderText = "Nombre";
-            this.EmpleadoNombre.Name = "EmpleadoNombre";
-            this.EmpleadoNombre.ReadOnly = true;
-            this.EmpleadoNombre.Width = 76;
-            // 
-            // EmpleadoApellido
-            // 
-            this.EmpleadoApellido.DataPropertyName = "EmpleadoApellido";
-            this.EmpleadoApellido.HeaderText = "Apellido";
-            this.EmpleadoApellido.Name = "EmpleadoApellido";
-            this.EmpleadoApellido.ReadOnly = true;
-            this.EmpleadoApellido.Width = 75;
-            // 
-            // EmpleadoDireccion
-            // 
-            this.EmpleadoDireccion.DataPropertyName = "EmpleadoDireccion";
-            this.EmpleadoDireccion.HeaderText = "Direccion";
-            this.EmpleadoDireccion.Name = "EmpleadoDireccion";
-            this.EmpleadoDireccion.ReadOnly = true;
-            this.EmpleadoDireccion.Width = 83;
-            // 
-            // TipoEmpleadoId
-            // 
-            this.TipoEmpleadoId.DataPropertyName = "TipoEmpleadoId";
-            this.TipoEmpleadoId.HeaderText = "Cargo";
-            this.TipoEmpleadoId.Name = "TipoEmpleadoId";
-            this.TipoEmpleadoId.ReadOnly = true;
-            this.TipoEmpleadoId.Visible = false;
-            this.TipoEmpleadoId.Width = 64;
-            // 
-            // TipoEmpleado
-            // 
-            this.TipoEmpleado.DataPropertyName = "TipoEmpleado";
-            this.TipoEmpleado.HeaderText = "Cargo";
-            this.TipoEmpleado.Name = "TipoEmpleado";
-            this.TipoEmpleado.ReadOnly = true;
-            this.TipoEmpleado.Width = 64;
-            // 
-            // FechaNacimiento
-            // 
-            this.FechaNacimiento.DataPropertyName = "EmpleadoFechaNacimiento";
-            this.FechaNacimiento.HeaderText = "Fecha Nacimiento";
-            this.FechaNacimiento.Name = "FechaNacimiento";
-            this.FechaNacimiento.ReadOnly = true;
-            this.FechaNacimiento.Width = 131;
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            this.Editar.Width = 44;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Eliminar.Width = 77;
-            // 
-            // Salario
-            // 
-            this.Salario.DataPropertyName = "EmpleadoSalario";
-            this.Salario.HeaderText = "Salario";
-            this.Salario.Name = "Salario";
-            this.Salario.ReadOnly = true;
-            this.Salario.Visible = false;
-            this.Salario.Width = 70;
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "Estado";
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Visible = false;
-            this.Estado.Width = 69;
             // 
             // MostrarEmpleado
             // 

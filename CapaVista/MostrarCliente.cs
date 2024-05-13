@@ -56,7 +56,8 @@ namespace CapaVista
 
         private void LlenarDataGridView()
         {
-            throw new NotImplementedException();
+            llenarDataGridView();
+            
         }
 
         private void CargarClienteEnDataGridView()
@@ -98,6 +99,7 @@ namespace CapaVista
 
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
+            _id = 0;
             AbrirFormulario2();
         }
 

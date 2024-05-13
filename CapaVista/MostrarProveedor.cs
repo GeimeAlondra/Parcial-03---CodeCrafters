@@ -50,7 +50,7 @@ namespace CapaVista
 
         private void LlenarDataGridView()
         {
-            throw new NotImplementedException();
+            llenarDataGridView();
         }
 
         private void CargarProveedorEnDataGridView()
@@ -96,6 +96,7 @@ namespace CapaVista
 
         private void btnAgregarProveedor_Click(object sender, EventArgs e)
         {
+            _id = 0;
             AbrirFormulario2();
         }
 

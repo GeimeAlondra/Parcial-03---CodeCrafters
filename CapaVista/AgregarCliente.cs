@@ -161,11 +161,13 @@ namespace CapaVista
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
+            
         }
 
         private void btnGuardarCliente_Click(object sender, EventArgs e)
         {
             GuardarCliente();
+            OnLlenarDataGridViewRequested();
         }
     }
 }

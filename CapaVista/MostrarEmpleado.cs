@@ -51,37 +51,12 @@ namespace CapaVista
 
         private void LlenarDataGridView()
         {
-            throw new NotImplementedException();
+            llenarDataGridView();
         }
 
-        private void dvgEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dvgEmpleado.Columns[e.ColumnIndex].Name.Equals("Editar"))
-            {
-                _id = Convert.ToInt32(dvgEmpleado.CurrentRow.Cells["EmpleadoId"].Value.ToString());
-                //Enviamos los datos al form
-                AbrirFormulario2();
-                llenarDataGridView();
-            }
-            else if (dvgEmpleado.Columns[e.ColumnIndex].Name.Equals("Eliminar"))
-            {
-                _EmpleadoLOG = new EmpleadoLOG();
-                int id = Convert.ToInt32(dvgEmpleado.CurrentRow.Cells["EmpleadoId"].Value.ToString());
-                int resultado = _EmpleadoLOG.EliminarEmpleado(id);
-                if (resultado > 0)
-                {
-                    MessageBox.Show("Empleado Eliminado con exito", "Tienda | Registro Empleado",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    llenarDataGridView();
-                }
-                else
-                {
-                    MessageBox.Show("No se logro Eliminar el Empleado", "Tienda | Registro Empleado",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
+
+
 
         private void checkEstadoActivo_CheckedChanged(object sender, EventArgs e)
         {
@@ -170,7 +145,39 @@ namespace CapaVista
 
         private void btnAgregarEmpleado_Click(object sender, EventArgs e)
         {
+            _id = 0;
             AbrirFormulario2();
+        }
+
+       
+
+        private void dvgEmpleado_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dvgEmpleado.Columns[e.ColumnIndex].Name.Equals("Editar"))
+            {
+                _id = Convert.ToInt32(dvgEmpleado.CurrentRow.Cells["EmpleadoId"].Value.ToString());
+                //Enviamos los datos al form
+                AbrirFormulario2();
+                llenarDataGridView();
+            }
+            else if (dvgEmpleado.Columns[e.ColumnIndex].Name.Equals("Eliminar"))
+            {
+                _EmpleadoLOG = new EmpleadoLOG();
+                int id = Convert.ToInt32(dvgEmpleado.CurrentRow.Cells["EmpleadoId"].Value.ToString());
+                int resultado = _EmpleadoLOG.EliminarEmpleado(id);
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Empleado Eliminado con exito", "Tienda | Registro Empleado",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    llenarDataGridView();
+                }
+                else
+                {
+                    MessageBox.Show("No se logro Eliminar el Empleado", "Tienda | Registro Empleado",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

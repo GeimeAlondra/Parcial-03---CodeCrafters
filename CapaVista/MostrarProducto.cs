@@ -17,7 +17,7 @@ namespace CapaVista
     public partial class MostrarProducto : Form
     { 
         int _id = 0;
-        private DataTable dataTable;
+        //private DataTable dataTable;
         ProductoLOG _ProductoLOG;
         public MostrarProducto()
         {

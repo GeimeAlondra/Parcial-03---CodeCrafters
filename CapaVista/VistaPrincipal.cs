@@ -63,6 +63,10 @@ namespace CapaVista
         }
         #region Mantenimiento
         //..Panel Mantenimiento ****
+
+        //Mostrar subMenu
+        //showSubMenu(panelMantenimientos);
+
         private void btnPrueba_Click(object sender, EventArgs e)
         {
             //Mostrar subMenu

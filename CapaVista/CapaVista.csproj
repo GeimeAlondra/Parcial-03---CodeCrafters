@@ -280,6 +280,15 @@
   <ItemGroup>
     <None Include="Resources\categoria.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\catalogar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\catalogar %283%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -29,14 +29,13 @@ namespace CapaVista
                 //Cambiar el boton
                 btnGuardarEmpleado.Text = "Actualizar";
                 btnGuardarEmpleado.BackColor = Color.FromArgb(82, 190, 128);
-                
                 ObtenerTipoEmpleados();
                 CargarElementos(_id);
             }
             else
             {
-                LimpiarCampos();
                 ObtenerTipoEmpleados();
+                LimpiarCampos();
                 empleadobindingSource.MoveLast();
                 empleadobindingSource.AddNew();
             }
@@ -70,6 +69,7 @@ namespace CapaVista
         {
 
             GuardarEmpleado();
+            OnLlenarDataGridViewRequested();
             LimpiarCampos();
         }
 
@@ -147,6 +147,7 @@ namespace CapaVista
                     }
 
                 }
+
             }
             catch (Exception ex)
             {
@@ -157,11 +158,13 @@ namespace CapaVista
 
         private void LimpiarCampos()
         {
+           
+            dtpFechaNacimiento.ResetText();
             txtNombreEmpleado.Clear();
             txtApellidoEmpleado.Clear();
-            dtpFechaNacimiento.ResetText();
             txtDireccionEmpleado.Clear();
             txtSalarioEmpleado.Clear();
+            cbCargoEmpleado.SelectedIndex = 0;
         }
 
         private bool ValidarCampos()
@@ -187,8 +190,6 @@ namespace CapaVista
                 MessageBox.Show("Por favor, seleccione una fecha de nacimiento válida.");
                 return false;
             }
-
-            
 
             if (string.IsNullOrEmpty(txtDireccionEmpleado.Text))
             {
@@ -225,6 +226,7 @@ namespace CapaVista
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
+            _id= 0;
            
         }
     }
