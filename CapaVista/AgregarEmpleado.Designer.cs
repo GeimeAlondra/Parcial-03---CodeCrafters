@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.empleadobindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbCargoEmpleado = new System.Windows.Forms.ComboBox();
-            this.txtFechaNacEmpleado = new System.Windows.Forms.TextBox();
             this.txtSalarioEmpleado = new System.Windows.Forms.TextBox();
             this.txtDireccionEmpleado = new System.Windows.Forms.TextBox();
             this.txtApellidoEmpleado = new System.Windows.Forms.TextBox();
@@ -48,12 +46,10 @@
             this.btnAgregarCargo = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.checkEstadoEmpleado = new System.Windows.Forms.CheckBox();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.empleadobindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.empleadobindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // empleadobindingSource
-            // 
-            this.empleadobindingSource.DataSource = typeof(CapaEntidades.Empleado);
             // 
             // cbCargoEmpleado
             // 
@@ -65,16 +61,6 @@
             this.cbCargoEmpleado.Name = "cbCargoEmpleado";
             this.cbCargoEmpleado.Size = new System.Drawing.Size(222, 21);
             this.cbCargoEmpleado.TabIndex = 58;
-            // 
-            // txtFechaNacEmpleado
-            // 
-            this.txtFechaNacEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.txtFechaNacEmpleado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadobindingSource, "EmpleadoFechaNacimiento", true));
-            this.txtFechaNacEmpleado.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtFechaNacEmpleado.Location = new System.Drawing.Point(263, 184);
-            this.txtFechaNacEmpleado.Name = "txtFechaNacEmpleado";
-            this.txtFechaNacEmpleado.Size = new System.Drawing.Size(222, 20);
-            this.txtFechaNacEmpleado.TabIndex = 57;
             // 
             // txtSalarioEmpleado
             // 
@@ -216,6 +202,7 @@
             this.btnRegresar.Text = " &Regresar";
             this.btnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // btnGuardarEmpleado
             // 
@@ -278,18 +265,40 @@
             this.checkEstadoEmpleado.Text = "Activo";
             this.checkEstadoEmpleado.UseVisualStyleBackColor = true;
             // 
+            // dtpFechaNacimiento
+            // 
+            this.dtpFechaNacimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaNacimiento.CalendarForeColor = System.Drawing.SystemColors.Highlight;
+            this.dtpFechaNacimiento.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.dtpFechaNacimiento.Checked = false;
+            this.dtpFechaNacimiento.CustomFormat = "";
+            this.dtpFechaNacimiento.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadobindingSource, "EmpleadoFechaNacimiento", true));
+            this.dtpFechaNacimiento.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.empleadobindingSource, "EmpleadoFechaNacimiento", true));
+            this.dtpFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(263, 184);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(222, 21);
+            this.dtpFechaNacimiento.TabIndex = 67;
+            this.dtpFechaNacimiento.Value = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            // 
+            // empleadobindingSource
+            // 
+            this.empleadobindingSource.DataSource = typeof(CapaEntidades.Empleado);
+            // 
             // AgregarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(715, 509);
+            this.Controls.Add(this.dtpFechaNacimiento);
             this.Controls.Add(this.checkEstadoEmpleado);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnAgregarCargo);
             this.Controls.Add(this.btnRegresar);
             this.Controls.Add(this.cbCargoEmpleado);
-            this.Controls.Add(this.txtFechaNacEmpleado);
             this.Controls.Add(this.txtSalarioEmpleado);
             this.Controls.Add(this.txtDireccionEmpleado);
             this.Controls.Add(this.txtApellidoEmpleado);
@@ -313,7 +322,6 @@
         #endregion
         private FontAwesome.Sharp.IconButton btnRegresar;
         private System.Windows.Forms.ComboBox cbCargoEmpleado;
-        private System.Windows.Forms.TextBox txtFechaNacEmpleado;
         private System.Windows.Forms.TextBox txtSalarioEmpleado;
         private System.Windows.Forms.TextBox txtDireccionEmpleado;
         private System.Windows.Forms.TextBox txtApellidoEmpleado;
@@ -330,5 +338,6 @@
         private System.Windows.Forms.BindingSource empleadobindingSource;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox checkEstadoEmpleado;
+        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
     }
 }

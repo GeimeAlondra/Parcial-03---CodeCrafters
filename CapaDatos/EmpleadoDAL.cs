@@ -1,6 +1,7 @@
 ﻿using CapaEntidades;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,16 +46,18 @@ namespace CapaDatos
             if (inactivos)
             {
                 return _db.Empleados
-                    //.Include(e => e.TipoEmpleado)
-                    .Where(e => e.Estado == false).ToList();
+                    .Include(e => e.TipoEmpleado)
+                    .Where(e => e.Estado == false ).ToList();
             }
             else
             {
                 return _db.Empleados
-                    //.Include(e => e.TipoEmpleado)
+                    .Include(e => e.TipoEmpleado)
                     .Where(e => e.Estado == true).ToList();
             }
         }
+
+      
 
         // Eliminar Empleado
         public int Eliminar(int Id)

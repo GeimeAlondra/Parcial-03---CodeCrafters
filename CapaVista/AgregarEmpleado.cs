@@ -5,9 +5,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace CapaVista
@@ -33,9 +35,10 @@ namespace CapaVista
             }
             else
             {
+                LimpiarCampos();
+                ObtenerTipoEmpleados();
                 empleadobindingSource.MoveLast();
                 empleadobindingSource.AddNew();
-                ObtenerTipoEmpleados();
             }
         }
 
@@ -65,7 +68,9 @@ namespace CapaVista
 
         private void btnGuardarEmpleado_Click(object sender, EventArgs e)
         {
+
             GuardarEmpleado();
+            LimpiarCampos();
         }
 
         private void GuardarEmpleado()
@@ -88,11 +93,7 @@ namespace CapaVista
                     resultado = _EmpleadoLOG.ActualizarEmpleado(empleado, _id, true);
                     if (resultado > 0)
                     {
-                        txtNombreEmpleado.Clear();
-                        txtApellidoEmpleado.Clear();
-                        txtFechaNacEmpleado.Clear();
-                        txtDireccionEmpleado.Clear();
-                        txtSalarioEmpleado.Clear();
+                        LimpiarCampos();
                         cbCargoEmpleado.SelectedItem = null;
                         MessageBox.Show("Empleado Actualizado con exito", "Tienda | Registro Empleado",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -107,6 +108,7 @@ namespace CapaVista
                 }
                 else
                 {
+
                     if (!checkEstadoEmpleado.Checked)
                     {
                         var dialogo = MessageBox.Show("¿Esta seguro que desea guardar el empleado inactivo", "Tienda | Registro Empleados",
@@ -118,21 +120,22 @@ namespace CapaVista
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                             return;
                         }
-                    }
+                    } 
+
+                   
+
+
                     empleadobindingSource.EndEdit();
 
                     Empleado empleado;
                     empleado = (Empleado)empleadobindingSource.Current;
+                    empleado.EmpleadoFechaNacimiento = dtpFechaNacimiento.Value.ToShortDateString();
 
                     resultado = _EmpleadoLOG.GuardarEmpleado(empleado);
 
                     if (resultado > 0)
                     {
-                        txtNombreEmpleado.Clear();
-                        txtApellidoEmpleado.Clear();
-                        txtFechaNacEmpleado.Clear();
-                        txtDireccionEmpleado.Clear();
-                        txtSalarioEmpleado.Clear();
+                        LimpiarCampos();
                         MessageBox.Show("Empleado agregado con exito", "Tienda | Registro Empleado",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
@@ -150,6 +153,15 @@ namespace CapaVista
                 MessageBox.Show($"Ocurrio un Error: {ex}", "Tienda | Registro Empleados",
                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void LimpiarCampos()
+        {
+            txtNombreEmpleado.Clear();
+            txtApellidoEmpleado.Clear();
+            dtpFechaNacimiento.ResetText();
+            txtDireccionEmpleado.Clear();
+            txtSalarioEmpleado.Clear();
         }
 
         private bool ValidarCampos()
@@ -170,12 +182,13 @@ namespace CapaVista
                 camposValidos = false;
             }
 
-            if (string.IsNullOrEmpty(txtFechaNacEmpleado.Text))
+            if (dtpFechaNacimiento.Value.ToString() == "01/01/1753")
             {
-                MessageBox.Show("Se requiere la fecha de nacimiento del Empleado \\n\\n !Este Campo es Obligatorio!", "Tienda | Registro Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtFechaNacEmpleado.Focus();
-                camposValidos = false;
+                MessageBox.Show("Por favor, seleccione una fecha de nacimiento válida.");
+                return false;
             }
+
+            
 
             if (string.IsNullOrEmpty(txtDireccionEmpleado.Text))
             {
@@ -207,6 +220,12 @@ namespace CapaVista
             MostrarTipoEmpleado objMostraCat = new MostrarTipoEmpleado();
             objMostraCat.ShowDialog();
             ObtenerTipoEmpleados();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+           
         }
     }
 

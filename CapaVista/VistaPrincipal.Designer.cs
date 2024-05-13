@@ -104,11 +104,10 @@
             this.btnMantenimientoCargo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMantenimientoCargo.Location = new System.Drawing.Point(0, 80);
             this.btnMantenimientoCargo.Name = "btnMantenimientoCargo";
-            this.btnMantenimientoCargo.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnMantenimientoCargo.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
             this.btnMantenimientoCargo.Size = new System.Drawing.Size(229, 40);
             this.btnMantenimientoCargo.TabIndex = 8;
             this.btnMantenimientoCargo.Text = "Registrar  Cargo";
-            this.btnMantenimientoCargo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMantenimientoCargo.UseVisualStyleBackColor = true;
             this.btnMantenimientoCargo.Click += new System.EventHandler(this.btnMantenimientoCargo_Click);
             // 
@@ -129,7 +128,6 @@
             this.btnMantenimientoMarca.Size = new System.Drawing.Size(229, 40);
             this.btnMantenimientoMarca.TabIndex = 6;
             this.btnMantenimientoMarca.Text = "Registrar  Marcas";
-            this.btnMantenimientoMarca.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMantenimientoMarca.UseVisualStyleBackColor = true;
             this.btnMantenimientoMarca.Click += new System.EventHandler(this.btnMantenimientoMarca_Click);
             // 
@@ -149,7 +147,6 @@
             this.btnMantenimientoCat.Size = new System.Drawing.Size(229, 40);
             this.btnMantenimientoCat.TabIndex = 5;
             this.btnMantenimientoCat.Text = "Registrar Categorias";
-            this.btnMantenimientoCat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMantenimientoCat.UseVisualStyleBackColor = true;
             this.btnMantenimientoCat.Click += new System.EventHandler(this.btnMantenimientoCat_Click);
             // 
@@ -165,7 +162,7 @@
             this.btnPanelGeneral.Size = new System.Drawing.Size(229, 39);
             this.btnPanelGeneral.TabIndex = 5;
             this.btnPanelGeneral.Text = "Catalogos";
-            this.btnPanelGeneral.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPanelGeneral.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPanelGeneral.UseVisualStyleBackColor = true;
             this.btnPanelGeneral.Click += new System.EventHandler(this.btnPanelGeneral_Click);
             // 
@@ -199,7 +196,6 @@
             this.btnManetenimientoEmpleado.Size = new System.Drawing.Size(229, 32);
             this.btnManetenimientoEmpleado.TabIndex = 10;
             this.btnManetenimientoEmpleado.Text = "Registrar Empleado";
-            this.btnManetenimientoEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnManetenimientoEmpleado.UseVisualStyleBackColor = true;
             this.btnManetenimientoEmpleado.Click += new System.EventHandler(this.btnManetenimientoEmpleado_Click);
             // 
@@ -220,7 +216,6 @@
             this.btnMantenimientoProveedor.Size = new System.Drawing.Size(229, 32);
             this.btnMantenimientoProveedor.TabIndex = 9;
             this.btnMantenimientoProveedor.Text = "Registrar  Proveedor";
-            this.btnMantenimientoProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMantenimientoProveedor.UseVisualStyleBackColor = true;
             this.btnMantenimientoProveedor.Click += new System.EventHandler(this.btnMantenimientoProveedor_Click_1);
             // 
@@ -238,10 +233,10 @@
             this.btnMantenimientoClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMantenimientoClientes.Location = new System.Drawing.Point(0, 40);
             this.btnMantenimientoClientes.Name = "btnMantenimientoClientes";
+            this.btnMantenimientoClientes.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
             this.btnMantenimientoClientes.Size = new System.Drawing.Size(229, 40);
             this.btnMantenimientoClientes.TabIndex = 7;
             this.btnMantenimientoClientes.Text = "Registrar  Cliente";
-            this.btnMantenimientoClientes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMantenimientoClientes.UseVisualStyleBackColor = true;
             this.btnMantenimientoClientes.Click += new System.EventHandler(this.btnMantenimientoClientes_Click);
             // 
@@ -274,7 +269,7 @@
             this.btnPrueba2.Size = new System.Drawing.Size(229, 37);
             this.btnPrueba2.TabIndex = 3;
             this.btnPrueba2.Text = "Ventas";
-            this.btnPrueba2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrueba2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrueba2.UseVisualStyleBackColor = true;
             this.btnPrueba2.Click += new System.EventHandler(this.btnPrueba2_Click);
             // 
@@ -325,7 +320,7 @@
             this.btnPrueba.Size = new System.Drawing.Size(229, 43);
             this.btnPrueba.TabIndex = 1;
             this.btnPrueba.Text = "Productos";
-            this.btnPrueba.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrueba.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrueba.UseVisualStyleBackColor = true;
             this.btnPrueba.Click += new System.EventHandler(this.btnPrueba_Click);
             // 

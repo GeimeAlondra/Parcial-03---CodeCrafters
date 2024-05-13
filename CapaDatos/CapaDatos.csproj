@@ -161,6 +161,10 @@
     <Compile Include="Migrations\202405100138086_Estados.designer.cs">
       <DependentUpon>202405100138086_Estados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202405130612329_modificacion_Fecha.cs" />
+    <Compile Include="Migrations\202405130612329_modificacion_Fecha.designer.cs">
+      <DependentUpon>202405130612329_modificacion_Fecha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -184,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202405100138086_Estados.resx">
       <DependentUpon>202405100138086_Estados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405130612329_modificacion_Fecha.resx">
+      <DependentUpon>202405130612329_modificacion_Fecha.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

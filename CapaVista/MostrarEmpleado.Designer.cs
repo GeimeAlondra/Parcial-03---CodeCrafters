@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MostrarEmpleado));
             this.dvgEmpleado = new System.Windows.Forms.DataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -51,8 +51,11 @@
             this.EmpleadoDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoEmpleadoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Salario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvgEmpleado)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -64,19 +67,19 @@
             this.dvgEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dvgEmpleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dvgEmpleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dvgEmpleado.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dvgEmpleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dvgEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dvgEmpleado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dvgEmpleado.ColumnHeadersHeight = 22;
             this.dvgEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dvgEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -86,28 +89,31 @@
             this.EmpleadoDireccion,
             this.TipoEmpleadoId,
             this.TipoEmpleado,
+            this.FechaNacimiento,
             this.Editar,
-            this.Eliminar});
+            this.Eliminar,
+            this.Salario,
+            this.Estado});
             this.dvgEmpleado.EnableHeadersVisualStyles = false;
             this.dvgEmpleado.GridColor = System.Drawing.Color.SteelBlue;
-            this.dvgEmpleado.Location = new System.Drawing.Point(21, 189);
+            this.dvgEmpleado.Location = new System.Drawing.Point(64, 192);
             this.dvgEmpleado.Name = "dvgEmpleado";
             this.dvgEmpleado.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgEmpleado.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgEmpleado.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dvgEmpleado.RowHeadersVisible = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            this.dvgEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            this.dvgEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dvgEmpleado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dvgEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgEmpleado.Size = new System.Drawing.Size(678, 280);
+            this.dvgEmpleado.Size = new System.Drawing.Size(594, 280);
             this.dvgEmpleado.TabIndex = 63;
             this.dvgEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgEmpleado_CellContentClick);
             this.dvgEmpleado.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dvgEmpleado_CellFormatting);
@@ -302,6 +308,7 @@
             this.EmpleadoId.HeaderText = "Id";
             this.EmpleadoId.Name = "EmpleadoId";
             this.EmpleadoId.ReadOnly = true;
+            this.EmpleadoId.Width = 41;
             // 
             // EmpleadoNombre
             // 
@@ -309,6 +316,7 @@
             this.EmpleadoNombre.HeaderText = "Nombre";
             this.EmpleadoNombre.Name = "EmpleadoNombre";
             this.EmpleadoNombre.ReadOnly = true;
+            this.EmpleadoNombre.Width = 76;
             // 
             // EmpleadoApellido
             // 
@@ -316,6 +324,7 @@
             this.EmpleadoApellido.HeaderText = "Apellido";
             this.EmpleadoApellido.Name = "EmpleadoApellido";
             this.EmpleadoApellido.ReadOnly = true;
+            this.EmpleadoApellido.Width = 75;
             // 
             // EmpleadoDireccion
             // 
@@ -323,6 +332,7 @@
             this.EmpleadoDireccion.HeaderText = "Direccion";
             this.EmpleadoDireccion.Name = "EmpleadoDireccion";
             this.EmpleadoDireccion.ReadOnly = true;
+            this.EmpleadoDireccion.Width = 83;
             // 
             // TipoEmpleadoId
             // 
@@ -331,6 +341,7 @@
             this.TipoEmpleadoId.Name = "TipoEmpleadoId";
             this.TipoEmpleadoId.ReadOnly = true;
             this.TipoEmpleadoId.Visible = false;
+            this.TipoEmpleadoId.Width = 64;
             // 
             // TipoEmpleado
             // 
@@ -338,6 +349,15 @@
             this.TipoEmpleado.HeaderText = "Cargo";
             this.TipoEmpleado.Name = "TipoEmpleado";
             this.TipoEmpleado.ReadOnly = true;
+            this.TipoEmpleado.Width = 64;
+            // 
+            // FechaNacimiento
+            // 
+            this.FechaNacimiento.DataPropertyName = "EmpleadoFechaNacimiento";
+            this.FechaNacimiento.HeaderText = "Fecha Nacimiento";
+            this.FechaNacimiento.Name = "FechaNacimiento";
+            this.FechaNacimiento.ReadOnly = true;
+            this.FechaNacimiento.Width = 131;
             // 
             // Editar
             // 
@@ -345,6 +365,7 @@
             this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
             this.Editar.Name = "Editar";
             this.Editar.ReadOnly = true;
+            this.Editar.Width = 44;
             // 
             // Eliminar
             // 
@@ -354,11 +375,31 @@
             this.Eliminar.ReadOnly = true;
             this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Eliminar.Width = 77;
+            // 
+            // Salario
+            // 
+            this.Salario.DataPropertyName = "EmpleadoSalario";
+            this.Salario.HeaderText = "Salario";
+            this.Salario.Name = "Salario";
+            this.Salario.ReadOnly = true;
+            this.Salario.Visible = false;
+            this.Salario.Width = 70;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Visible = false;
+            this.Estado.Width = 69;
             // 
             // MostrarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(722, 561);
             this.Controls.Add(this.groupBox1);
@@ -395,7 +436,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn EmpleadoDireccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoEmpleadoId;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaNacimiento;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Salario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

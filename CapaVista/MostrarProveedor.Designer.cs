@@ -277,6 +277,7 @@
             this.checkEstadoActivo.TabStop = true;
             this.checkEstadoActivo.Text = "Activo";
             this.checkEstadoActivo.UseVisualStyleBackColor = true;
+            this.checkEstadoActivo.CheckedChanged += new System.EventHandler(this.checkEstadoActivo_CheckedChanged_1);
             // 
             // label6
             // 

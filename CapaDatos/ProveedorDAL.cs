@@ -39,14 +39,7 @@ namespace CapaDatos
             return resultado;
         }
 
-        // Ver Proveedor
-        public List<Proveedor> Leer()
-        {
-            _db = new Contexto();
-
-            return _db.Proveedores.ToList();
-        }
-
+     
         // Ver Proveedores por Estado
         public List<Proveedor> Leer(bool inactivos = false)
         {
@@ -78,7 +71,7 @@ namespace CapaDatos
             var proveedor = _db.Proveedores.Find(Id);
             if (proveedor != null)
             {
-                proveedor.Estado = true;
+                proveedor.Estado = false;
                 _db.SaveChanges();
                 resultado = proveedor.ProveedorId;
             }
