@@ -146,7 +146,7 @@
             this.lblDia.AutoSize = true;
             this.lblDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDia.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblDia.Location = new System.Drawing.Point(226, 353);
+            this.lblDia.Location = new System.Drawing.Point(225, 387);
             this.lblDia.Name = "lblDia";
             this.lblDia.Size = new System.Drawing.Size(315, 37);
             this.lblDia.TabIndex = 2;
@@ -158,7 +158,7 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblHora.Location = new System.Drawing.Point(255, 262);
+            this.lblHora.Location = new System.Drawing.Point(257, 295);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(255, 73);
             this.lblHora.TabIndex = 1;
@@ -173,9 +173,9 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(259, 120);
+            this.pictureBox1.Location = new System.Drawing.Point(205, 77);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(246, 118);
+            this.pictureBox1.Size = new System.Drawing.Size(335, 168);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
