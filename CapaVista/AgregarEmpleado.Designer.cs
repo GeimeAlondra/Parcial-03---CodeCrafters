@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.cbCargoEmpleado = new System.Windows.Forms.ComboBox();
+            this.empleadobindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtSalarioEmpleado = new System.Windows.Forms.TextBox();
             this.txtDireccionEmpleado = new System.Windows.Forms.TextBox();
             this.txtApellidoEmpleado = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.checkEstadoEmpleado = new System.Windows.Forms.CheckBox();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.empleadobindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.empleadobindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +62,10 @@
             this.cbCargoEmpleado.Size = new System.Drawing.Size(222, 21);
             this.cbCargoEmpleado.TabIndex = 58;
             // 
+            // empleadobindingSource
+            // 
+            this.empleadobindingSource.DataSource = typeof(CapaEntidades.Empleado);
+            // 
             // txtSalarioEmpleado
             // 
             this.txtSalarioEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
@@ -71,6 +75,7 @@
             this.txtSalarioEmpleado.Name = "txtSalarioEmpleado";
             this.txtSalarioEmpleado.Size = new System.Drawing.Size(222, 20);
             this.txtSalarioEmpleado.TabIndex = 56;
+            this.txtSalarioEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalarioEmpleado_KeyPress);
             // 
             // txtDireccionEmpleado
             // 
@@ -82,6 +87,7 @@
             this.txtDireccionEmpleado.Name = "txtDireccionEmpleado";
             this.txtDireccionEmpleado.Size = new System.Drawing.Size(222, 82);
             this.txtDireccionEmpleado.TabIndex = 55;
+            this.txtDireccionEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccionEmpleado_KeyPress);
             // 
             // txtApellidoEmpleado
             // 
@@ -92,6 +98,7 @@
             this.txtApellidoEmpleado.Name = "txtApellidoEmpleado";
             this.txtApellidoEmpleado.Size = new System.Drawing.Size(221, 20);
             this.txtApellidoEmpleado.TabIndex = 54;
+            this.txtApellidoEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoEmpleado_KeyPress);
             // 
             // txtNombreEmpleado
             // 
@@ -102,6 +109,7 @@
             this.txtNombreEmpleado.Name = "txtNombreEmpleado";
             this.txtNombreEmpleado.Size = new System.Drawing.Size(221, 20);
             this.txtNombreEmpleado.TabIndex = 53;
+            this.txtNombreEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreEmpleado_KeyPress);
             // 
             // label7
             // 
@@ -281,10 +289,6 @@
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(222, 21);
             this.dtpFechaNacimiento.TabIndex = 67;
             this.dtpFechaNacimiento.Value = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            // 
-            // empleadobindingSource
-            // 
-            this.empleadobindingSource.DataSource = typeof(CapaEntidades.Empleado);
             // 
             // AgregarEmpleado
             // 

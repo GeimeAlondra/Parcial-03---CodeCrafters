@@ -206,6 +206,7 @@
             this.btnRegresar.Text = " &Regresar";
             this.btnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click_1);
             // 
             // btnAgregarProveedor
             // 
@@ -305,6 +306,7 @@
             this.txtNombreProveedor.Size = new System.Drawing.Size(180, 26);
             this.txtNombreProveedor.TabIndex = 37;
             this.txtNombreProveedor.TextChanged += new System.EventHandler(this.txtNombreProveedor_TextChanged);
+            this.txtNombreProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreProveedor_KeyPress);
             // 
             // label2
             // 

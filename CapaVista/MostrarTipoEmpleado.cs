@@ -174,5 +174,13 @@ namespace CapaVista
                 EliminarTipoEmpleado(_id);
             }
         }
+
+        private void txtCargo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

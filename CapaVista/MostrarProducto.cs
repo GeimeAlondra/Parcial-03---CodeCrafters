@@ -276,5 +276,18 @@ namespace CapaVista
             cbCategoriaProducto.SelectedIndex = 0;
             cbMarcaProducto.SelectedIndex = 0;
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtNombreProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

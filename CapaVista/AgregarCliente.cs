@@ -4,12 +4,15 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace CapaVista
 {
@@ -75,6 +78,7 @@ namespace CapaVista
                 MessageBox.Show("Se requiere la direccion del Cliente \\n\\n !!Este Campo es Obligatorio!!", "Tienda | Registro Cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtDireccionCliente.Focus();
                 camposValidos = false;
+
             }
 
             if (string.IsNullOrEmpty(txtCorreoCliente.Text))
@@ -126,6 +130,19 @@ namespace CapaVista
                 }
                 else
                 {
+                    if (!checkEstadoCliente.Checked)
+                    {
+                        var dialogo = MessageBox.Show("¿Esta seguro que desea guardar el cliente inactivo", "Tienda | Registro Clientes",
+                                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                        if (dialogo != DialogResult.Yes)
+                        {
+                            MessageBox.Show("Seleccione el cuadro Estado como activo", "Tienda | Registro Clientes",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+                    }
+
                     clientebindingSource.EndEdit();
 
                     Cliente cliente;
@@ -168,6 +185,66 @@ namespace CapaVista
         {
             GuardarCliente();
             OnLlenarDataGridViewRequested();
+        }
+
+        private void txtNombreCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtApellidoCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDireccionCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Caracteres permitidos: letras, números, espacios, comas, puntos y guiones
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) &&
+                !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.' && e.KeyChar != '-')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTelefonoCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCorreoCliente_Validating(object sender, CancelEventArgs e)
+        {
+            string correo = txtCorreoCliente.Text.Trim();
+
+            // Expresión regular para validar el correo electrónico
+            Regex re = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+
+            // Verificamos si el correo no es válido
+            if (!re.IsMatch(correo))
+            {
+                txtCorreoCliente.BackColor = System.Drawing.Color.FromArgb(35, 32, 39);
+
+                MessageBox.Show("El correo es invalido", "Tienda | Registro Cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true;
+            }
+            else
+            {
+                txtCorreoCliente.BackColor = System.Drawing.Color.FromArgb(35, 32, 39);
+            }
+        }
+
+        private void txtCorreoCliente_Validated(object sender, EventArgs e)
+        {
+            txtCorreoCliente.BackColor = System.Drawing.Color.FromArgb(35, 32, 39);
         }
     }
 }

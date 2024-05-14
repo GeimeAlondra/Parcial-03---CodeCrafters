@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -229,6 +230,40 @@ namespace CapaVista
             _id= 0;
            
         }
-    }
 
+        private void txtNombreEmpleado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtApellidoEmpleado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDireccionEmpleado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Caracteres permitidos: letras, números, espacios, comas, puntos y guiones
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) &&
+                !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.' && e.KeyChar != '-')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtSalarioEmpleado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo dígitos, el punto decimal y el carácter de retroceso
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+    }
 }

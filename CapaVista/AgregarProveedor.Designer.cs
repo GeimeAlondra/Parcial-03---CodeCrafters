@@ -64,6 +64,7 @@
             this.txtDireccionProveedor.Name = "txtDireccionProveedor";
             this.txtDireccionProveedor.Size = new System.Drawing.Size(309, 19);
             this.txtDireccionProveedor.TabIndex = 56;
+            this.txtDireccionProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccionProveedor_KeyPress);
             // 
             // proveedorbindingSource
             // 
@@ -80,6 +81,8 @@
             this.txtCorreoProveedor.Name = "txtCorreoProveedor";
             this.txtCorreoProveedor.Size = new System.Drawing.Size(309, 19);
             this.txtCorreoProveedor.TabIndex = 55;
+            this.txtCorreoProveedor.Validating += new System.ComponentModel.CancelEventHandler(this.txtCorreoProveedor_Validating);
+            this.txtCorreoProveedor.Validated += new System.EventHandler(this.txtCorreoProveedor_Validated);
             // 
             // txtTelefonoProveedor
             // 
@@ -92,6 +95,7 @@
             this.txtTelefonoProveedor.Name = "txtTelefonoProveedor";
             this.txtTelefonoProveedor.Size = new System.Drawing.Size(183, 17);
             this.txtTelefonoProveedor.TabIndex = 54;
+            this.txtTelefonoProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefonoProveedor_KeyPress);
             // 
             // label1
             // 
@@ -202,6 +206,7 @@
             this.txtNombreProveedor.Name = "txtNombreProveedor";
             this.txtNombreProveedor.Size = new System.Drawing.Size(309, 19);
             this.txtNombreProveedor.TabIndex = 53;
+            this.txtNombreProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreProveedor_KeyPress);
             // 
             // checkEstadoProveedor
             // 

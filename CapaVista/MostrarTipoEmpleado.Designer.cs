@@ -67,6 +67,7 @@
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(229, 20);
             this.txtCargo.TabIndex = 19;
+            this.txtCargo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCargo_KeyPress);
             // 
             // tipoEmpleadoBindingSources
             // 

@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -177,6 +178,58 @@ namespace CapaVista
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtNombreProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDireccionProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Caracteres permitidos: letras, números, espacios, comas, puntos y guiones
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) &&
+                !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != '.' && e.KeyChar != '-')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTelefonoProveedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCorreoProveedor_Validating(object sender, CancelEventArgs e)
+        {
+            string correo = txtCorreoProveedor.Text.Trim();
+
+            // Expresión regular para validar el correo electrónico
+            Regex re = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+
+            // Verificamos si el correo no es válido
+            if (!re.IsMatch(correo))
+            {
+                txtCorreoProveedor.BackColor = System.Drawing.Color.FromArgb(35, 32, 39);
+
+                MessageBox.Show("El correo es invalido", "Tienda | Registro Cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                e.Cancel = true;
+            }
+            else
+            {
+                txtCorreoProveedor.BackColor = System.Drawing.Color.FromArgb(35, 32, 39);
+            }
+        }
+
+        private void txtCorreoProveedor_Validated(object sender, EventArgs e)
+        {
+            txtCorreoProveedor.BackColor = System.Drawing.Color.FromArgb(35, 32, 39);
         }
     }
 }

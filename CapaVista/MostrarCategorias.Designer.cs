@@ -137,7 +137,9 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(282, 22);
             this.txtNombre.TabIndex = 10;
+            
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // categoriaBindingSources
             // 

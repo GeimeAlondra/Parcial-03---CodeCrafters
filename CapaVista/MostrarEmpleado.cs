@@ -149,8 +149,6 @@ namespace CapaVista
             AbrirFormulario2();
         }
 
-       
-
         private void dvgEmpleado_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (dvgEmpleado.Columns[e.ColumnIndex].Name.Equals("Editar"))
@@ -177,6 +175,19 @@ namespace CapaVista
                     MessageBox.Show("No se logro Eliminar el Empleado", "Tienda | Registro Empleado",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtNombreEmpleado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

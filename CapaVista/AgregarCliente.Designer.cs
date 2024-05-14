@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.checkEstadoCliente = new System.Windows.Forms.CheckBox();
+            this.clientebindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
             this.txtCorreoCliente = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegresar = new FontAwesome.Sharp.IconButton();
             this.btnGuardarCliente = new FontAwesome.Sharp.IconButton();
-            this.clientebindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.clientebindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,6 +61,10 @@
             this.checkEstadoCliente.TabIndex = 57;
             this.checkEstadoCliente.Text = "Activo";
             this.checkEstadoCliente.UseVisualStyleBackColor = true;
+            // 
+            // clientebindingSource
+            // 
+            this.clientebindingSource.DataSource = typeof(CapaEntidades.Cliente);
             // 
             // label7
             // 
@@ -85,6 +89,7 @@
             this.txtTelefonoCliente.Name = "txtTelefonoCliente";
             this.txtTelefonoCliente.Size = new System.Drawing.Size(275, 26);
             this.txtTelefonoCliente.TabIndex = 55;
+            this.txtTelefonoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefonoCliente_KeyPress);
             // 
             // txtCorreoCliente
             // 
@@ -97,6 +102,9 @@
             this.txtCorreoCliente.Name = "txtCorreoCliente";
             this.txtCorreoCliente.Size = new System.Drawing.Size(275, 26);
             this.txtCorreoCliente.TabIndex = 54;
+       
+            this.txtCorreoCliente.Validating += new System.ComponentModel.CancelEventHandler(this.txtCorreoCliente_Validating);
+            this.txtCorreoCliente.Validated += new System.EventHandler(this.txtCorreoCliente_Validated);
             // 
             // label6
             // 
@@ -133,6 +141,7 @@
             this.txtDireccionCliente.Name = "txtDireccionCliente";
             this.txtDireccionCliente.Size = new System.Drawing.Size(275, 72);
             this.txtDireccionCliente.TabIndex = 51;
+            this.txtDireccionCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccionCliente_KeyPress);
             // 
             // txtApellidoCliente
             // 
@@ -144,6 +153,7 @@
             this.txtApellidoCliente.Name = "txtApellidoCliente";
             this.txtApellidoCliente.Size = new System.Drawing.Size(275, 26);
             this.txtApellidoCliente.TabIndex = 50;
+            this.txtApellidoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoCliente_KeyPress);
             // 
             // txtNombreCliente
             // 
@@ -155,6 +165,7 @@
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(275, 26);
             this.txtNombreCliente.TabIndex = 49;
+            this.txtNombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreCliente_KeyPress);
             // 
             // label4
             // 
@@ -247,10 +258,6 @@
             this.btnGuardarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardarCliente.UseVisualStyleBackColor = false;
             this.btnGuardarCliente.Click += new System.EventHandler(this.btnGuardarCliente_Click);
-            // 
-            // clientebindingSource
-            // 
-            this.clientebindingSource.DataSource = typeof(CapaEntidades.Cliente);
             // 
             // AgregarCliente
             // 

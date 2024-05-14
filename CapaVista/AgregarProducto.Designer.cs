@@ -154,6 +154,7 @@
             this.txtDescripcionProducto.Name = "txtDescripcionProducto";
             this.txtDescripcionProducto.Size = new System.Drawing.Size(353, 68);
             this.txtDescripcionProducto.TabIndex = 9;
+   
             // 
             // productobindingSource
             // 
@@ -169,6 +170,7 @@
             this.txtPrecioProducto.Name = "txtPrecioProducto";
             this.txtPrecioProducto.Size = new System.Drawing.Size(148, 22);
             this.txtPrecioProducto.TabIndex = 10;
+            this.txtPrecioProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioProducto_KeyPress);
             // 
             // txtStockProducto
             // 
@@ -180,6 +182,7 @@
             this.txtStockProducto.Name = "txtStockProducto";
             this.txtStockProducto.Size = new System.Drawing.Size(123, 22);
             this.txtStockProducto.TabIndex = 11;
+            this.txtStockProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStockProducto_KeyPress);
             // 
             // checkEstadoProducto
             // 
@@ -227,6 +230,7 @@
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(353, 26);
             this.txtNombreProducto.TabIndex = 36;
+          
             // 
             // btnAgregarMarca
             // 

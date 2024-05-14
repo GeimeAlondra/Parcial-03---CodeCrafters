@@ -256,5 +256,22 @@ namespace CapaVista
             objMostrarProveedor.ShowDialog();
             ObtenerProveedores();
         }
+
+        private void txtPrecioProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo dígitos, el punto decimal y el carácter de retroceso
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtStockProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

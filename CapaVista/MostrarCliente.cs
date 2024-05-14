@@ -134,5 +134,18 @@ namespace CapaVista
         {
             llenarDataGridView();
         }
+
+        private void btnRegresar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtNombreCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -217,6 +217,7 @@
             this.btnRegresar.Text = " &Regresar";
             this.btnRegresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click_1);
             // 
             // btnAgregarCliente
             // 
@@ -317,6 +318,7 @@
             this.txtNombreCliente.Size = new System.Drawing.Size(177, 26);
             this.txtNombreCliente.TabIndex = 37;
             this.txtNombreCliente.TextChanged += new System.EventHandler(this.txtNombreCliente_TextChanged);
+            this.txtNombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreCliente_KeyPress);
             // 
             // label2
             // 
