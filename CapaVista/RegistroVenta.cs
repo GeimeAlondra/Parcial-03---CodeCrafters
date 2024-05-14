@@ -336,5 +336,13 @@ namespace CapaVista
         {
             cbxEmpleado.BackColor = Color.FromArgb(35, 32, 39);
         }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

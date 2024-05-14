@@ -167,20 +167,8 @@
     <Compile Include="MostrarTipoEmpleado.Designer.cs">
       <DependentUpon>MostrarTipoEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="MostrarVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MostrarVenta.Designer.cs">
-      <DependentUpon>MostrarVenta.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Prueb2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Prueb2.Designer.cs">
-      <DependentUpon>Prueb2.cs</DependentUpon>
-    </Compile>
     <Compile Include="RegistroVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,9 +217,6 @@
     <EmbeddedResource Include="MostrarTipoEmpleado.resx">
       <DependentUpon>MostrarTipoEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MostrarVenta.resx">
-      <DependentUpon>MostrarVenta.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -242,9 +227,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Prueb2.resx">
-      <DependentUpon>Prueb2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="RegistroVenta.resx">
       <DependentUpon>RegistroVenta.cs</DependentUpon>
     </EmbeddedResource>

@@ -76,7 +76,7 @@ namespace CapaVista
         private void button1_Click(object sender, EventArgs e)
         {
             //Abrir Formulario vinculado
-            abrirFormulario(new Prueb2());
+            //abrirFormulario(new Prueb2());
 
             //.
             // codigo
