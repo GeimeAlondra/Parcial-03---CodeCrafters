@@ -133,7 +133,7 @@ namespace CapaVista
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ocurrio un Error {ex}", "Registro Venta|Chalatenango",
+                MessageBox.Show($"Ocurrio un Error {ex}", "Tienda | Registro Venta",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -167,7 +167,7 @@ namespace CapaVista
                     }
                     else
                     {
-                        MessageBox.Show("Debe ingresar un precio valido");
+                        MessageBox.Show("Debe ingresar un precio válido");
                         CalcularMontoTotal();
                     }
                 }
@@ -207,7 +207,7 @@ namespace CapaVista
 
             if (string.IsNullOrEmpty(txtCantidad.Text))
             {
-                MessageBox.Show("Se requiere la cantidad del Producto \n\n !Este Campo es Obligatorio!", "Tienda | Registro Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere la cantidad del Producto \n !Este campo es obligatorio!", "Tienda | Registro Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 lineaCantidad.BackColor = Color.LightCoral;
                 txtCantidad.Focus();
 
@@ -225,7 +225,7 @@ namespace CapaVista
 
             if (string.IsNullOrEmpty(txtCantidad.Text))
             {
-                MessageBox.Show("Se requiere la cantidad del Producto \n\n !Este Campo es Obligatorio!", "Tienda | Registro Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere la cantidad del Producto \n !Este campo es obligatorio!", "Tienda | Registro Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 lineaCantidad.BackColor = Color.LightCoral;
                 txtCantidad.Focus();
 
@@ -236,7 +236,7 @@ namespace CapaVista
 
             if (cbxCliente.SelectedIndex == 0)
             {
-                MessageBox.Show("Se requiere el cliente de la venta \n\n !Este Campo es Obligatorio!", "Tienda | Registro Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere el cliente de la Venta \n !Este campo es obligatorio!", "Tienda | Registro Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cbxCliente.BackColor = Color.LightCoral;
                
 
@@ -245,13 +245,11 @@ namespace CapaVista
 
             if (cbxEmpleado.SelectedIndex == 0)
             {
-                MessageBox.Show("Se requiere el empleado que realizo la venta \n\n !Este Campo es Obligatorio!", "Tienda | Registro Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere el empleado que realizo la Venta \n !Este campo es obligatorio!", "Tienda | Registro Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cbxEmpleado.BackColor = Color.LightCoral;
 
                 camposValidos = false;
             }
-
-
 
             return camposValidos;
         }
@@ -300,14 +298,13 @@ namespace CapaVista
                 {
                     LimpiarCampos();
                     
-                    MessageBox.Show("Venta Guardada con Exito", "Tienda|Registro Venta",
+                    MessageBox.Show("Venta guardada con exito", "Tienda | Registro Venta",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                    
+                   
                 }
                 else
                 {
-                    MessageBox.Show("No se logro guardar la venta");
+                    MessageBox.Show("No se logro guardar la Venta");
                 }
             }
             catch (Exception)

@@ -338,7 +338,7 @@
             this.txtNombreProducto.Size = new System.Drawing.Size(180, 26);
             this.txtNombreProducto.TabIndex = 37;
             this.txtNombreProducto.TextChanged += new System.EventHandler(this.txtNombreProducto_TextChanged);
-            this.txtNombreProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreProducto_KeyPress);
+           
             // 
             // label7
             // 

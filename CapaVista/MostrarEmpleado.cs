@@ -54,10 +54,6 @@ namespace CapaVista
             llenarDataGridView();
         }
 
-
-
-
-
         private void checkEstadoActivo_CheckedChanged(object sender, EventArgs e)
         {
             llenarDataGridView();
@@ -165,14 +161,14 @@ namespace CapaVista
                 int resultado = _EmpleadoLOG.EliminarEmpleado(id);
                 if (resultado > 0)
                 {
-                    MessageBox.Show("Empleado Eliminado con exito", "Tienda | Registro Empleado",
+                    MessageBox.Show("Empleado eliminado con exito", "Tienda | Registro Empleado",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     llenarDataGridView();
                 }
                 else
                 {
-                    MessageBox.Show("No se logro Eliminar el Empleado", "Tienda | Registro Empleado",
+                    MessageBox.Show("No se logro eliminar el Empleado", "Tienda | Registro Empleado",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }

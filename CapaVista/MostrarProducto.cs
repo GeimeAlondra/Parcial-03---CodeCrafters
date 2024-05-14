@@ -85,14 +85,14 @@ namespace CapaVista
                 int resultado = _ProductoLOG.EliminarProducto(id);
                 if (resultado > 0)
                 {
-                    MessageBox.Show("Producto Eliminado con exito", "Tienda | Registro Productos",
+                    MessageBox.Show("Producto eliminado con exito", "Tienda | Registro Producto",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     llenarDataGridView();
                 }
                 else
                 {
-                    MessageBox.Show("No se logro Eliminar el producto", "Tienda | Registro Productos",
+                    MessageBox.Show("No se logro eliminar el Producto", "Tienda | Registro Producto",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -222,7 +222,7 @@ namespace CapaVista
             }
             else
             {
-                MessageBox.Show("Seleccione una Marca", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Seleccione una marca", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -248,7 +248,7 @@ namespace CapaVista
             }
             else
             {
-                MessageBox.Show("Seleccione un Proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Seleccione un proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -280,14 +280,6 @@ namespace CapaVista
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void txtNombreProducto_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
-            {
-                e.Handled = true;
-            }
         }
     }
 }

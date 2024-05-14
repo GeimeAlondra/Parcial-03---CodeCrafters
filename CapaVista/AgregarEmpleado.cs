@@ -96,14 +96,14 @@ namespace CapaVista
                     {
                         LimpiarCampos();
                         cbCargoEmpleado.SelectedItem = null;
-                        MessageBox.Show("Empleado Actualizado con exito", "Tienda | Registro Empleado",
+                        MessageBox.Show("Empleado actualizado con exito", "Tienda | Registro Empleado",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("No se logro Actualizar el Empleado", "Tienda | Registro Empleado",
+                        MessageBox.Show("No se logro actualizar el empleado", "Tienda | Registro Empleado",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -112,12 +112,12 @@ namespace CapaVista
 
                     if (!checkEstadoEmpleado.Checked)
                     {
-                        var dialogo = MessageBox.Show("¿Esta seguro que desea guardar el empleado inactivo", "Tienda | Registro Empleados",
+                        var dialogo = MessageBox.Show("¿Esta seguro que desea guardar el empleado inactivo", "Tienda | Registro Empleado",
                                         MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                         if (dialogo != DialogResult.Yes)
                         {
-                            MessageBox.Show("Seleccione el cuadro Estado como activo", "Tienda | Registro Empleados",
+                            MessageBox.Show("Seleccione el cuadro Estado como activo", "Tienda | Registro Empleado",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                             return;
                         }
@@ -152,7 +152,7 @@ namespace CapaVista
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ocurrio un Error: {ex}", "Tienda | Registro Empleados",
+                MessageBox.Show($"Ocurrio un Error: {ex}", "Tienda | Registro Empleado",
                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -174,14 +174,14 @@ namespace CapaVista
 
             if (string.IsNullOrEmpty(txtNombreEmpleado.Text))
             {
-                MessageBox.Show("Se requiere el nombre del Empleado \\n\\n !Este Campo es Obligatorio!", "Tienda | Registro Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere el nombre del Empleado \n !Este campo es obligatorio!", "Tienda | Registro Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNombreEmpleado.Focus();
                 camposValidos = false;
             }
 
             if (string.IsNullOrEmpty(txtApellidoEmpleado.Text))
             {
-                MessageBox.Show("Se requiere el apellido del Empleado \\n\\n !Este Campo es Obligatorio!", "Tienda | Registro Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere el apellido del Empleado \n !Este campo es obligatorio!", "Tienda | Registro Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtApellidoEmpleado.Focus();
                 camposValidos = false;
             }
@@ -194,14 +194,14 @@ namespace CapaVista
 
             if (string.IsNullOrEmpty(txtDireccionEmpleado.Text))
             {
-                MessageBox.Show("Se requiere la dirección del Empleado \\n\\n !Este Campo es Obligatorio!", "Tienda | Registro Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere la dirección del Empleado \n !Este campo es obligatorio!", "Tienda | Registro Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtDireccionEmpleado.Focus();
                 camposValidos = false;
             }
 
             if (string.IsNullOrEmpty(txtSalarioEmpleado.Text))
             {
-                MessageBox.Show("Se requiere el monto del salario del Empleado \\n\\n !Este Campo es Obligatorio!", "Tienda | Registro Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere el monto del salario del Empleado \n !Este campo es obligatorio!", "Tienda | Registro Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtSalarioEmpleado.Focus();
                 camposValidos = false;
             }
@@ -209,7 +209,7 @@ namespace CapaVista
             // Validación del ComboBox
             if (cbCargoEmpleado.SelectedItem == null)
             {
-                MessageBox.Show("Debes seleccionar un cargo válido.", "Tienda | Registro Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un cargo válido.", "Tienda | Registro Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cbCargoEmpleado.Focus();
                 camposValidos = false;
             }

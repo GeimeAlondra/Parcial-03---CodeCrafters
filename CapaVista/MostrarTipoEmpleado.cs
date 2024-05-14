@@ -57,7 +57,7 @@ namespace CapaVista
                     if (resultado > 0)
                     {
                         txtCargo.Clear();
-                        MessageBox.Show("Tipo Empleado Actualizado con exito", "Tienda | Registro Tipo Empleado",
+                        MessageBox.Show("Tipo Empleado actualizado con exito", "Tienda | Registro Tipo Empleado",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         btnActualizarTipoEmpleado.Visible = false;
                         btnGuardarTipoEmpleado.Visible = true;
@@ -66,7 +66,7 @@ namespace CapaVista
                     }
                     else
                     {
-                        MessageBox.Show("No se logro Actualizar el Tipo Empleado", "Tienda | Registro Tipo Empleado",
+                        MessageBox.Show("No se logro actualizar el Tipo Empleado", "Tienda | Registro Tipo Empleado",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
@@ -84,20 +84,20 @@ namespace CapaVista
                     if (resultado > 0)
                     {
                         txtCargo.Clear();
-                        MessageBox.Show("Tipo Empleado Agregado con Exito", "Tienda | Registro Tipo Empleado",
+                        MessageBox.Show("Tipo Empleado agregado con Exito", "Tienda | Registro Tipo Empleado",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CargarTipoEmpleadoEnDataGridView();
                     }
                     else
                     {
-                        MessageBox.Show("No se logro Guardar el Tipo Empleado", "Tienda | Registro Tipo Empleado",
+                        MessageBox.Show("No se logro guardar el Tipo Empleado", "Tienda | Registro Tipo Empleado",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ocurrio un Error: {ex}", "Tienda | Registro Productos",
+                MessageBox.Show($"Ocurrio un Error: {ex}", "Tienda | Registro Tipo Empleado",
                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -108,14 +108,14 @@ namespace CapaVista
             int resultado = _TipoEmpleadoLOG.EliminarTipoEmpleado(id);
             if (resultado > 0)
             {
-                MessageBox.Show("Tipo Empleado Eliminado con exito", "Tienda | Registro Tipo Empleado",
+                MessageBox.Show("Tipo Empleado eliminado con exito", "Tienda | Registro Tipo Empleado",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 CargarTipoEmpleadoEnDataGridView();
             }
             else
             {
-                MessageBox.Show("No se logro Eliminar el Tipo Empleado", "Tienda | Registro Tipo Empleado",
+                MessageBox.Show("No se logro eliminar el Tipo Empleado", "Tienda | Registro Tipo Empleado",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -126,7 +126,7 @@ namespace CapaVista
             bool camposValidos = true;
             if (string.IsNullOrEmpty(txtCargo.Text))
             {
-                MessageBox.Show("Se requiere el nombre del cargo \n\n !!Este Campo es Obligatorio!!", "Tienda | Registro Tipo Empleado",
+                MessageBox.Show("Se requiere el nombre del cargo \n !Este campo es obligatorio!", "Tienda | Registro Tipo Empleado",
                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //plinea.BackColor = Color.LightCoral;
                 camposValidos = false;

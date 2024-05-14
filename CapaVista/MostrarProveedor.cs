@@ -76,14 +76,14 @@ namespace CapaVista
                 int resultado = _ProveedorLOG.EliminarProveedor(id);
                 if (resultado > 0)
                 {
-                    MessageBox.Show("Proveedor Eliminado con exito", "Tienda | Registro Proveedores",
+                    MessageBox.Show("Proveedor eliminado con exito", "Tienda | Registro Proveedor",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     llenarDataGridView();
                 }
                 else
                 {
-                    MessageBox.Show("No se logro eliminar el Proveedor", "Tienda | Registro Proveedores",
+                    MessageBox.Show("No se logro eliminar el Proveedor", "Tienda | Registro Proveedor",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }

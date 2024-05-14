@@ -61,21 +61,21 @@ namespace CapaVista
 
             if (string.IsNullOrEmpty(txtNombreCliente.Text))
             {
-                MessageBox.Show("Se requiere el nombre del Cliente \\n\\n !!Este Campo es Obligatorio!!", "Tienda | Registro Cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere el nombre del Cliente \n !Este campo es obligatorio!", "Tienda | Registro Cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNombreCliente.Focus();
                 camposValidos = false;
             }
 
             if (string.IsNullOrEmpty(txtApellidoCliente.Text))
             {
-                MessageBox.Show("Se requiere el apellido del Cliente \\n\\n !!Este Campo es Obligatorio!!", "Tienda | Registro Clienteo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere el apellido del Cliente \n !Este campo es obligatorio!", "Tienda | Registro Cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtApellidoCliente.Focus();
                 camposValidos = false;
             }
 
             if (string.IsNullOrEmpty(txtDireccionCliente.Text))
             {
-                MessageBox.Show("Se requiere la direccion del Cliente \\n\\n !!Este Campo es Obligatorio!!", "Tienda | Registro Cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere la direccion del Cliente \n !Este campo es obligatorio!", "Tienda | Registro Cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtDireccionCliente.Focus();
                 camposValidos = false;
 
@@ -83,7 +83,7 @@ namespace CapaVista
 
             if (string.IsNullOrEmpty(txtCorreoCliente.Text))
             {
-                MessageBox.Show("Se requiere el correo del Cliente \\n\\n !!Este Campo es Obligatorio!!", "Tienda | Registro Cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere el correo del Cliente \n !Este campo es obligatorio!", "Tienda | Registro Cliente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtCorreoCliente.Focus();
                 camposValidos = false;
             }
@@ -117,14 +117,14 @@ namespace CapaVista
                         txtDireccionCliente.Clear();
                         txtCorreoCliente.Clear();
                         txtTelefonoCliente.Clear();
-                        MessageBox.Show("Cliente Actualizado con exito", "Tienda | Registro Cliente",
+                        MessageBox.Show("Cliente actualizado con exito", "Tienda | Registro Cliente",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("No se logro Actualizar el Cliente", "Tienda | Registro Cliente",
+                        MessageBox.Show("No se logro actualizar el Cliente", "Tienda | Registro Cliente",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -132,12 +132,12 @@ namespace CapaVista
                 {
                     if (!checkEstadoCliente.Checked)
                     {
-                        var dialogo = MessageBox.Show("¿Esta seguro que desea guardar el cliente inactivo", "Tienda | Registro Clientes",
+                        var dialogo = MessageBox.Show("¿Esta seguro que desea guardar el cliente inactivo", "Tienda | Registro Cliente",
                                         MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                         if (dialogo != DialogResult.Yes)
                         {
-                            MessageBox.Show("Seleccione el cuadro Estado como activo", "Tienda | Registro Clientes",
+                            MessageBox.Show("Seleccione el cuadro Estado como activo", "Tienda | Registro Cliente",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                             return;
                         }
@@ -163,7 +163,7 @@ namespace CapaVista
                     }
                     else
                     {
-                        MessageBox.Show("No se logro guardar el cliente", "Tienda | Registro Cliente",
+                        MessageBox.Show("No se logro guardar el Cliente", "Tienda | Registro Cliente",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }

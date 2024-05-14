@@ -121,14 +121,14 @@ namespace CapaVista
                         cbCategoriaProducto.SelectedItem = null;
                         cbMarcaProducto.SelectedItem = null;
                         cbProveedorProducto.SelectedItem = null;
-                        MessageBox.Show("Producto Actualizado con exito", "Tienda | Registro Producto",
+                        MessageBox.Show("Producto actualizado con exito", "Tienda | Registro Producto",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("No se logro Actualizar el Producto", "Tienda | Registro Producto",
+                        MessageBox.Show("No se logro actualizar el producto", "Tienda | Registro Producto",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -136,12 +136,12 @@ namespace CapaVista
                 {
                     if (!checkEstadoProducto.Checked)
                     {
-                        var dialogo = MessageBox.Show("¿Esta seguro que desea guardar el producto inactivo", "Tienda | Registro Productos",
+                        var dialogo = MessageBox.Show("¿Esta seguro que desea guardar el producto inactivo", "Tienda | Registro Producto",
                                         MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                         if (dialogo != DialogResult.Yes)
                         {
-                            MessageBox.Show("Seleccione el cuadro Estado como activo", "Tienda | Registro Productos",
+                            MessageBox.Show("Seleccione el cuadro Estado como activo", "Tienda | Registro Producto",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                             return;
                         }
@@ -168,7 +168,7 @@ namespace CapaVista
                     }
                     else
                     {
-                        MessageBox.Show("No se logro guardar el producto", "Tienda | Registro producto",
+                        MessageBox.Show("No se logro guardar el Producto", "Tienda | Registro Producto",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
@@ -176,7 +176,7 @@ namespace CapaVista
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ocurrio un Error: {ex}", "Tienda | Registro Productos",
+                MessageBox.Show($"Ocurrio un Error: {ex}", "Tienda | Registro Producto",
                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -187,21 +187,21 @@ namespace CapaVista
 
             if (string.IsNullOrEmpty(txtNombreProducto.Text))
             {
-                MessageBox.Show("Se requiere el nombre del Producto \\n\\n !Este Campo es Obligatorio!", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere el nombre del Producto \n !Este campo es obligatorio!", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNombreProducto.Focus();
                 camposValidos = false;
             }
 
             if (string.IsNullOrEmpty(txtDescripcionProducto.Text))
             {
-                MessageBox.Show("Se requiere la descripción del Producto \\n\\n !Este Campo es Obligatorio!", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere la descripción del Producto \n !Este campo es obligatorio!", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtDescripcionProducto.Focus();
                 camposValidos = false;
             }
 
             if (string.IsNullOrEmpty(txtPrecioProducto.Text))
             {
-                MessageBox.Show("Se requiere el precio del Producto \\n\\n !Este Campo es Obligatorio!", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Se requiere el precio del Producto \n !Este campo es obligatorio!", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtPrecioProducto.Focus();
                 camposValidos = false;
             }
@@ -209,21 +209,21 @@ namespace CapaVista
             // Validación del ComboBox
             if (cbCategoriaProducto.SelectedItem == null)
             {
-                MessageBox.Show("Debes seleccionar una categoría válida.", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar una categoría válida.", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cbCategoriaProducto.Focus();
                 camposValidos = false;
             }
 
             if (cbMarcaProducto.SelectedItem == null)
             {
-                MessageBox.Show("Debes seleccionar una marca válida.", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar una marca válida.", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cbMarcaProducto.Focus();
                 camposValidos = false;
             }
 
             if (cbProveedorProducto.SelectedItem == null)
             {
-                MessageBox.Show("Debes seleccionar un proveedor válido.", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un proveedor válido.", "Tienda | Registro Producto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cbProveedorProducto.Focus();
                 camposValidos = false;
             }

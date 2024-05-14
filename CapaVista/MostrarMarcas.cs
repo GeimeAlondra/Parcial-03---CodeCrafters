@@ -75,7 +75,7 @@ namespace CapaVista
             {
                 if (txtNombre.Text == "")
                 {
-                    MessageBox.Show("!!El campo nombre no se puede dejar vacio,\nEs obligatorio!!", "Tienda | Registro Marcas",
+                    MessageBox.Show("!!El campo nombre no se puede dejar vacio,\n ¡Es obligatorio!", "Tienda | Registro Marca",
                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -83,7 +83,7 @@ namespace CapaVista
                     //Verificamos el texbox
                     if (string.IsNullOrEmpty(txtNombre.Text))
                     {
-                        MessageBox.Show("Se requiere el nombre del producto", "Tienda | Registro Productos",
+                        MessageBox.Show("Se requiere el nombre de la Marca", "Tienda | Registro Marca",
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         txtNombre.Focus();
                         plinea.BackColor = Color.LightCoral;
@@ -97,14 +97,14 @@ namespace CapaVista
                     if (resultado > 0)
                     {
                         txtNombre.Clear();
-                        MessageBox.Show("Marca agregado con exito", "Tienda | Registro Marcas",
+                        MessageBox.Show("Marca agregada con exito", "Tienda | Registro Marca",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         dvgMarcas.DataSource = _MarcasLOG.ObtenerMarcas();
                     }
                     else
                     {
-                        MessageBox.Show("No se logro guardar la Marca", "Tienda | Registro Marcas",
+                        MessageBox.Show("No se logro guardar la Marca", "Tienda | Registro Marca",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -132,7 +132,7 @@ namespace CapaVista
                 //Verificamos el texbox
                 if (string.IsNullOrEmpty(txtNombre.Text))
                 {
-                    MessageBox.Show("Se requiere el nombre de la Marcas\n\n !!Este Campo es Obligatorio!!", "Tienda | Registro Productos",
+                    MessageBox.Show("Se requiere el nombre de la Marca \n !Este campo es obligatorio!", "Tienda | Registro Marca",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtNombre.Focus();
                     plinea.BackColor = Color.LightCoral;
@@ -149,7 +149,7 @@ namespace CapaVista
                     if (resultado > 0)
                     {
                         txtNombre.Clear();
-                        MessageBox.Show("Marca Actualizado con exito", "Tienda | Registro Marcas",
+                        MessageBox.Show("Marca actualizada con exito", "Tienda | Registro Marca",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         //Cambiamos visivibilidad del boton de guardar a true y ocultamos el deactualizar
                         btnActualizar.Visible = false;
@@ -159,7 +159,7 @@ namespace CapaVista
                     }
                     else
                     {
-                        MessageBox.Show("No se logro guardar la Marca", "Tienda | Registro Marcas",
+                        MessageBox.Show("No se logro guardar la Marca", "Tienda | Registro Marca",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -186,8 +186,8 @@ namespace CapaVista
                 int resultado;
                 if (Id != null)
                 {
-                    DialogResult result = MessageBox.Show("¿Estás seguro que quieres eliminar este registro?",
-                                            "Tienda | Registro Marcas", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult result = MessageBox.Show("¿Estás seguro que quiere eliminar este registro?",
+                                            "Tienda | Registro Marca", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (result == DialogResult.Yes)
                     {
@@ -195,13 +195,13 @@ namespace CapaVista
 
                         if(resultado > 0)
                         {
-                            MessageBox.Show("La Marca ha sido eliminada con exito", "Tienda | Registro Marcas",
+                            MessageBox.Show("La Marca ha sido eliminada con exito", "Tienda | Registro Marca",
                            MessageBoxButtons.OK, MessageBoxIcon.Information);
                            dvgMarcas.DataSource = _MarcasLOG.ObtenerMarcas();
                         }
                         else
                         {
-                            MessageBox.Show("La Marca no se a eliminado", "Tienda | Registro Marcas",
+                            MessageBox.Show("La Marca no se ha eliminado", "Tienda | Registro Marca",
                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
 

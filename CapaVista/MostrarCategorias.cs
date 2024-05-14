@@ -55,7 +55,7 @@ namespace CapaVista
                     if (resultado > 0)
                     {
                         txtNombre.Clear();
-                        MessageBox.Show("Categoria Actualizada con exito", "Tienda | Registro Categoria",
+                        MessageBox.Show("Categoria actualizada con exito", "Tienda | Registro Categoria",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         btnActualizarCategoria.Visible = false;
                         btnGuardarCategoria.Visible = true;
@@ -64,7 +64,7 @@ namespace CapaVista
                     }
                     else
                     {
-                        MessageBox.Show("No se logro Actualizar la Categoria", "Tienda | Registro Categoria",
+                        MessageBox.Show("No se logro actualizar la Categoria", "Tienda | Registro Categoria",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
@@ -82,13 +82,13 @@ namespace CapaVista
                     if (resultado > 0)
                     {
                         txtNombre.Clear();
-                        MessageBox.Show("Categoria agregada con exito", "Tienda | Registro categoria",
+                        MessageBox.Show("Categoria agregada con exito", "Tienda | Registro Categoria",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         CargarCategoriaEnDataGridView();
                     }
                     else
                     {
-                        MessageBox.Show("No se logro guardar la categoria", "Tienda | Registro categoria",
+                        MessageBox.Show("No se logro guardar la Categoria", "Tienda | Registro Categoria",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -96,7 +96,7 @@ namespace CapaVista
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ocurrio un Error: {ex}", "Tienda | Registro Productos",
+                MessageBox.Show($"Ocurrio un Error: {ex}", "Tienda | Registro Categoria",
                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
@@ -115,7 +115,7 @@ namespace CapaVista
             bool camposValidos = true;
             if (string.IsNullOrEmpty(txtNombre.Text))
             {
-                MessageBox.Show("Se requiere el nombre de la Categoria \n\n !!Este Campo es Obligatorio!!", "Tienda | Registro Categoria",
+                MessageBox.Show("Se requiere el nombre de la Categoria \n !Este campo es obligatorio!", "Tienda | Registro Categoria",
                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //txtNombreProveedor.Focus();
                 plinea.BackColor = Color.LightCoral;
@@ -161,14 +161,14 @@ namespace CapaVista
             int resultado = _CategoriaLOG.EliminarCategoria(id);
             if (resultado > 0)
             {
-                MessageBox.Show("Categoria Eliminado con exito", "Tienda | Registro Categorias",
+                MessageBox.Show("Categoria eliminada con exito", "Tienda | Registro Categoria",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 CargarCategoriaEnDataGridView();
             }
             else
             {
-                MessageBox.Show("No se logro Eliminar la Categoria", "Tienda | Registro Categorias",
+                MessageBox.Show("No se logro eliminar la Categoria", "Tienda | Registro Categoria",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
