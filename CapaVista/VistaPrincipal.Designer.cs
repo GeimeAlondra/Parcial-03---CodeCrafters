@@ -34,7 +34,9 @@
             this.panelTools = new System.Windows.Forms.Panel();
             this.panelVentas = new System.Windows.Forms.Panel();
             this.panelMantenimientos = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.paneLogo = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.lblDia = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
@@ -44,6 +46,7 @@
             this.btnMantenimientoMarca = new FontAwesome.Sharp.IconButton();
             this.btnMantenimientoCat = new FontAwesome.Sharp.IconButton();
             this.btnPanelGeneral = new System.Windows.Forms.Button();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnManetenimientoEmpleado = new FontAwesome.Sharp.IconButton();
             this.btnMantenimientoProveedor = new FontAwesome.Sharp.IconButton();
             this.btnMantenimientoClientes = new FontAwesome.Sharp.IconButton();
@@ -51,9 +54,6 @@
             this.btnMantenimientoProductos = new FontAwesome.Sharp.IconButton();
             this.btnPrueba = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.MenuSideBar.SuspendLayout();
             this.panelTools.SuspendLayout();
             this.panelVentas.SuspendLayout();
@@ -117,6 +117,14 @@
             this.panelMantenimientos.Size = new System.Drawing.Size(229, 43);
             this.panelMantenimientos.TabIndex = 2;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel2.Location = new System.Drawing.Point(0, 43);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(5, 43);
+            this.panel2.TabIndex = 4;
+            // 
             // paneLogo
             // 
             this.paneLogo.Controls.Add(this.pictureBox2);
@@ -126,6 +134,14 @@
             this.paneLogo.Name = "paneLogo";
             this.paneLogo.Size = new System.Drawing.Size(229, 106);
             this.paneLogo.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.panel1.Location = new System.Drawing.Point(3, 100);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(229, 2);
+            this.panel1.TabIndex = 3;
             // 
             // panelContainer
             // 
@@ -257,6 +273,26 @@
             this.btnPanelGeneral.Text = "Catalogos";
             this.btnPanelGeneral.UseVisualStyleBackColor = true;
             this.btnPanelGeneral.Click += new System.EventHandler(this.btnPanelGeneral_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.CartArrowDown;
+            this.iconButton1.IconColor = System.Drawing.Color.PaleTurquoise;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 35;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(0, 120);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
+            this.iconButton1.Size = new System.Drawing.Size(229, 40);
+            this.iconButton1.TabIndex = 11;
+            this.iconButton1.Text = "Registrar Ventas";
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // btnManetenimientoEmpleado
             // 
@@ -391,41 +427,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DarkBlue;
-            this.panel2.Location = new System.Drawing.Point(0, 43);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 43);
-            this.panel2.TabIndex = 4;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.panel1.Location = new System.Drawing.Point(3, 100);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 2);
-            this.panel1.TabIndex = 3;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.CartArrowDown;
-            this.iconButton1.IconColor = System.Drawing.Color.PaleTurquoise;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 35;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 120);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(0, 0, 35, 0);
-            this.iconButton1.Size = new System.Drawing.Size(229, 40);
-            this.iconButton1.TabIndex = 11;
-            this.iconButton1.Text = "Registar Venta";
-            this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // VistaPrincipal
             // 

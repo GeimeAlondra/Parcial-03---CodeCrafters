@@ -197,5 +197,35 @@ namespace CapaDatos
 
         }
 
+        public int DescontarProductos(int id = 0, int cantidad = 0)
+        {
+            _db = new Contexto();
+            // Buscar el producto por su ID
+            var producto = _db.Productos.FirstOrDefault(p => p.ProductoId == id);
+
+            if (producto != null)
+            {
+                // Descontar la cantidad del stock
+                producto.ProductoStock = producto.ProductoStock - cantidad;
+
+                // Asegurarse de que la cantidad no sea negativa
+                if (producto.ProductoStock < 0)
+                {
+                    producto.ProductoStock = 0;
+                }
+
+                // Marcar el producto como modificado
+                _db.Entry(producto).State = System.Data.Entity.EntityState.Modified;
+
+                // Guardar los cambios
+                return _db.SaveChanges();
+            }
+            else
+            {
+                // Manejar el caso donde no se encuentra el producto
+                throw new Exception("Producto no encontrado");
+            }
+        }
+
     }
 }

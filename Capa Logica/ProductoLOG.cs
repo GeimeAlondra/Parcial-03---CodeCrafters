@@ -97,5 +97,11 @@ namespace Capa_Logica
 
             return _ProductoDAL.FiltroNombre(nombre, inactivos);
         }
+
+        public int DescontarStock(int productoId, int cantidad)
+        {
+            _ProductoDAL = new ProductoDAL();
+            return _ProductoDAL.DescontarProductos(productoId, cantidad);
+        }
     }
 }

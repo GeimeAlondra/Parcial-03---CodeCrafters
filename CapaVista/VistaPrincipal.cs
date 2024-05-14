@@ -266,5 +266,11 @@ namespace CapaVista
             abrirFormulario(new MostrarEmpleado());
             HideSubMenu();
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new RegistroVenta());
+            HideSubMenu();
+        }
     }
 }

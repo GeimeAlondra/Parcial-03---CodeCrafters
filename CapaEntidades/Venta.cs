@@ -34,7 +34,10 @@ namespace CapaEntidades
 
         public List<DetalleVenta> DetalleVenta { get; set; }
 
-
+        public Venta()
+        {
+            DetalleVenta = new List<DetalleVenta>();
+        }
 
     }
 }
