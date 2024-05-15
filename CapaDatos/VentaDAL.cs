@@ -1,6 +1,7 @@
 ﻿using CapaEntidades;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,10 +37,20 @@ namespace CapaDatos
         }
 
         // Ver Venta
-        public List<Venta> LeerVenta()
+        public List<Venta> ObtenerVentaPorId()
         {
             _db = new Contexto();
             return _db.Ventas.Where(v => v.VentaId > 0).ToList();
+        }
+
+        //Obtener todas las ventas
+        public List<Venta> ObtenerVentas()
+        {
+            _db = new Contexto();
+            return _db.Ventas
+                .Include(v => v.Empleado)
+                .Include(v => v.Cliente).ToList();
+
         }
     }
 }

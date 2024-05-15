@@ -272,5 +272,11 @@ namespace CapaVista
             abrirFormulario(new RegistroVenta());
             HideSubMenu();
         }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(new MostrarVentas());
+            HideSubMenu();
+        }
     }
 }

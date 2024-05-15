@@ -17,12 +17,17 @@ namespace Capa_Logica
             _VentaDAL = new VentaDAL();
             return _VentaDAL.Guardar(venta);
         }
-
+        //Metodo que devuelve las ventas realizadas
         public List<Venta> ObtenerVentas()
         {
             _VentaDAL = new VentaDAL();
 
-            return _VentaDAL.LeerVenta();
+            return _VentaDAL.ObtenerVentas();
         }
     }
+    
+    
+
+
+
 }

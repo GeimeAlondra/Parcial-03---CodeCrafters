@@ -42,6 +42,7 @@
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.btnMantenimientoCargo = new FontAwesome.Sharp.IconButton();
             this.btnMantenimientoMarca = new FontAwesome.Sharp.IconButton();
             this.btnMantenimientoCat = new FontAwesome.Sharp.IconButton();
@@ -84,13 +85,14 @@
             // panelTools
             // 
             this.panelTools.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelTools.Controls.Add(this.iconButton2);
             this.panelTools.Controls.Add(this.btnMantenimientoCargo);
             this.panelTools.Controls.Add(this.btnMantenimientoMarca);
             this.panelTools.Controls.Add(this.btnMantenimientoCat);
             this.panelTools.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTools.Location = new System.Drawing.Point(0, 445);
             this.panelTools.Name = "panelTools";
-            this.panelTools.Size = new System.Drawing.Size(229, 121);
+            this.panelTools.Size = new System.Drawing.Size(229, 152);
             this.panelTools.TabIndex = 6;
             // 
             // panelVentas
@@ -196,6 +198,26 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // iconButton2
+            // 
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Spinner;
+            this.iconButton2.IconColor = System.Drawing.Color.PaleTurquoise;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 36;
+            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.Location = new System.Drawing.Point(0, 108);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
+            this.iconButton2.Size = new System.Drawing.Size(229, 35);
+            this.iconButton2.TabIndex = 9;
+            this.iconButton2.Text = "MostarVentas";
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
             // btnMantenimientoCargo
             // 
             this.btnMantenimientoCargo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -210,7 +232,7 @@
             this.btnMantenimientoCargo.Location = new System.Drawing.Point(0, 80);
             this.btnMantenimientoCargo.Name = "btnMantenimientoCargo";
             this.btnMantenimientoCargo.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
-            this.btnMantenimientoCargo.Size = new System.Drawing.Size(229, 40);
+            this.btnMantenimientoCargo.Size = new System.Drawing.Size(229, 28);
             this.btnMantenimientoCargo.TabIndex = 8;
             this.btnMantenimientoCargo.Text = "Registrar  Cargo";
             this.btnMantenimientoCargo.UseVisualStyleBackColor = true;
@@ -483,6 +505,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton2;
     }
 }
 
