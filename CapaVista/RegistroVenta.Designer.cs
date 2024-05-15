@@ -269,11 +269,11 @@
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregar.IconSize = 34;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(610, 143);
+            this.btnAgregar.Location = new System.Drawing.Point(589, 143);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
-            this.btnAgregar.Size = new System.Drawing.Size(115, 30);
+            this.btnAgregar.Size = new System.Drawing.Size(115, 26);
             this.btnAgregar.TabIndex = 31;
             this.btnAgregar.Text = "&Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

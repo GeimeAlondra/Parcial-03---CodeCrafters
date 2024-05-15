@@ -85,14 +85,14 @@ namespace CapaVista
                 int resultado = _ProductoLOG.EliminarProducto(id);
                 if (resultado > 0)
                 {
-                    MessageBox.Show("Producto eliminado con exito", "Tienda | Registro Producto",
+                    MessageBox.Show("Producto desactivado con exito", "Tienda | Registro Producto",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     llenarDataGridView();
                 }
                 else
                 {
-                    MessageBox.Show("No se logro eliminar el Producto", "Tienda | Registro Producto",
+                    MessageBox.Show("No se logro desactivar el Producto", "Tienda | Registro Producto",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }

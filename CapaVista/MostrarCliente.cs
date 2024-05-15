@@ -83,14 +83,14 @@ namespace CapaVista
                 int resultado = _ClienteLOG.EliminarCliente(id);
                 if (resultado > 0)
                 {
-                    MessageBox.Show("Cliente eliminado con exito", "Tienda | Registro Cliente",
+                    MessageBox.Show("Cliente desactivado con exito", "Tienda | Registro Cliente",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     llenarDataGridView();
                 }
                 else
                 {
-                    MessageBox.Show("No se logro eliminar el Cliente", "Tienda | Registro Cliente",
+                    MessageBox.Show("No se logro desactivar el Cliente", "Tienda | Registro Cliente",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
