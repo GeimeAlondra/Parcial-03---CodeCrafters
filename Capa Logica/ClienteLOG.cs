@@ -7,6 +7,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Capa_Logica
+        {
+    public class ClienteLOG
+    {
+        ClienteDAL _ClienteDAL;
+
+        public int GuardarCliente(Cliente cliente, int id = 0, bool esActualizacion = false)
+        {
+            _ClienteDAL = new ClienteDAL();
+
+            return _ClienteDAL.Guardar(cliente, id, esActualizacion);
+        }
 
 
         public int ActualizarCliente(Cliente cliente, int id = 0, bool esActualizacion = true)
