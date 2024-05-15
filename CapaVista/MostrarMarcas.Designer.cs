@@ -82,7 +82,7 @@
             this.Eliminar});
             this.dvgMarcas.EnableHeadersVisualStyles = false;
             this.dvgMarcas.GridColor = System.Drawing.Color.SteelBlue;
-            this.dvgMarcas.Location = new System.Drawing.Point(45, 229);
+            this.dvgMarcas.Location = new System.Drawing.Point(62, 227);
             this.dvgMarcas.Name = "dvgMarcas";
             this.dvgMarcas.ReadOnly = true;
             this.dvgMarcas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -142,7 +142,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label2.Location = new System.Drawing.Point(31, 163);
+            this.label2.Location = new System.Drawing.Point(48, 161);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 22);
             this.label2.TabIndex = 2;
@@ -151,7 +151,7 @@
             // plinea
             // 
             this.plinea.BackColor = System.Drawing.Color.AliceBlue;
-            this.plinea.Location = new System.Drawing.Point(140, 183);
+            this.plinea.Location = new System.Drawing.Point(157, 181);
             this.plinea.Name = "plinea";
             this.plinea.Size = new System.Drawing.Size(282, 2);
             this.plinea.TabIndex = 3;
@@ -163,7 +163,7 @@
             this.txtNombre.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.marcasBindingSources, "MarcaNombre", true));
             this.txtNombre.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.txtNombre.Location = new System.Drawing.Point(140, 162);
+            this.txtNombre.Location = new System.Drawing.Point(157, 160);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(282, 22);
@@ -179,7 +179,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(29, 55);
+            this.label1.Location = new System.Drawing.Point(46, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(266, 32);
             this.label1.TabIndex = 1;
@@ -189,9 +189,9 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(315, 43);
+            this.pictureBox1.Location = new System.Drawing.Point(513, 100);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(107, 75);
+            this.pictureBox1.Size = new System.Drawing.Size(121, 83);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -209,7 +209,7 @@
             this.btnGuardarMarca.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarMarca.IconSize = 38;
             this.btnGuardarMarca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarMarca.Location = new System.Drawing.Point(501, 497);
+            this.btnGuardarMarca.Location = new System.Drawing.Point(67, 495);
             this.btnGuardarMarca.MaximumSize = new System.Drawing.Size(110, 30);
             this.btnGuardarMarca.MinimumSize = new System.Drawing.Size(110, 30);
             this.btnGuardarMarca.Name = "btnGuardarMarca";
@@ -233,7 +233,7 @@
             this.btnRegresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRegresar.IconSize = 34;
             this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegresar.Location = new System.Drawing.Point(45, 497);
+            this.btnRegresar.Location = new System.Drawing.Point(524, 495);
             this.btnRegresar.MaximumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.MinimumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.Name = "btnRegresar";
@@ -257,7 +257,7 @@
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 34;
             this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(496, 497);
+            this.btnActualizar.Location = new System.Drawing.Point(62, 495);
             this.btnActualizar.MaximumSize = new System.Drawing.Size(115, 30);
             this.btnActualizar.MinimumSize = new System.Drawing.Size(115, 30);
             this.btnActualizar.Name = "btnActualizar";

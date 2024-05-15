@@ -17,20 +17,18 @@ namespace CapaVista
     public partial class MostrarVentas : Form
     {
         VentaLOG _VentaLOG;
-        
+        int _id = 0;
+
         public MostrarVentas()
         {
             InitializeComponent();
             CargarDatagridView();
-            
         }
 
         public void CargarDatagridView()
         {
             _VentaLOG = new VentaLOG();
             dgvVentas.DataSource = _VentaLOG.ObtenerVentas();
-
-
         }
 
         private void dgvVentas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -67,6 +65,46 @@ namespace CapaVista
                 Reportes.ReporteVentas objeReporte = new Reportes.ReporteVentas(id);
                 objeReporte.ShowDialog();
 
+            }
+        }
+
+        public event EventHandler LlenarDataGridViewRequested;
+
+        private void OnLlenarDataGridViewRequested()
+        {
+            LlenarDataGridViewRequested?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void AbrirFormulario2()
+        {
+            RegistroVenta objRegistrarVenta = new RegistroVenta(_id);
+            objRegistrarVenta.LlenarDataGridViewRequested += (sender, args) => {
+                LlenarDataGridView();
+            };
+            objRegistrarVenta.ShowDialog();
+        }
+
+        private void LlenarDataGridView()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void btnAgregarVenta_Click(object sender, EventArgs e)
+        {
+            _id = 0;
+            AbrirFormulario2();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }       

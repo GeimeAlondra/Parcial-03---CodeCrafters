@@ -46,8 +46,10 @@
             this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.tipoEmpleadoBindingSources)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgTipoEmpleado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -63,10 +65,11 @@
             this.txtCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.txtCargo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipoEmpleadoBindingSources, "Cargo", true));
             this.txtCargo.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtCargo.Location = new System.Drawing.Point(176, 136);
+            this.txtCargo.Location = new System.Drawing.Point(167, 143);
+            this.txtCargo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(229, 20);
-            this.txtCargo.TabIndex = 19;
+            this.txtCargo.Size = new System.Drawing.Size(227, 20);
+            this.txtCargo.TabIndex = 0;
             this.txtCargo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCargo_KeyPress);
             // 
             // tipoEmpleadoBindingSources
@@ -86,7 +89,7 @@
             this.btnActualizarTipoEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizarTipoEmpleado.IconSize = 34;
             this.btnActualizarTipoEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizarTipoEmpleado.Location = new System.Drawing.Point(515, 484);
+            this.btnActualizarTipoEmpleado.Location = new System.Drawing.Point(82, 484);
             this.btnActualizarTipoEmpleado.MaximumSize = new System.Drawing.Size(115, 30);
             this.btnActualizarTipoEmpleado.MinimumSize = new System.Drawing.Size(115, 30);
             this.btnActualizarTipoEmpleado.Name = "btnActualizarTipoEmpleado";
@@ -111,7 +114,7 @@
             this.btnRegresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRegresar.IconSize = 34;
             this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegresar.Location = new System.Drawing.Point(71, 484);
+            this.btnRegresar.Location = new System.Drawing.Point(531, 484);
             this.btnRegresar.MaximumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.MinimumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.Name = "btnRegresar";
@@ -125,11 +128,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(65, 48);
+            this.label1.Location = new System.Drawing.Point(67, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(406, 31);
+            this.label1.Size = new System.Drawing.Size(415, 32);
             this.label1.TabIndex = 23;
             this.label1.Text = "Registro de Tipo de Empleado";
             // 
@@ -138,7 +141,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(67, 136);
+            this.label3.Location = new System.Drawing.Point(83, 143);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 24;
@@ -157,7 +160,7 @@
             this.btnGuardarTipoEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarTipoEmpleado.IconSize = 38;
             this.btnGuardarTipoEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarTipoEmpleado.Location = new System.Drawing.Point(520, 484);
+            this.btnGuardarTipoEmpleado.Location = new System.Drawing.Point(87, 484);
             this.btnGuardarTipoEmpleado.MaximumSize = new System.Drawing.Size(110, 30);
             this.btnGuardarTipoEmpleado.MinimumSize = new System.Drawing.Size(110, 30);
             this.btnGuardarTipoEmpleado.Name = "btnGuardarTipoEmpleado";
@@ -252,12 +255,24 @@
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(520, 109);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(121, 83);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
             // MostrarTipoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(705, 561);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dvgTipoEmpleado);
             this.Controls.Add(this.btnActualizarTipoEmpleado);
             this.Controls.Add(this.btnGuardarTipoEmpleado);
@@ -270,6 +285,7 @@
             this.Text = "MostrarTipoEmpleado";
             ((System.ComponentModel.ISupportInitialize)(this.tipoEmpleadoBindingSources)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgTipoEmpleado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,5 +305,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -65,7 +65,7 @@
             this.btnActualizarCategoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizarCategoria.IconSize = 34;
             this.btnActualizarCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizarCategoria.Location = new System.Drawing.Point(525, 492);
+            this.btnActualizarCategoria.Location = new System.Drawing.Point(74, 493);
             this.btnActualizarCategoria.MaximumSize = new System.Drawing.Size(115, 30);
             this.btnActualizarCategoria.MinimumSize = new System.Drawing.Size(115, 30);
             this.btnActualizarCategoria.Name = "btnActualizarCategoria";
@@ -90,7 +90,7 @@
             this.btnRegresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRegresar.IconSize = 34;
             this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegresar.Location = new System.Drawing.Point(74, 492);
+            this.btnRegresar.Location = new System.Drawing.Point(536, 493);
             this.btnRegresar.MaximumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.MinimumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.Name = "btnRegresar";
@@ -114,7 +114,7 @@
             this.btnGuardarCategoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarCategoria.IconSize = 38;
             this.btnGuardarCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCategoria.Location = new System.Drawing.Point(530, 492);
+            this.btnGuardarCategoria.Location = new System.Drawing.Point(79, 493);
             this.btnGuardarCategoria.MaximumSize = new System.Drawing.Size(110, 30);
             this.btnGuardarCategoria.MinimumSize = new System.Drawing.Size(110, 30);
             this.btnGuardarCategoria.Name = "btnGuardarCategoria";
@@ -137,7 +137,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(282, 22);
             this.txtNombre.TabIndex = 10;
-            
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -242,7 +241,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label2.Location = new System.Drawing.Point(60, 158);
+            this.label2.Location = new System.Drawing.Point(70, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 22);
             this.label2.TabIndex = 13;
@@ -253,7 +252,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(58, 50);
+            this.label1.Location = new System.Drawing.Point(68, 35);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(316, 32);
@@ -264,7 +263,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::CapaVista.Properties.Resources.categoria;
-            this.pictureBox1.Location = new System.Drawing.Point(411, 50);
+            this.pictureBox1.Location = new System.Drawing.Point(539, 105);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(107, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

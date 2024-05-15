@@ -87,7 +87,7 @@
             this.txtTelefonoCliente.ForeColor = System.Drawing.SystemColors.Window;
             this.txtTelefonoCliente.Location = new System.Drawing.Point(240, 344);
             this.txtTelefonoCliente.Name = "txtTelefonoCliente";
-            this.txtTelefonoCliente.Size = new System.Drawing.Size(275, 26);
+            this.txtTelefonoCliente.Size = new System.Drawing.Size(289, 26);
             this.txtTelefonoCliente.TabIndex = 55;
             this.txtTelefonoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefonoCliente_KeyPress);
             // 
@@ -100,9 +100,8 @@
             this.txtCorreoCliente.ForeColor = System.Drawing.SystemColors.Window;
             this.txtCorreoCliente.Location = new System.Drawing.Point(240, 287);
             this.txtCorreoCliente.Name = "txtCorreoCliente";
-            this.txtCorreoCliente.Size = new System.Drawing.Size(275, 26);
+            this.txtCorreoCliente.Size = new System.Drawing.Size(289, 26);
             this.txtCorreoCliente.TabIndex = 54;
-       
             this.txtCorreoCliente.Validating += new System.ComponentModel.CancelEventHandler(this.txtCorreoCliente_Validating);
             this.txtCorreoCliente.Validated += new System.EventHandler(this.txtCorreoCliente_Validated);
             // 
@@ -139,7 +138,7 @@
             this.txtDireccionCliente.Location = new System.Drawing.Point(238, 194);
             this.txtDireccionCliente.Multiline = true;
             this.txtDireccionCliente.Name = "txtDireccionCliente";
-            this.txtDireccionCliente.Size = new System.Drawing.Size(275, 72);
+            this.txtDireccionCliente.Size = new System.Drawing.Size(291, 72);
             this.txtDireccionCliente.TabIndex = 51;
             this.txtDireccionCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccionCliente_KeyPress);
             // 
@@ -151,7 +150,7 @@
             this.txtApellidoCliente.ForeColor = System.Drawing.SystemColors.Window;
             this.txtApellidoCliente.Location = new System.Drawing.Point(238, 145);
             this.txtApellidoCliente.Name = "txtApellidoCliente";
-            this.txtApellidoCliente.Size = new System.Drawing.Size(275, 26);
+            this.txtApellidoCliente.Size = new System.Drawing.Size(291, 26);
             this.txtApellidoCliente.TabIndex = 50;
             this.txtApellidoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoCliente_KeyPress);
             // 
@@ -163,7 +162,7 @@
             this.txtNombreCliente.ForeColor = System.Drawing.SystemColors.Window;
             this.txtNombreCliente.Location = new System.Drawing.Point(238, 94);
             this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(275, 26);
+            this.txtNombreCliente.Size = new System.Drawing.Size(291, 26);
             this.txtNombreCliente.TabIndex = 49;
             this.txtNombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreCliente_KeyPress);
             // 

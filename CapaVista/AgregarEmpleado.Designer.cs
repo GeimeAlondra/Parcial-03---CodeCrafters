@@ -57,9 +57,9 @@
             this.cbCargoEmpleado.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.empleadobindingSource, "TipoEmpleadoId", true));
             this.cbCargoEmpleado.ForeColor = System.Drawing.SystemColors.Window;
             this.cbCargoEmpleado.FormattingEnabled = true;
-            this.cbCargoEmpleado.Location = new System.Drawing.Point(263, 378);
+            this.cbCargoEmpleado.Location = new System.Drawing.Point(216, 378);
             this.cbCargoEmpleado.Name = "cbCargoEmpleado";
-            this.cbCargoEmpleado.Size = new System.Drawing.Size(222, 21);
+            this.cbCargoEmpleado.Size = new System.Drawing.Size(160, 21);
             this.cbCargoEmpleado.TabIndex = 58;
             // 
             // empleadobindingSource
@@ -71,9 +71,9 @@
             this.txtSalarioEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.txtSalarioEmpleado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadobindingSource, "EmpleadoSalario", true));
             this.txtSalarioEmpleado.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtSalarioEmpleado.Location = new System.Drawing.Point(263, 331);
+            this.txtSalarioEmpleado.Location = new System.Drawing.Point(216, 331);
             this.txtSalarioEmpleado.Name = "txtSalarioEmpleado";
-            this.txtSalarioEmpleado.Size = new System.Drawing.Size(222, 20);
+            this.txtSalarioEmpleado.Size = new System.Drawing.Size(306, 20);
             this.txtSalarioEmpleado.TabIndex = 56;
             this.txtSalarioEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalarioEmpleado_KeyPress);
             // 
@@ -82,10 +82,10 @@
             this.txtDireccionEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.txtDireccionEmpleado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadobindingSource, "EmpleadoDireccion", true));
             this.txtDireccionEmpleado.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtDireccionEmpleado.Location = new System.Drawing.Point(263, 227);
+            this.txtDireccionEmpleado.Location = new System.Drawing.Point(216, 227);
             this.txtDireccionEmpleado.Multiline = true;
             this.txtDireccionEmpleado.Name = "txtDireccionEmpleado";
-            this.txtDireccionEmpleado.Size = new System.Drawing.Size(222, 82);
+            this.txtDireccionEmpleado.Size = new System.Drawing.Size(306, 82);
             this.txtDireccionEmpleado.TabIndex = 55;
             this.txtDireccionEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccionEmpleado_KeyPress);
             // 
@@ -94,9 +94,9 @@
             this.txtApellidoEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.txtApellidoEmpleado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadobindingSource, "EmpleadoApellido", true));
             this.txtApellidoEmpleado.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtApellidoEmpleado.Location = new System.Drawing.Point(263, 142);
+            this.txtApellidoEmpleado.Location = new System.Drawing.Point(216, 142);
             this.txtApellidoEmpleado.Name = "txtApellidoEmpleado";
-            this.txtApellidoEmpleado.Size = new System.Drawing.Size(221, 20);
+            this.txtApellidoEmpleado.Size = new System.Drawing.Size(306, 20);
             this.txtApellidoEmpleado.TabIndex = 54;
             this.txtApellidoEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoEmpleado_KeyPress);
             // 
@@ -105,9 +105,9 @@
             this.txtNombreEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.txtNombreEmpleado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadobindingSource, "EmpleadoNombre", true));
             this.txtNombreEmpleado.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtNombreEmpleado.Location = new System.Drawing.Point(263, 101);
+            this.txtNombreEmpleado.Location = new System.Drawing.Point(216, 101);
             this.txtNombreEmpleado.Name = "txtNombreEmpleado";
-            this.txtNombreEmpleado.Size = new System.Drawing.Size(221, 20);
+            this.txtNombreEmpleado.Size = new System.Drawing.Size(306, 20);
             this.txtNombreEmpleado.TabIndex = 53;
             this.txtNombreEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreEmpleado_KeyPress);
             // 
@@ -116,7 +116,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(201, 385);
+            this.label7.Location = new System.Drawing.Point(154, 385);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 16);
             this.label7.TabIndex = 51;
@@ -127,7 +127,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(99, 184);
+            this.label6.Location = new System.Drawing.Point(52, 184);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(155, 16);
             this.label6.TabIndex = 50;
@@ -138,7 +138,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(193, 332);
+            this.label5.Location = new System.Drawing.Point(146, 332);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 16);
             this.label5.TabIndex = 49;
@@ -149,7 +149,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(180, 227);
+            this.label4.Location = new System.Drawing.Point(133, 227);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 16);
             this.label4.TabIndex = 48;
@@ -160,7 +160,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(188, 143);
+            this.label3.Location = new System.Drawing.Point(141, 143);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 16);
             this.label3.TabIndex = 47;
@@ -171,7 +171,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(188, 101);
+            this.label2.Location = new System.Drawing.Point(141, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 46;
@@ -201,7 +201,7 @@
             this.btnRegresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRegresar.IconSize = 34;
             this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegresar.Location = new System.Drawing.Point(449, 458);
+            this.btnRegresar.Location = new System.Drawing.Point(412, 458);
             this.btnRegresar.MaximumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.MinimumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.Name = "btnRegresar";
@@ -241,7 +241,7 @@
             this.btnAgregarCargo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btnAgregarCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCargo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAgregarCargo.Location = new System.Drawing.Point(515, 378);
+            this.btnAgregarCargo.Location = new System.Drawing.Point(399, 376);
             this.btnAgregarCargo.Name = "btnAgregarCargo";
             this.btnAgregarCargo.Size = new System.Drawing.Size(123, 23);
             this.btnAgregarCargo.TabIndex = 64;
@@ -254,7 +254,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(193, 425);
+            this.label8.Location = new System.Drawing.Point(146, 421);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 16);
             this.label8.TabIndex = 65;
@@ -266,7 +266,7 @@
             this.checkEstadoEmpleado.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.empleadobindingSource, "Estado", true));
             this.checkEstadoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkEstadoEmpleado.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.checkEstadoEmpleado.Location = new System.Drawing.Point(267, 421);
+            this.checkEstadoEmpleado.Location = new System.Drawing.Point(220, 421);
             this.checkEstadoEmpleado.Name = "checkEstadoEmpleado";
             this.checkEstadoEmpleado.Size = new System.Drawing.Size(69, 20);
             this.checkEstadoEmpleado.TabIndex = 66;
@@ -284,9 +284,9 @@
             this.dtpFechaNacimiento.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.empleadobindingSource, "EmpleadoFechaNacimiento", true));
             this.dtpFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(263, 184);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(216, 184);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(222, 21);
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(306, 21);
             this.dtpFechaNacimiento.TabIndex = 67;
             this.dtpFechaNacimiento.Value = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             // 

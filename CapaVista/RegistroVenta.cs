@@ -22,7 +22,7 @@ namespace CapaVista
         DataTable detalleVenta;
 
 
-        public RegistroVenta()
+        public RegistroVenta(int id = 0)
         {
             InitializeComponent();
             CargarProductos();
@@ -340,6 +340,13 @@ namespace CapaVista
             {
                 e.Handled = true;
             }
+        }
+
+        public event EventHandler LlenarDataGridViewRequested;
+
+        private void OnLlenarDataGridViewRequested()
+        {
+            LlenarDataGridViewRequested?.Invoke(this, EventArgs.Empty);
         }
     }
 }
