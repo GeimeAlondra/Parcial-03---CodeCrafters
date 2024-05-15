@@ -70,7 +70,12 @@ namespace CapaDatos
 
         }
 
-     
+         public Cliente LeerPorId(int id)
+         {
+             _db = new Contexto();
+        
+             return _db.Clientes.Find(id);
+         }
 
         public List<Cliente> FiltroNombre(string nombre, bool inactivos)
         {
