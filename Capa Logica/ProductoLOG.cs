@@ -19,12 +19,7 @@ namespace Capa_Logica
             return _ProductoDAL.Guardar(producto, id, esActualizacion);
         }
 
-        public Producto ObtenerProductoPorId(int codigo)
-        {
-            _ProductoDAL = new ProductoDAL();
-
-            return _ProductoDAL.LeerPorId(codigo);
-        }
+        
 
         public List<Producto> ObtenerProductos(bool inactivos = false)
         {
