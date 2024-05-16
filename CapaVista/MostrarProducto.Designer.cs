@@ -33,20 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MostrarProducto));
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.ProductoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductoNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductoDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductoPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductoStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CategoriaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MarcaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProveedorId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnRegresar = new FontAwesome.Sharp.IconButton();
@@ -63,6 +49,20 @@
             this.cbProveedorProducto = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ProductoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductoNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductoDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductoPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductoStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoriaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MarcaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProveedorId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -131,125 +131,6 @@
             this.dgvProductos.TabIndex = 35;
             this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             this.dgvProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvProductos_CellFormatting);
-            // 
-            // ProductoId
-            // 
-            this.ProductoId.DataPropertyName = "ProductoId";
-            this.ProductoId.HeaderText = "Id";
-            this.ProductoId.Name = "ProductoId";
-            this.ProductoId.ReadOnly = true;
-            this.ProductoId.Width = 41;
-            // 
-            // ProductoNombre
-            // 
-            this.ProductoNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProductoNombre.DataPropertyName = "ProductoNombre";
-            this.ProductoNombre.HeaderText = "Nombre";
-            this.ProductoNombre.Name = "ProductoNombre";
-            this.ProductoNombre.ReadOnly = true;
-            // 
-            // ProductoDescripcion
-            // 
-            this.ProductoDescripcion.DataPropertyName = "ProductoDescripcion";
-            this.ProductoDescripcion.HeaderText = "Descripcion";
-            this.ProductoDescripcion.Name = "ProductoDescripcion";
-            this.ProductoDescripcion.ReadOnly = true;
-            this.ProductoDescripcion.Visible = false;
-            this.ProductoDescripcion.Width = 104;
-            // 
-            // ProductoPrecio
-            // 
-            this.ProductoPrecio.DataPropertyName = "ProductoPrecio";
-            this.ProductoPrecio.HeaderText = "Precio";
-            this.ProductoPrecio.Name = "ProductoPrecio";
-            this.ProductoPrecio.ReadOnly = true;
-            this.ProductoPrecio.Width = 69;
-            // 
-            // ProductoStock
-            // 
-            this.ProductoStock.DataPropertyName = "ProductoStock";
-            this.ProductoStock.HeaderText = "Stock";
-            this.ProductoStock.Name = "ProductoStock";
-            this.ProductoStock.ReadOnly = true;
-            this.ProductoStock.Width = 64;
-            // 
-            // Categoria
-            // 
-            this.Categoria.DataPropertyName = "Categoria";
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            this.Categoria.Width = 89;
-            // 
-            // Marca
-            // 
-            this.Marca.DataPropertyName = "Marca";
-            this.Marca.HeaderText = "Marca";
-            this.Marca.Name = "Marca";
-            this.Marca.ReadOnly = true;
-            this.Marca.Width = 68;
-            // 
-            // Proveedor
-            // 
-            this.Proveedor.DataPropertyName = "Proveedor";
-            this.Proveedor.HeaderText = "Proveedor";
-            this.Proveedor.Name = "Proveedor";
-            this.Proveedor.ReadOnly = true;
-            this.Proveedor.Width = 94;
-            // 
-            // CategoriaId
-            // 
-            this.CategoriaId.DataPropertyName = "CategoriaId";
-            this.CategoriaId.HeaderText = "Categoria";
-            this.CategoriaId.Name = "CategoriaId";
-            this.CategoriaId.ReadOnly = true;
-            this.CategoriaId.Visible = false;
-            this.CategoriaId.Width = 91;
-            // 
-            // MarcaId
-            // 
-            this.MarcaId.DataPropertyName = "MarcaId";
-            this.MarcaId.HeaderText = "Marca";
-            this.MarcaId.Name = "MarcaId";
-            this.MarcaId.ReadOnly = true;
-            this.MarcaId.Visible = false;
-            this.MarcaId.Width = 70;
-            // 
-            // ProveedorId
-            // 
-            this.ProveedorId.DataPropertyName = "ProveedorId";
-            this.ProveedorId.HeaderText = "Proveedor";
-            this.ProveedorId.Name = "ProveedorId";
-            this.ProveedorId.ReadOnly = true;
-            this.ProveedorId.Visible = false;
-            this.ProveedorId.Width = 96;
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
-            this.Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            this.Editar.Width = 46;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
-            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Width = 59;
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "Estado";
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Visible = false;
-            this.Estado.Width = 75;
             // 
             // dataGridViewImageColumn1
             // 
@@ -338,7 +219,6 @@
             this.txtNombreProducto.Size = new System.Drawing.Size(180, 26);
             this.txtNombreProducto.TabIndex = 37;
             this.txtNombreProducto.TextChanged += new System.EventHandler(this.txtNombreProducto_TextChanged);
-           
             // 
             // label7
             // 
@@ -499,6 +379,125 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtro de Productos";
             // 
+            // ProductoId
+            // 
+            this.ProductoId.DataPropertyName = "ProductoId";
+            this.ProductoId.HeaderText = "Id";
+            this.ProductoId.Name = "ProductoId";
+            this.ProductoId.ReadOnly = true;
+            this.ProductoId.Width = 41;
+            // 
+            // ProductoNombre
+            // 
+            this.ProductoNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProductoNombre.DataPropertyName = "ProductoNombre";
+            this.ProductoNombre.HeaderText = "Nombre";
+            this.ProductoNombre.Name = "ProductoNombre";
+            this.ProductoNombre.ReadOnly = true;
+            // 
+            // ProductoDescripcion
+            // 
+            this.ProductoDescripcion.DataPropertyName = "ProductoDescripcion";
+            this.ProductoDescripcion.HeaderText = "Descripcion";
+            this.ProductoDescripcion.Name = "ProductoDescripcion";
+            this.ProductoDescripcion.ReadOnly = true;
+            this.ProductoDescripcion.Visible = false;
+            this.ProductoDescripcion.Width = 102;
+            // 
+            // ProductoPrecio
+            // 
+            this.ProductoPrecio.DataPropertyName = "ProductoPrecio";
+            this.ProductoPrecio.HeaderText = "Precio";
+            this.ProductoPrecio.Name = "ProductoPrecio";
+            this.ProductoPrecio.ReadOnly = true;
+            this.ProductoPrecio.Width = 69;
+            // 
+            // ProductoStock
+            // 
+            this.ProductoStock.DataPropertyName = "ProductoStock";
+            this.ProductoStock.HeaderText = "Stock";
+            this.ProductoStock.Name = "ProductoStock";
+            this.ProductoStock.ReadOnly = true;
+            this.ProductoStock.Width = 64;
+            // 
+            // Categoria
+            // 
+            this.Categoria.DataPropertyName = "Categoria";
+            this.Categoria.HeaderText = "Categoria";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            this.Categoria.Width = 89;
+            // 
+            // Marca
+            // 
+            this.Marca.DataPropertyName = "Marca";
+            this.Marca.HeaderText = "Marca";
+            this.Marca.Name = "Marca";
+            this.Marca.ReadOnly = true;
+            this.Marca.Width = 68;
+            // 
+            // Proveedor
+            // 
+            this.Proveedor.DataPropertyName = "Proveedor";
+            this.Proveedor.HeaderText = "Proveedor";
+            this.Proveedor.Name = "Proveedor";
+            this.Proveedor.ReadOnly = true;
+            this.Proveedor.Width = 94;
+            // 
+            // CategoriaId
+            // 
+            this.CategoriaId.DataPropertyName = "CategoriaId";
+            this.CategoriaId.HeaderText = "Categoria";
+            this.CategoriaId.Name = "CategoriaId";
+            this.CategoriaId.ReadOnly = true;
+            this.CategoriaId.Visible = false;
+            this.CategoriaId.Width = 89;
+            // 
+            // MarcaId
+            // 
+            this.MarcaId.DataPropertyName = "MarcaId";
+            this.MarcaId.HeaderText = "Marca";
+            this.MarcaId.Name = "MarcaId";
+            this.MarcaId.ReadOnly = true;
+            this.MarcaId.Visible = false;
+            this.MarcaId.Width = 68;
+            // 
+            // ProveedorId
+            // 
+            this.ProveedorId.DataPropertyName = "ProveedorId";
+            this.ProveedorId.HeaderText = "Proveedor";
+            this.ProveedorId.Name = "ProveedorId";
+            this.ProveedorId.ReadOnly = true;
+            this.ProveedorId.Visible = false;
+            this.ProveedorId.Width = 94;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
+            this.Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Width = 46;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Desactivar";
+            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
+            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Width = 76;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Visible = false;
+            this.Estado.Width = 73;
+            // 
             // MostrarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -526,6 +525,18 @@
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtNombreProducto;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cbCategoriaProducto;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbMarcaProducto;
+        private System.Windows.Forms.RadioButton checkEstadoActivo;
+        private System.Windows.Forms.RadioButton checkEstadoInactivo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbProveedorProducto;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductoId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductoNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductoDescripcion;
@@ -540,17 +551,5 @@
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNombreProducto;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbCategoriaProducto;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbMarcaProducto;
-        private System.Windows.Forms.RadioButton checkEstadoActivo;
-        private System.Windows.Forms.RadioButton checkEstadoInactivo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbProveedorProducto;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

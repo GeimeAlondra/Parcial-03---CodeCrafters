@@ -33,14 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MostrarProveedor));
             this.dgvProveedor = new System.Windows.Forms.DataGridView();
-            this.ProveedorId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProveedorCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProveedorDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProveedorTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnRegresar = new FontAwesome.Sharp.IconButton();
@@ -51,6 +43,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtNombreProveedor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.ProveedorId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProveedorCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProveedorDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProveedorTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedor)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -108,65 +108,6 @@
             this.dgvProveedor.Size = new System.Drawing.Size(619, 273);
             this.dgvProveedor.TabIndex = 0;
             this.dgvProveedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedor_CellContentClick);
-            // 
-            // ProveedorId
-            // 
-            this.ProveedorId.DataPropertyName = "ProveedorId";
-            this.ProveedorId.HeaderText = "Id";
-            this.ProveedorId.Name = "ProveedorId";
-            this.ProveedorId.ReadOnly = true;
-            // 
-            // NombreProveedor
-            // 
-            this.NombreProveedor.DataPropertyName = "ProveedorNombre";
-            this.NombreProveedor.HeaderText = "Nombre";
-            this.NombreProveedor.Name = "NombreProveedor";
-            this.NombreProveedor.ReadOnly = true;
-            // 
-            // ProveedorCorreo
-            // 
-            this.ProveedorCorreo.DataPropertyName = "ProveedorCorreo";
-            this.ProveedorCorreo.HeaderText = "Correo";
-            this.ProveedorCorreo.Name = "ProveedorCorreo";
-            this.ProveedorCorreo.ReadOnly = true;
-            // 
-            // ProveedorDireccion
-            // 
-            this.ProveedorDireccion.DataPropertyName = "ProveedorDireccion";
-            this.ProveedorDireccion.HeaderText = "Direccion";
-            this.ProveedorDireccion.Name = "ProveedorDireccion";
-            this.ProveedorDireccion.ReadOnly = true;
-            // 
-            // ProveedorTelefono
-            // 
-            this.ProveedorTelefono.DataPropertyName = "ProveedorTelefono";
-            this.ProveedorTelefono.HeaderText = "Telefono";
-            this.ProveedorTelefono.Name = "ProveedorTelefono";
-            this.ProveedorTelefono.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "Estado";
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Visible = false;
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // dataGridViewImageColumn1
             // 
@@ -271,7 +212,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkEstadoActivo.AutoSize = true;
             this.checkEstadoActivo.Checked = true;
-            this.checkEstadoActivo.Location = new System.Drawing.Point(420, 45);
+            this.checkEstadoActivo.Location = new System.Drawing.Point(443, 46);
             this.checkEstadoActivo.Name = "checkEstadoActivo";
             this.checkEstadoActivo.Size = new System.Drawing.Size(72, 22);
             this.checkEstadoActivo.TabIndex = 45;
@@ -287,7 +228,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(353, 47);
+            this.label6.Location = new System.Drawing.Point(393, 49);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 16);
             this.label6.TabIndex = 42;
@@ -303,7 +244,7 @@
             this.txtNombreProveedor.Location = new System.Drawing.Point(104, 44);
             this.txtNombreProveedor.Margin = new System.Windows.Forms.Padding(0);
             this.txtNombreProveedor.Name = "txtNombreProveedor";
-            this.txtNombreProveedor.Size = new System.Drawing.Size(180, 26);
+            this.txtNombreProveedor.Size = new System.Drawing.Size(159, 26);
             this.txtNombreProveedor.TabIndex = 37;
             this.txtNombreProveedor.TextChanged += new System.EventHandler(this.txtNombreProveedor_TextChanged);
             this.txtNombreProveedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreProveedor_KeyPress);
@@ -317,6 +258,65 @@
             this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre:";
+            // 
+            // ProveedorId
+            // 
+            this.ProveedorId.DataPropertyName = "ProveedorId";
+            this.ProveedorId.HeaderText = "Id";
+            this.ProveedorId.Name = "ProveedorId";
+            this.ProveedorId.ReadOnly = true;
+            // 
+            // NombreProveedor
+            // 
+            this.NombreProveedor.DataPropertyName = "ProveedorNombre";
+            this.NombreProveedor.HeaderText = "Nombre";
+            this.NombreProveedor.Name = "NombreProveedor";
+            this.NombreProveedor.ReadOnly = true;
+            // 
+            // ProveedorCorreo
+            // 
+            this.ProveedorCorreo.DataPropertyName = "ProveedorCorreo";
+            this.ProveedorCorreo.HeaderText = "Correo";
+            this.ProveedorCorreo.Name = "ProveedorCorreo";
+            this.ProveedorCorreo.ReadOnly = true;
+            // 
+            // ProveedorDireccion
+            // 
+            this.ProveedorDireccion.DataPropertyName = "ProveedorDireccion";
+            this.ProveedorDireccion.HeaderText = "Direccion";
+            this.ProveedorDireccion.Name = "ProveedorDireccion";
+            this.ProveedorDireccion.ReadOnly = true;
+            // 
+            // ProveedorTelefono
+            // 
+            this.ProveedorTelefono.DataPropertyName = "ProveedorTelefono";
+            this.ProveedorTelefono.HeaderText = "Telefono";
+            this.ProveedorTelefono.Name = "ProveedorTelefono";
+            this.ProveedorTelefono.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Visible = false;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Desactivar";
+            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // MostrarProveedor
             // 
@@ -346,6 +346,12 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private FontAwesome.Sharp.IconButton btnRegresar;
         private FontAwesome.Sharp.IconButton btnAgregarProveedor;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton checkEstadoInactivo;
+        private System.Windows.Forms.RadioButton checkEstadoActivo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtNombreProveedor;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProveedorId;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProveedorCorreo;
@@ -354,11 +360,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton checkEstadoInactivo;
-        private System.Windows.Forms.RadioButton checkEstadoActivo;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtNombreProveedor;
-        private System.Windows.Forms.Label label2;
     }
 }

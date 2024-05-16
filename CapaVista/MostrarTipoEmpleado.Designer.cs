@@ -89,7 +89,7 @@
             this.btnActualizarTipoEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizarTipoEmpleado.IconSize = 34;
             this.btnActualizarTipoEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizarTipoEmpleado.Location = new System.Drawing.Point(82, 484);
+            this.btnActualizarTipoEmpleado.Location = new System.Drawing.Point(224, 484);
             this.btnActualizarTipoEmpleado.MaximumSize = new System.Drawing.Size(115, 30);
             this.btnActualizarTipoEmpleado.MinimumSize = new System.Drawing.Size(115, 30);
             this.btnActualizarTipoEmpleado.Name = "btnActualizarTipoEmpleado";
@@ -114,7 +114,7 @@
             this.btnRegresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRegresar.IconSize = 34;
             this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegresar.Location = new System.Drawing.Point(531, 484);
+            this.btnRegresar.Location = new System.Drawing.Point(372, 484);
             this.btnRegresar.MaximumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.MinimumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.Name = "btnRegresar";
@@ -160,7 +160,7 @@
             this.btnGuardarTipoEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarTipoEmpleado.IconSize = 38;
             this.btnGuardarTipoEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarTipoEmpleado.Location = new System.Drawing.Point(87, 484);
+            this.btnGuardarTipoEmpleado.Location = new System.Drawing.Point(229, 484);
             this.btnGuardarTipoEmpleado.MaximumSize = new System.Drawing.Size(110, 30);
             this.btnGuardarTipoEmpleado.MinimumSize = new System.Drawing.Size(110, 30);
             this.btnGuardarTipoEmpleado.Name = "btnGuardarTipoEmpleado";

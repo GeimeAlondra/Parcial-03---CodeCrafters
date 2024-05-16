@@ -33,6 +33,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MostrarCliente));
             this.dvgCliente = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnRegresar = new FontAwesome.Sharp.IconButton();
+            this.btnAgregarCliente = new FontAwesome.Sharp.IconButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkEstadoInactivo = new System.Windows.Forms.RadioButton();
+            this.checkEstadoActivo = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.ClienteId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClienteProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClienteApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,16 +52,6 @@
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnRegresar = new FontAwesome.Sharp.IconButton();
-            this.btnAgregarCliente = new FontAwesome.Sharp.IconButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkEstadoInactivo = new System.Windows.Forms.RadioButton();
-            this.checkEstadoActivo = new System.Windows.Forms.RadioButton();
-            this.txtNombreCliente = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvgCliente)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -110,72 +110,6 @@
             this.dvgCliente.Size = new System.Drawing.Size(698, 250);
             this.dvgCliente.TabIndex = 42;
             this.dvgCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgCliente_CellContentClick);
-            // 
-            // ClienteId
-            // 
-            this.ClienteId.DataPropertyName = "ClienteId";
-            this.ClienteId.HeaderText = "Id";
-            this.ClienteId.Name = "ClienteId";
-            this.ClienteId.ReadOnly = true;
-            // 
-            // ClienteProveedor
-            // 
-            this.ClienteProveedor.DataPropertyName = "ClienteNombre";
-            this.ClienteProveedor.HeaderText = "Nombre";
-            this.ClienteProveedor.Name = "ClienteProveedor";
-            this.ClienteProveedor.ReadOnly = true;
-            // 
-            // ClienteApellido
-            // 
-            this.ClienteApellido.DataPropertyName = "ClienteApellido";
-            this.ClienteApellido.HeaderText = "Apellido";
-            this.ClienteApellido.Name = "ClienteApellido";
-            this.ClienteApellido.ReadOnly = true;
-            // 
-            // ClienteDireccion
-            // 
-            this.ClienteDireccion.DataPropertyName = "ClienteDireccion";
-            this.ClienteDireccion.HeaderText = "Direccion";
-            this.ClienteDireccion.Name = "ClienteDireccion";
-            this.ClienteDireccion.ReadOnly = true;
-            // 
-            // ClienteCorreo
-            // 
-            this.ClienteCorreo.DataPropertyName = "ClienteCorreo";
-            this.ClienteCorreo.HeaderText = "Correo";
-            this.ClienteCorreo.Name = "ClienteCorreo";
-            this.ClienteCorreo.ReadOnly = true;
-            // 
-            // ClienteTelefono
-            // 
-            this.ClienteTelefono.DataPropertyName = "ClienteTelefono";
-            this.ClienteTelefono.HeaderText = "Telefono";
-            this.ClienteTelefono.Name = "ClienteTelefono";
-            this.ClienteTelefono.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "Estado";
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Visible = false;
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // dataGridViewImageColumn1
             // 
@@ -292,6 +226,19 @@
             this.checkEstadoActivo.UseVisualStyleBackColor = true;
             this.checkEstadoActivo.CheckedChanged += new System.EventHandler(this.checkEstadoActivo_CheckedChanged);
             // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(479, 44);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 16);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "Estado:";
+            // 
             // txtNombreCliente
             // 
             this.txtNombreCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -317,18 +264,71 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre:";
             // 
-            // label6
+            // ClienteId
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(479, 44);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 16);
-            this.label6.TabIndex = 42;
-            this.label6.Text = "Estado:";
+            this.ClienteId.DataPropertyName = "ClienteId";
+            this.ClienteId.HeaderText = "Id";
+            this.ClienteId.Name = "ClienteId";
+            this.ClienteId.ReadOnly = true;
+            // 
+            // ClienteProveedor
+            // 
+            this.ClienteProveedor.DataPropertyName = "ClienteNombre";
+            this.ClienteProveedor.HeaderText = "Nombre";
+            this.ClienteProveedor.Name = "ClienteProveedor";
+            this.ClienteProveedor.ReadOnly = true;
+            // 
+            // ClienteApellido
+            // 
+            this.ClienteApellido.DataPropertyName = "ClienteApellido";
+            this.ClienteApellido.HeaderText = "Apellido";
+            this.ClienteApellido.Name = "ClienteApellido";
+            this.ClienteApellido.ReadOnly = true;
+            // 
+            // ClienteDireccion
+            // 
+            this.ClienteDireccion.DataPropertyName = "ClienteDireccion";
+            this.ClienteDireccion.HeaderText = "Direccion";
+            this.ClienteDireccion.Name = "ClienteDireccion";
+            this.ClienteDireccion.ReadOnly = true;
+            // 
+            // ClienteCorreo
+            // 
+            this.ClienteCorreo.DataPropertyName = "ClienteCorreo";
+            this.ClienteCorreo.HeaderText = "Correo";
+            this.ClienteCorreo.Name = "ClienteCorreo";
+            this.ClienteCorreo.ReadOnly = true;
+            // 
+            // ClienteTelefono
+            // 
+            this.ClienteTelefono.DataPropertyName = "ClienteTelefono";
+            this.ClienteTelefono.HeaderText = "Telefono";
+            this.ClienteTelefono.Name = "ClienteTelefono";
+            this.ClienteTelefono.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Visible = false;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Desactivar";
+            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // MostrarCliente
             // 
@@ -351,15 +351,6 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dvgCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteProveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteApellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteDireccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteCorreo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteTelefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewImageColumn Editar;
-        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private FontAwesome.Sharp.IconButton btnRegresar;
@@ -370,5 +361,14 @@
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteProveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteDireccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteCorreo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ClienteTelefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewImageColumn Editar;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
     }
 }

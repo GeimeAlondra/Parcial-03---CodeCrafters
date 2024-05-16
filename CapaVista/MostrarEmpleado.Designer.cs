@@ -28,22 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MostrarEmpleado));
             this.dvgEmpleado = new System.Windows.Forms.DataGridView();
-            this.EmpleadoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmpleadoNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmpleadoApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmpleadoDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoEmpleadoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Salario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnAgregarEmpleado = new FontAwesome.Sharp.IconButton();
@@ -56,6 +45,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.EmpleadoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpleadoNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpleadoApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmpleadoDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoEmpleadoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Salario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvgEmpleado)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -72,14 +72,14 @@
             this.dvgEmpleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dvgEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dvgEmpleado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dvgEmpleado.ColumnHeadersHeight = 22;
             this.dvgEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dvgEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -99,117 +99,24 @@
             this.dvgEmpleado.Location = new System.Drawing.Point(64, 192);
             this.dvgEmpleado.Name = "dvgEmpleado";
             this.dvgEmpleado.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgEmpleado.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgEmpleado.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dvgEmpleado.RowHeadersVisible = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            this.dvgEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            this.dvgEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dvgEmpleado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dvgEmpleado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgEmpleado.Size = new System.Drawing.Size(594, 280);
             this.dvgEmpleado.TabIndex = 63;
             this.dvgEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgEmpleado_CellContentClick_1);
             this.dvgEmpleado.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dvgEmpleado_CellFormatting);
-            // 
-            // EmpleadoId
-            // 
-            this.EmpleadoId.DataPropertyName = "EmpleadoId";
-            this.EmpleadoId.HeaderText = "Id";
-            this.EmpleadoId.Name = "EmpleadoId";
-            this.EmpleadoId.ReadOnly = true;
-            this.EmpleadoId.Width = 41;
-            // 
-            // EmpleadoNombre
-            // 
-            this.EmpleadoNombre.DataPropertyName = "EmpleadoNombre";
-            this.EmpleadoNombre.HeaderText = "Nombre";
-            this.EmpleadoNombre.Name = "EmpleadoNombre";
-            this.EmpleadoNombre.ReadOnly = true;
-            this.EmpleadoNombre.Width = 76;
-            // 
-            // EmpleadoApellido
-            // 
-            this.EmpleadoApellido.DataPropertyName = "EmpleadoApellido";
-            this.EmpleadoApellido.HeaderText = "Apellido";
-            this.EmpleadoApellido.Name = "EmpleadoApellido";
-            this.EmpleadoApellido.ReadOnly = true;
-            this.EmpleadoApellido.Width = 75;
-            // 
-            // EmpleadoDireccion
-            // 
-            this.EmpleadoDireccion.DataPropertyName = "EmpleadoDireccion";
-            this.EmpleadoDireccion.HeaderText = "Direccion";
-            this.EmpleadoDireccion.Name = "EmpleadoDireccion";
-            this.EmpleadoDireccion.ReadOnly = true;
-            this.EmpleadoDireccion.Width = 83;
-            // 
-            // TipoEmpleadoId
-            // 
-            this.TipoEmpleadoId.DataPropertyName = "TipoEmpleadoId";
-            this.TipoEmpleadoId.HeaderText = "Cargo";
-            this.TipoEmpleadoId.Name = "TipoEmpleadoId";
-            this.TipoEmpleadoId.ReadOnly = true;
-            this.TipoEmpleadoId.Visible = false;
-            this.TipoEmpleadoId.Width = 65;
-            // 
-            // TipoEmpleado
-            // 
-            this.TipoEmpleado.DataPropertyName = "TipoEmpleado";
-            this.TipoEmpleado.HeaderText = "Cargo";
-            this.TipoEmpleado.Name = "TipoEmpleado";
-            this.TipoEmpleado.ReadOnly = true;
-            this.TipoEmpleado.Width = 64;
-            // 
-            // FechaNacimiento
-            // 
-            this.FechaNacimiento.DataPropertyName = "EmpleadoFechaNacimiento";
-            this.FechaNacimiento.HeaderText = "Fecha Nacimiento";
-            this.FechaNacimiento.Name = "FechaNacimiento";
-            this.FechaNacimiento.ReadOnly = true;
-            this.FechaNacimiento.Width = 131;
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            this.Editar.Width = 44;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Eliminar.Width = 77;
-            // 
-            // Salario
-            // 
-            this.Salario.DataPropertyName = "EmpleadoSalario";
-            this.Salario.HeaderText = "Salario";
-            this.Salario.Name = "Salario";
-            this.Salario.ReadOnly = true;
-            this.Salario.Visible = false;
-            this.Salario.Width = 71;
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "Estado";
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Visible = false;
-            this.Estado.Width = 70;
             // 
             // dataGridViewImageColumn1
             // 
@@ -396,6 +303,99 @@
             this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre:";
+            // 
+            // EmpleadoId
+            // 
+            this.EmpleadoId.DataPropertyName = "EmpleadoId";
+            this.EmpleadoId.HeaderText = "Id";
+            this.EmpleadoId.Name = "EmpleadoId";
+            this.EmpleadoId.ReadOnly = true;
+            this.EmpleadoId.Width = 41;
+            // 
+            // EmpleadoNombre
+            // 
+            this.EmpleadoNombre.DataPropertyName = "EmpleadoNombre";
+            this.EmpleadoNombre.HeaderText = "Nombre";
+            this.EmpleadoNombre.Name = "EmpleadoNombre";
+            this.EmpleadoNombre.ReadOnly = true;
+            this.EmpleadoNombre.Width = 76;
+            // 
+            // EmpleadoApellido
+            // 
+            this.EmpleadoApellido.DataPropertyName = "EmpleadoApellido";
+            this.EmpleadoApellido.HeaderText = "Apellido";
+            this.EmpleadoApellido.Name = "EmpleadoApellido";
+            this.EmpleadoApellido.ReadOnly = true;
+            this.EmpleadoApellido.Width = 75;
+            // 
+            // EmpleadoDireccion
+            // 
+            this.EmpleadoDireccion.DataPropertyName = "EmpleadoDireccion";
+            this.EmpleadoDireccion.HeaderText = "Direccion";
+            this.EmpleadoDireccion.Name = "EmpleadoDireccion";
+            this.EmpleadoDireccion.ReadOnly = true;
+            this.EmpleadoDireccion.Width = 83;
+            // 
+            // TipoEmpleadoId
+            // 
+            this.TipoEmpleadoId.DataPropertyName = "TipoEmpleadoId";
+            this.TipoEmpleadoId.HeaderText = "Cargo";
+            this.TipoEmpleadoId.Name = "TipoEmpleadoId";
+            this.TipoEmpleadoId.ReadOnly = true;
+            this.TipoEmpleadoId.Visible = false;
+            this.TipoEmpleadoId.Width = 64;
+            // 
+            // TipoEmpleado
+            // 
+            this.TipoEmpleado.DataPropertyName = "TipoEmpleado";
+            this.TipoEmpleado.HeaderText = "Cargo";
+            this.TipoEmpleado.Name = "TipoEmpleado";
+            this.TipoEmpleado.ReadOnly = true;
+            this.TipoEmpleado.Width = 64;
+            // 
+            // FechaNacimiento
+            // 
+            this.FechaNacimiento.DataPropertyName = "EmpleadoFechaNacimiento";
+            this.FechaNacimiento.HeaderText = "Fecha Nacimiento";
+            this.FechaNacimiento.Name = "FechaNacimiento";
+            this.FechaNacimiento.ReadOnly = true;
+            this.FechaNacimiento.Width = 131;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = ((System.Drawing.Image)(resources.GetObject("Editar.Image")));
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Width = 44;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Desactivar";
+            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Eliminar.Width = 88;
+            // 
+            // Salario
+            // 
+            this.Salario.DataPropertyName = "EmpleadoSalario";
+            this.Salario.HeaderText = "Salario";
+            this.Salario.Name = "Salario";
+            this.Salario.ReadOnly = true;
+            this.Salario.Visible = false;
+            this.Salario.Width = 70;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Visible = false;
+            this.Estado.Width = 69;
             // 
             // MostrarEmpleado
             // 

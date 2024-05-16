@@ -209,7 +209,7 @@
             this.btnGuardarMarca.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarMarca.IconSize = 38;
             this.btnGuardarMarca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarMarca.Location = new System.Drawing.Point(67, 495);
+            this.btnGuardarMarca.Location = new System.Drawing.Point(202, 495);
             this.btnGuardarMarca.MaximumSize = new System.Drawing.Size(110, 30);
             this.btnGuardarMarca.MinimumSize = new System.Drawing.Size(110, 30);
             this.btnGuardarMarca.Name = "btnGuardarMarca";
@@ -233,7 +233,7 @@
             this.btnRegresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRegresar.IconSize = 34;
             this.btnRegresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegresar.Location = new System.Drawing.Point(524, 495);
+            this.btnRegresar.Location = new System.Drawing.Point(372, 495);
             this.btnRegresar.MaximumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.MinimumSize = new System.Drawing.Size(110, 30);
             this.btnRegresar.Name = "btnRegresar";
@@ -257,7 +257,7 @@
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 34;
             this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(62, 495);
+            this.btnActualizar.Location = new System.Drawing.Point(197, 495);
             this.btnActualizar.MaximumSize = new System.Drawing.Size(115, 30);
             this.btnActualizar.MinimumSize = new System.Drawing.Size(115, 30);
             this.btnActualizar.Name = "btnActualizar";
