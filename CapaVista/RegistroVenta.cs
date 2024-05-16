@@ -138,7 +138,7 @@ namespace CapaVista
             }
         }
 
-
+       
 
         private void CalcularMontoTotal()
         {
@@ -300,7 +300,7 @@ namespace CapaVista
                     
                     MessageBox.Show("Venta guardada con exito", "Tienda | Registro Venta",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                   
+                    this.Close();
                 }
                 else
                 {

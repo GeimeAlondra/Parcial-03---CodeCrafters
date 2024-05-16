@@ -12,6 +12,29 @@ namespace CapaDatos
     {
         Contexto _db;
 
+        public List<Venta> FiltroCodigo(int id)
+        {
+            
+            _db = new Contexto();
+            return _db.Ventas
+                .Include(v => v.Empleado)
+                .Include(v => v.Cliente)
+                .Where(v => v.VentaId.Equals(id)).ToList();
+        }
+
+        public List<Venta> FiltroNombres(string name)
+        {
+
+            _db = new Contexto();
+            return _db.Ventas
+                .Include(v => v.Empleado)
+                .Include(v => v.Cliente)
+                .Where(v => v.Cliente.ClienteNombre.Contains(name)).ToList();
+        }
+
+
+
+
         // Guardar y actualizar Venta
         public int Guardar(Venta venta, int id = 0, bool esActualizacion = false)
         {

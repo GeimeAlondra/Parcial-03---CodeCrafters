@@ -68,17 +68,13 @@ namespace CapaVista
             }
         }
 
-        public event EventHandler LlenarDataGridViewRequested;
-
-        private void OnLlenarDataGridViewRequested()
-        {
-            LlenarDataGridViewRequested?.Invoke(this, EventArgs.Empty);
-        }
+       
 
         private void AbrirFormulario2()
         {
             RegistroVenta objRegistrarVenta = new RegistroVenta(_id);
-            objRegistrarVenta.LlenarDataGridViewRequested += (sender, args) => {
+            objRegistrarVenta.LlenarDataGridViewRequested += (sender, args) =>
+            {
                 LlenarDataGridView();
             };
             objRegistrarVenta.ShowDialog();
@@ -86,13 +82,14 @@ namespace CapaVista
 
         private void LlenarDataGridView()
         {
-            throw new NotImplementedException();
+            CargarDatagridView();
         }
 
         private void btnAgregarVenta_Click(object sender, EventArgs e)
         {
             _id = 0;
             AbrirFormulario2();
+            CargarDatagridView();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
@@ -106,6 +103,51 @@ namespace CapaVista
             {
                 e.Handled = true;
             }
+
+
+
+        }
+
+        private void FiltroCodigo()
+        {
+            if (!string.IsNullOrEmpty(txtCodigo.Text))
+            {
+                int codigo;
+                if (int.TryParse(txtCodigo.Text, out codigo))
+                {
+                    dgvVentas.DataSource = _VentaLOG.FiltroCodigo(codigo);
+                }
+                else
+                {
+                    MessageBox.Show("Digite un código válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+
+        }
+
+
+        private void FiltroNombre()
+        {
+            string nombre = txtNombre.Text;
+            dgvVentas.DataSource = _VentaLOG.FiltroNombres(nombre);
+
+
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            FiltroCodigo();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            FiltroNombre();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }       
 }

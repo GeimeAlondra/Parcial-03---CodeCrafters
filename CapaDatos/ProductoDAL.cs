@@ -1,4 +1,5 @@
 ﻿using CapaEntidades;
+using Microsoft.ReportingServices.ReportProcessing.OnDemandReportObjectModel;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -116,7 +117,7 @@ namespace CapaDatos
                     .Include(p => p.Categoria)
                     .Include(p => p.Marca)
                     .Include(p => p.Proveedor)
-                    .Where(p => p.CategoriaId == id && p.Estado == false ).ToList();
+                    .Where(p => p.CategoriaId == id && p.Estado == false  ).ToList();
             }
             else
             {

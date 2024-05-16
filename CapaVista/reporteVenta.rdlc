@@ -81,7 +81,7 @@
       <Line Name="Line2">
         <Top>4.01722cm</Top>
         <Height>0cm</Height>
-        <Width>18.18599cm</Width>
+        <Width>17.4187cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -131,7 +131,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Nombre de la empresa o de la tienda</Value>
+                <Value>World Center Extreme Tecnologi</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -461,16 +461,16 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>4.43898cm</Width>
+                  <Width>4.24846cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>6.87192cm</Width>
+                  <Width>6.6814cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.90209cm</Width>
+                  <Width>2.71157cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.35188cm</Width>
+                  <Width>3.16136cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -780,7 +780,7 @@
             </SortExpressions>
             <Top>0.3525cm</Top>
             <Height>1.2cm</Height>
-            <Width>17.56487cm</Width>
+            <Width>16.80278cm</Width>
             <Style>
               <Border>
                 <Color>DimGray</Color>
@@ -792,9 +792,9 @@
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>10.28058cm</Top>
-        <Left>0.563cm</Left>
+        <Left>0.34447cm</Left>
         <Height>4.14042cm</Height>
-        <Width>17.62299cm</Width>
+        <Width>16.81763cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -841,9 +841,9 @@
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>9.25724cm</Top>
-        <Left>0.563cm</Left>
+        <Left>0.35931cm</Left>
         <Height>0.9175cm</Height>
-        <Width>17.62299cm</Width>
+        <Width>16.80278cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -871,9 +871,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox57</rd:DefaultName>
         <Top>14.49155cm</Top>
-        <Left>13.90409cm</Left>
+        <Left>12.80082cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.30938cm</Width>
+        <Width>1.38876cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -965,7 +965,7 @@
         </TablixRowHierarchy>
         <DataSetName>Factura</DataSetName>
         <Top>14.49155cm</Top>
-        <Left>15.28402cm</Left>
+        <Left>14.31825cm</Left>
         <Height>0.84185cm</Height>
         <Width>2.84385cm</Width>
         <ZIndex>14</ZIndex>
@@ -993,8 +993,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>0.70107cm</Top>
-        <Left>11.8739cm</Left>
+        <Top>0.83709cm</Top>
+        <Left>9.88942cm</Left>
         <Height>0.73602cm</Height>
         <Width>3.11832cm</Width>
         <ZIndex>15</ZIndex>
@@ -1087,8 +1087,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Factura</DataSetName>
-        <Top>0.70107cm</Top>
-        <Left>15.28402cm</Left>
+        <Top>0.83709cm</Top>
+        <Left>13.29954cm</Left>
         <Height>0.73602cm</Height>
         <Width>2.60301cm</Width>
         <ZIndex>16</ZIndex>
@@ -1116,8 +1116,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>1.61348cm</Top>
-        <Left>11.85016cm</Left>
+        <Top>1.7495cm</Top>
+        <Left>9.86568cm</Left>
         <Height>0.73602cm</Height>
         <Width>3.11832cm</Width>
         <ZIndex>17</ZIndex>
@@ -1203,8 +1203,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Factura</DataSetName>
-        <Top>1.61348cm</Top>
-        <Left>15.26028cm</Left>
+        <Top>1.7495cm</Top>
+        <Left>13.2758cm</Left>
         <Height>0.73602cm</Height>
         <Width>2.60301cm</Width>
         <ZIndex>18</ZIndex>
@@ -1223,7 +1223,7 @@
       <BackgroundColor>White</BackgroundColor>
     </Style>
   </Body>
-  <Width>7.24141in</Width>
+  <Width>6.90984in</Width>
   <Page>
     <PageFooter>
       <Height>5.87375cm</Height>
@@ -1299,7 +1299,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>2.91854cm</Top>
-          <Left>11.8739cm</Left>
+          <Left>10.81557cm</Left>
           <Height>0.81167cm</Height>
           <Width>6.01313cm</Width>
           <ZIndex>2</ZIndex>
@@ -1335,7 +1335,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>1.93048cm</Top>
-          <Left>13.29954cm</Left>
+          <Left>12.24121cm</Left>
           <Height>0.81167cm</Height>
           <Width>4.56375cm</Width>
           <ZIndex>3</ZIndex>
@@ -1376,7 +1376,7 @@
               <Top>0.06173cm</Top>
               <Left>0.28339cm</Left>
               <Height>0.6cm</Height>
-              <Width>17.78484cm</Width>
+              <Width>17.02275cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1392,7 +1392,7 @@
           <Top>5.14146cm</Top>
           <Left>0.05964cm</Left>
           <Height>0.73229cm</Height>
-          <Width>18.33354cm</Width>
+          <Width>17.30614cm</Width>
           <ZIndex>4</ZIndex>
           <Style>
             <Border>

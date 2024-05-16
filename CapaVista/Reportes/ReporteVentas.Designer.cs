@@ -30,26 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.facturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSVenta = new CapaVista.DSVenta();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.facturaTableAdapter = new CapaVista.DSVentaTableAdapters.FacturaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSVenta)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "Factura";
-            reportDataSource1.Value = this.facturaBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "CapaVista.reporteVenta.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(697, 683);
-            this.reportViewer1.TabIndex = 0;
             // 
             // facturaBindingSource
             // 
@@ -61,6 +48,19 @@
             this.dSVenta.DataSetName = "DSVenta";
             this.dSVenta.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "Factura";
+            reportDataSource1.Value = this.facturaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "CapaVista.reporteVenta.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(713, 683);
+            this.reportViewer1.TabIndex = 0;
+            // 
             // facturaTableAdapter
             // 
             this.facturaTableAdapter.ClearBeforeFill = true;
@@ -69,7 +69,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 683);
+            this.ClientSize = new System.Drawing.Size(713, 683);
             this.Controls.Add(this.reportViewer1);
             this.Name = "ReporteVentas";
             this.Text = "ReporteVentas";
