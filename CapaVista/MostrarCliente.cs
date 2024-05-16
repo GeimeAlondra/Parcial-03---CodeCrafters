@@ -38,10 +38,12 @@ namespace CapaVista
             if (checkEstadoActivo.Checked)
             {
                 dvgCliente.DataSource = _ClienteLOG.ObtenerCliente();
+                dvgCliente.Columns["Eliminar"].Visible = true;
             }
             else if (checkEstadoInactivo.Checked)
             {
                 dvgCliente.DataSource = _ClienteLOG.ObtenerCliente(true);
+                dvgCliente.Columns["Eliminar"].Visible = false;
             }
         }
 

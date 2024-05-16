@@ -31,10 +31,12 @@ namespace CapaVista
             if (checkEstadoActivo.Checked)
             {
                 dvgEmpleado.DataSource = _EmpleadoLOG.ObtenerEmpleado();
+                dvgEmpleado.Columns["Eliminar"].Visible = true;
             }
             else if (checkEstadoInactivo.Checked)
             {
                 dvgEmpleado.DataSource = _EmpleadoLOG.ObtenerEmpleado(true);
+                dvgEmpleado.Columns["Eliminar"].Visible = false;
             }
       
             cbCargoEmpleado.SelectedIndex = 0;

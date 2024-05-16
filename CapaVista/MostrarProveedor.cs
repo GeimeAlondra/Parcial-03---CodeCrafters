@@ -32,10 +32,12 @@ namespace CapaVista
             if (checkEstadoActivo.Checked)
             {
                 dgvProveedor.DataSource = _ProveedorLOG.ObtenerProveedor();
+                dgvProveedor.Columns["Eliminar"].Visible = true;
             }
             else if (checkEstadoInactivo.Checked)
             {
                 dgvProveedor.DataSource = _ProveedorLOG.ObtenerProveedor(true);
+                dgvProveedor.Columns["Eliminar"].Visible = false;
             }
         }
 

@@ -42,13 +42,16 @@ namespace CapaVista
             {
                 
                 dgvProductos.DataSource = _ProductoLOG.ObtenerProductos();
-
+                dgvProductos.Columns["Eliminar"].Visible = true;
             }
             else if (checkEstadoInactivo.Checked)
             {
                 
                 dgvProductos.DataSource = _ProductoLOG.ObtenerProductos(true);
+                dgvProductos.Columns["Eliminar"].Visible = false;
             }
+            
+
             cbCategoriaProducto.SelectedIndex = 0;
             cbMarcaProducto.SelectedIndex = 0;
             cbProveedorProducto.SelectedIndex = 0;
