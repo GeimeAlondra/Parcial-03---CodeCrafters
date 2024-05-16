@@ -12,7 +12,12 @@ namespace Capa_Logica
     {
         ProveedorDAL _ProveedorDAL;
 
-        
+        public int GuardarProveedor(Proveedor proveedor, int id = 0, bool esActualizacion = false)
+        {
+            _ProveedorDAL = new ProveedorDAL();
+
+            return _ProveedorDAL.Guardar(proveedor, id, esActualizacion);
+        }
 
         public int ActualizarProveedor(Proveedor proveedor, int id, bool esActualizacion)
         {
