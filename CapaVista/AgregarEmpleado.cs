@@ -20,7 +20,27 @@ namespace CapaVista
         EmpleadoLOG _EmpleadoLOG;
         int _id = 0;
 
-        
+        public AgregarEmpleado(int id = 0)
+        {
+            InitializeComponent();
+            _id = id;
+            if (_id > 0)
+            {
+                this.Text = "Tienda|Edicion de Empleados";
+                //Cambiar el boton
+                btnGuardarEmpleado.Text = "Actualizar";
+                btnGuardarEmpleado.BackColor = Color.FromArgb(82, 190, 128);
+                ObtenerTipoEmpleados();
+                CargarElementos(_id);
+            }
+            else
+            {
+                ObtenerTipoEmpleados();
+                LimpiarCampos();
+                empleadobindingSource.MoveLast();
+                empleadobindingSource.AddNew();
+            }
+        }
 
         public event EventHandler LlenarDataGridViewRequested;
 
