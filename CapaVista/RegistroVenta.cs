@@ -169,18 +169,26 @@ namespace CapaVista
             {
                 if (e.ColumnIndex >= 0 && e.RowIndex >= 0)
                 {
-                    bool precioValido = decimal.TryParse(dgvDetalleVenta.Rows[e.RowIndex].Cells["Precio"].Value.ToString(), out decimal precio);
-                    int cantidad = int.Parse(dgvDetalleVenta.Rows[e.RowIndex].Cells["Cantidad"].Value.ToString());
+                    string columnName = dgvDetalleVenta.Columns[e.ColumnIndex].Name;
 
-                    if (precioValido && cantidad > 0)
+                    if (columnName == "Precio" || columnName == "Cantidad")
                     {
-                        decimal SubTotal = precio * cantidad;
-                        dgvDetalleVenta.Rows[e.RowIndex].Cells["SubTotal"].Value = SubTotal;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Debe ingresar un precio válido");
-                        CalcularMontoTotal();
+                        bool precioValido = decimal.TryParse(dgvDetalleVenta.Rows[e.RowIndex].Cells["Precio"].Value.ToString(), out decimal precio);
+                        int cantidad = int.Parse(dgvDetalleVenta.Rows[e.RowIndex].Cells["Cantidad"].Value.ToString());
+
+                        if (precioValido && cantidad > 0)
+                        {
+                            decimal SubTotal = precio * cantidad;
+                            dgvDetalleVenta.Rows[e.RowIndex].Cells["SubTotal"].Value = SubTotal;
+
+                            // Actualizar el monto total después de cambiar el precio o la cantidad
+                            CalcularMontoTotal();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Debe ingresar un precio y una cantidad válidos");
+                            CalcularMontoTotal(); // Actualizar el monto total si la entrada no es válida
+                        }
                     }
                 }
             }
