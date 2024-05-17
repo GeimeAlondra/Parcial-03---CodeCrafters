@@ -199,7 +199,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.73602cm</Height>
+              <Height>0.7545cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -212,7 +212,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!ClienteNombre.Value + " " +Fields!ClienteApellido.Value</Value>
+                                  <Value>=IIF(IsNothing(Fields!ClienteNombre.Value) OR IsNothing(Fields!ClienteApellido.Value), "", Fields!ClienteNombre.Value + " " + Fields!ClienteApellido.Value)</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -225,6 +225,9 @@
                           <rd:DefaultName>Textbox25</rd:DefaultName>
                           <Height>0.6cm</Height>
                           <Width>7.08432cm</Width>
+                          <Visibility>
+                            <Hidden>=IIF(Fields!VentaId.Value = Previous(Fields!VentaId.Value), True, False)</Hidden>
+                          </Visibility>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -264,7 +267,7 @@
         <DataSetName>Factura</DataSetName>
         <Top>5.32419cm</Top>
         <Left>3.60281cm</Left>
-        <Height>0.73602cm</Height>
+        <Height>0.7545cm</Height>
         <Width>8.69669cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
@@ -291,7 +294,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>6.39549cm</Top>
+        <Top>6.20132cm</Top>
         <Left>0.563cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -328,7 +331,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!EmpleadoNombre.Value+" "+Fields!EmpleadoApellido.Value</Value>
+                                  <Value>=IIF(Fields!EmpleadoNombre.Value &lt;&gt; Previous(Fields!EmpleadoNombre.Value), Fields!EmpleadoNombre.Value + " " + Fields!EmpleadoApellido.Value, Nothing)</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -341,6 +344,9 @@
                           <rd:DefaultName>Textbox25</rd:DefaultName>
                           <Height>0.6cm</Height>
                           <Width>7.08432cm</Width>
+                          <Visibility>
+                            <Hidden>=IIF(Fields!VentaId.Value = Previous(Fields!VentaId.Value), True, False)</Hidden>
+                          </Visibility>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -353,6 +359,9 @@
                         </Textbox>
                       </ReportItems>
                       <KeepTogether>true</KeepTogether>
+                      <Visibility>
+                        <Hidden>=IIF(Fields!VentaId.Value = Previous(Fields!VentaId.Value), True, False)</Hidden>
+                      </Visibility>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -378,7 +387,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Factura</DataSetName>
-        <Top>6.39549cm</Top>
+        <Top>6.20132cm</Top>
         <Left>3.59992cm</Left>
         <Height>0.73602cm</Height>
         <Width>8.69669cm</Width>
@@ -407,7 +416,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>7.58583cm</Top>
+        <Top>7.11373cm</Top>
         <Left>0.563cm</Left>
         <Height>0.6cm</Height>
         <Width>3.74354cm</Width>
@@ -440,7 +449,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>7.58583cm</Top>
+        <Top>7.11373cm</Top>
         <Left>4.79661cm</Left>
         <Height>0.6cm</Height>
         <Width>7.07729cm</Width>
@@ -791,8 +800,8 @@
           </Tablix>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>10.28058cm</Top>
-        <Left>0.34447cm</Left>
+        <Top>8.93948cm</Top>
+        <Left>0.42967cm</Left>
         <Height>4.14042cm</Height>
         <Width>16.81763cm</Width>
         <ZIndex>11</ZIndex>
@@ -840,8 +849,8 @@
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>9.25724cm</Top>
-        <Left>0.35931cm</Left>
+        <Top>7.91614cm</Top>
+        <Left>0.44451cm</Left>
         <Height>0.9175cm</Height>
         <Width>16.80278cm</Width>
         <ZIndex>12</ZIndex>
@@ -870,8 +879,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox57</rd:DefaultName>
-        <Top>14.49155cm</Top>
-        <Left>12.80082cm</Left>
+        <Top>13.15045cm</Top>
+        <Left>12.88602cm</Left>
         <Height>0.6cm</Height>
         <Width>1.38876cm</Width>
         <ZIndex>13</ZIndex>
@@ -914,7 +923,7 @@
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Fields!VentaTotal.Value</Value>
+                                  <Value>=IIF(Fields!VentaTotal.Value &lt;&gt; Previous(Fields!VentaTotal.Value), Fields!VentaTotal.Value, Nothing)</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -927,6 +936,9 @@
                           <rd:DefaultName>Textbox25</rd:DefaultName>
                           <Height>0.6cm</Height>
                           <Width>2.84385cm</Width>
+                          <Visibility>
+                            <Hidden>=IIF(Fields!VentaId.Value = Previous(Fields!VentaId.Value), True, False)</Hidden>
+                          </Visibility>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -964,8 +976,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Factura</DataSetName>
-        <Top>14.49155cm</Top>
-        <Left>14.31825cm</Left>
+        <Top>13.15045cm</Top>
+        <Left>14.40345cm</Left>
         <Height>0.84185cm</Height>
         <Width>2.84385cm</Width>
         <ZIndex>14</ZIndex>
@@ -1008,96 +1020,6 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Tablix Name="Tablix8">
-        <TablixBody>
-          <TablixColumns>
-            <TablixColumn>
-              <Width>2.60301cm</Width>
-            </TablixColumn>
-          </TablixColumns>
-          <TablixRows>
-            <TablixRow>
-              <Height>0.73602cm</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Rectangle Name="Rectangle9">
-                      <ReportItems>
-                        <Textbox Name="Textbox37">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>000</Value>
-                                  <Style>
-                                    <FontSize>12pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                                <TextRun>
-                                  <Value>=Fields!VentaId.Value</Value>
-                                  <Style>
-                                    <FontSize>12pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style />
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox25</rd:DefaultName>
-                          <Height>0.6cm</Height>
-                          <Width>2.60012cm</Width>
-                          <Style>
-                            <Border>
-                              <Style>None</Style>
-                            </Border>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </ReportItems>
-                      <KeepTogether>true</KeepTogether>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                      </Style>
-                    </Rectangle>
-                  </CellContents>
-                </TablixCell>
-              </TablixCells>
-            </TablixRow>
-          </TablixRows>
-        </TablixBody>
-        <TablixColumnHierarchy>
-          <TablixMembers>
-            <TablixMember />
-          </TablixMembers>
-        </TablixColumnHierarchy>
-        <TablixRowHierarchy>
-          <TablixMembers>
-            <TablixMember>
-              <Group Name="Detalles7" />
-            </TablixMember>
-          </TablixMembers>
-        </TablixRowHierarchy>
-        <DataSetName>Factura</DataSetName>
-        <Top>0.83709cm</Top>
-        <Left>13.29954cm</Left>
-        <Height>0.73602cm</Height>
-        <Width>2.60301cm</Width>
-        <ZIndex>16</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Tablix>
       <Textbox Name="Textbox38">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -1120,7 +1042,7 @@
         <Left>9.86568cm</Left>
         <Height>0.73602cm</Height>
         <Width>3.11832cm</Width>
-        <ZIndex>17</ZIndex>
+        <ZIndex>16</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1131,7 +1053,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Tablix Name="Tablix9">
+      <Tablix Name="Tablix10">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
@@ -1140,20 +1062,20 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.73602cm</Height>
+              <Height>0.74526cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Rectangle Name="Rectangle10">
+                    <Rectangle Name="Rectangle11">
                       <ReportItems>
-                        <Textbox Name="Textbox39">
+                        <Textbox Name="Textbox40">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!VentaFecha.Value</Value>
+                                  <Value>=IIF(Fields!VentaId.Value &lt;&gt; Previous(Fields!VentaId.Value), Fields!VentaId.Value, Nothing)</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -1165,7 +1087,96 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox25</rd:DefaultName>
                           <Height>0.6cm</Height>
-                          <Width>2.60012cm</Width>
+                          <Width>2.24086cm</Width>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                      <KeepTogether>true</KeepTogether>
+                      <Visibility>
+                        <Hidden>=IIF(Fields!VentaId.Value = Previous(Fields!VentaId.Value), True, False)</Hidden>
+                      </Visibility>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalles9" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>Factura</DataSetName>
+        <Top>0.83709cm</Top>
+        <Left>13.2758cm</Left>
+        <Height>0.74526cm</Height>
+        <Width>2.60301cm</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Tablix Name="Tablix11">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>3.03228cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.74526cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="Rectangle12">
+                      <ReportItems>
+                        <Textbox Name="Textbox42">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIF(Fields!VentaFecha.Value &lt;&gt; Previous(Fields!VentaFecha.Value), Fields!VentaFecha.Value, Nothing)</Value>
+                                  <Style>
+                                    <FontSize>12pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox25</rd:DefaultName>
+                          <Height>0.6cm</Height>
+                          <Width>2.60301cm</Width>
+                          <Visibility>
+                            <Hidden>=IIF(Fields!VentaId.Value = Previous(Fields!VentaId.Value), True, False)</Hidden>
+                          </Visibility>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -1198,15 +1209,15 @@
         <TablixRowHierarchy>
           <TablixMembers>
             <TablixMember>
-              <Group Name="Detalles8" />
+              <Group Name="Detalles10" />
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>Factura</DataSetName>
-        <Top>1.7495cm</Top>
+        <Top>1.75874cm</Top>
         <Left>13.2758cm</Left>
-        <Height>0.73602cm</Height>
-        <Width>2.60301cm</Width>
+        <Height>0.74526cm</Height>
+        <Width>3.03228cm</Width>
         <ZIndex>18</ZIndex>
         <Style>
           <Border>
@@ -1215,7 +1226,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>6.11557in</Height>
+    <Height>6.89682in</Height>
     <Style>
       <Border>
         <Style>None</Style>
@@ -1226,7 +1237,7 @@
   <Width>6.90984in</Width>
   <Page>
     <PageFooter>
-      <Height>5.87375cm</Height>
+      <Height>4.49792cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1248,8 +1259,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>2.91854cm</Top>
-          <Left>0.34303cm</Left>
+          <Top>2.61184cm</Top>
+          <Left>0.66159cm</Left>
           <Height>0.81167cm</Height>
           <Width>7.2625cm</Width>
           <Style>
@@ -1266,8 +1277,8 @@
           <Source>Embedded</Source>
           <Value>LOGOS</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.41253cm</Top>
-          <Left>0.34303cm</Left>
+          <Top>0.10583cm</Top>
+          <Left>0.66159cm</Left>
           <Height>2.17909cm</Height>
           <Width>5.62749cm</Width>
           <ZIndex>1</ZIndex>
@@ -1298,8 +1309,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>2.91854cm</Top>
-          <Left>10.81557cm</Left>
+          <Top>2.61184cm</Top>
+          <Left>11.13413cm</Left>
           <Height>0.81167cm</Height>
           <Width>6.01313cm</Width>
           <ZIndex>2</ZIndex>
@@ -1334,8 +1345,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.93048cm</Top>
-          <Left>12.24121cm</Left>
+          <Top>1.62378cm</Top>
+          <Left>12.55977cm</Left>
           <Height>0.81167cm</Height>
           <Width>4.56375cm</Width>
           <ZIndex>3</ZIndex>
@@ -1389,8 +1400,8 @@
             </Textbox>
           </ReportItems>
           <KeepTogether>true</KeepTogether>
-          <Top>5.14146cm</Top>
-          <Left>0.05964cm</Left>
+          <Top>3.69617cm</Top>
+          <Left>0.16112cm</Left>
           <Height>0.73229cm</Height>
           <Width>17.30614cm</Width>
           <ZIndex>4</ZIndex>
