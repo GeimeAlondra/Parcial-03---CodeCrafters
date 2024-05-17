@@ -43,7 +43,7 @@ namespace CapaVista
         private void CargarProductos()
         {
             _ProductoLOG = new ProductoLOG();
-            productoBindingSource.DataSource = _ProductoLOG.ObtenerProductos();
+            productoBindingSource.DataSource = _ProductoLOG.ObtenerProductosConExistencias();
         }
 
         private void CargarClientes()

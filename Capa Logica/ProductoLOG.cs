@@ -34,6 +34,13 @@ namespace Capa_Logica
             return _ProductoDAL.Leer(inactivos);
         }
 
+        public List<Producto> ObtenerProductosConExistencias(bool inactivos = false)
+        {
+            _ProductoDAL = new ProductoDAL();
+
+            return _ProductoDAL.ObtenerProductosConExistencias(inactivos);
+        }
+
         //obtner lo del combobox
         public List<Categoria> ObtenerCategoria()
         {

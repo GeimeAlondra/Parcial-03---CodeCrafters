@@ -79,6 +79,29 @@ namespace CapaDatos
             }
         }
 
+
+
+        public List<Producto> ObtenerProductosConExistencias(bool inactivos = false)
+        {
+            _db = new Contexto();
+            if (inactivos)
+            {
+                return _db.Productos
+                    .Include(p => p.Categoria)
+                    .Include(p => p.Marca)
+                    .Include(p => p.Proveedor)
+                    .Where(p => p.Estado == false && p.ProductoStock > 0).ToList();
+            }
+            else
+            {
+                return _db.Productos
+                    .Include(p => p.Categoria)
+                    .Include(p => p.Marca)
+                    .Include(p => p.Proveedor)
+                    .Where(p => p.Estado == true && p.ProductoStock > 0).ToList();
+            }
+        }
+
         // Buscar Productos por ID
         public Producto LeerPorId(int id)
         {
