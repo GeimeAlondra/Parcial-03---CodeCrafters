@@ -308,7 +308,6 @@
             this.dgvDetalleVenta.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvDetalleVenta.Location = new System.Drawing.Point(11, 238);
             this.dgvDetalleVenta.Name = "dgvDetalleVenta";
-            this.dgvDetalleVenta.ReadOnly = true;
             this.dgvDetalleVenta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -327,41 +326,37 @@
             this.dgvDetalleVenta.Size = new System.Drawing.Size(737, 170);
             this.dgvDetalleVenta.TabIndex = 29;
             this.dgvDetalleVenta.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleVenta_CellValueChanged);
+            this.dgvDetalleVenta.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvDetalleVenta_RowsAdded);
             // 
             // Codigo
             // 
             this.Codigo.DataPropertyName = "Codigo";
             this.Codigo.HeaderText = "Código";
             this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
             // 
             // Nombre
             // 
             this.Nombre.DataPropertyName = "Nombre";
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
             // 
             // Precio
             // 
             this.Precio.DataPropertyName = "Precio";
             this.Precio.HeaderText = "Precio";
             this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
             // 
             // Cantidad
             // 
             this.Cantidad.DataPropertyName = "Cantidad";
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
             // 
             // SubTotal
             // 
             this.SubTotal.DataPropertyName = "SubTotal";
             this.SubTotal.HeaderText = "Sub Total";
             this.SubTotal.Name = "SubTotal";
-            this.SubTotal.ReadOnly = true;
             // 
             // btnProcesar
             // 

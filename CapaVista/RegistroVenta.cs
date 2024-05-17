@@ -28,7 +28,9 @@ namespace CapaVista
             CargarProductos();
             CargarClientes();
             CargarEmpleados();
-          
+            dgvDetalleVenta.RowsAdded += dgvDetalleVenta_RowsAdded;
+
+
             detalleVenta = new DataTable();
             detalleVenta.Columns.Add("Codigo", typeof(int));
             detalleVenta.Columns.Add("Nombre", typeof(string));
@@ -107,6 +109,7 @@ namespace CapaVista
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+
             try
             {
                 _ProductoLOG = new ProductoLOG();
@@ -119,7 +122,7 @@ namespace CapaVista
 
                 productoBindingSource.EndEdit();
                 var producto = (Producto)productoBindingSource.Current;
-                
+               
 
                 if (producto != null)
                 {
@@ -130,6 +133,7 @@ namespace CapaVista
 
                     CalcularMontoTotal();
                 }
+               
             }
             catch (Exception ex)
             {
@@ -347,6 +351,14 @@ namespace CapaVista
         private void OnLlenarDataGridViewRequested()
         {
             LlenarDataGridViewRequested?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void dgvDetalleVenta_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvDetalleVenta.Rows)
+            {
+                row.Cells["Cantidad"].ReadOnly = false;
+            }
         }
     }
 }
