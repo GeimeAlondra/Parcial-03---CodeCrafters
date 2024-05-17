@@ -298,20 +298,7 @@ namespace CapaVista
 
                 foreach (DataGridViewRow row in dgvDetalleVenta.Rows)
                 {
-                    int cantidad = int.Parse(row.Cells["Cantidad"].Value.ToString());
-                    if (cantidad == 0)
-                    {
-                        MessageBox.Show("No se puede procesar la venta porque la cantidad de un producto es igual a cero", "Tienda | Registro Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return; // Salir del método si se encuentra una cantidad igual a cero
-                    }
-
-                    int precio = int.Parse(row.Cells["Precio"].Value.ToString());
-                    if (precio == 0)
-                    {
-                        MessageBox.Show("No se puede procesar la venta porque el precio de un producto no debe ser igual a 0", "Tienda | Registro Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return; // Salir del método si se encuentra una cantidad igual a cero
-                    }
-
+                    
 
                     var detalle = new DetalleVenta()
                     {
