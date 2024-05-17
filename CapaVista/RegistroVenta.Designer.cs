@@ -326,6 +326,7 @@
             this.dgvDetalleVenta.Size = new System.Drawing.Size(737, 170);
             this.dgvDetalleVenta.TabIndex = 29;
             this.dgvDetalleVenta.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleVenta_CellValueChanged);
+            this.dgvDetalleVenta.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvDetalleVenta_EditingControlShowing);
             this.dgvDetalleVenta.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvDetalleVenta_RowsAdded);
             // 
             // Codigo

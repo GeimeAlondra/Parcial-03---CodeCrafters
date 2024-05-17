@@ -60,7 +60,7 @@ namespace CapaVista
 
         private void CargarEmpleados()
         {
-            _EmpleadoLOG = new EmpleadoLOG();         
+            _EmpleadoLOG = new EmpleadoLOG();
             var empleado = _EmpleadoLOG.ObtenerEmpleado();
             // Insertar un Empleado de selección predeterminada
             empleado.Insert(0, new Empleado { EmpleadoId = 0, EmpleadoNombre = "---Seleccionar---" });
@@ -122,7 +122,7 @@ namespace CapaVista
 
                 productoBindingSource.EndEdit();
                 var producto = (Producto)productoBindingSource.Current;
-               
+
 
                 if (producto != null)
                 {
@@ -141,7 +141,7 @@ namespace CapaVista
 
                     CalcularMontoTotal();
                 }
-               
+
             }
             catch (Exception ex)
             {
@@ -150,7 +150,7 @@ namespace CapaVista
             }
         }
 
-       
+
 
         private void CalcularMontoTotal()
         {
@@ -242,7 +242,7 @@ namespace CapaVista
                 txtCantidad.Focus();
 
                 camposValidos = false;
-         
+
             }
 
 
@@ -250,7 +250,7 @@ namespace CapaVista
             {
                 MessageBox.Show("Se requiere el cliente de la Venta \n !Este campo es obligatorio!", "Tienda | Registro Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cbxCliente.BackColor = Color.LightCoral;
-               
+
 
                 camposValidos = false;
             }
@@ -286,7 +286,7 @@ namespace CapaVista
 
                 var clienteseleccionado = (Cliente)cbxCliente.SelectedItem;
                 venta.ClienteId = clienteseleccionado.ClienteId;
-            
+
 
                 foreach (DataGridViewRow row in dgvDetalleVenta.Rows)
                 {
@@ -302,7 +302,7 @@ namespace CapaVista
                     //Descontamos el producto
                     _ProductoLOG.DescontarStock(detalle.ProductoId, detalle.Cantidad);
                 }
-                    
+
 
 
                 int resultado = _VentaLOG.GuardarVenta(venta);
@@ -310,7 +310,7 @@ namespace CapaVista
                 if (resultado > 0)
                 {
                     LimpiarCampos();
-                    
+
                     MessageBox.Show("Venta guardada con exito", "Tienda | Registro Venta",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
@@ -369,5 +369,29 @@ namespace CapaVista
                 row.Cells["Cantidad"].ReadOnly = false;
             }
         }
+
+        private void dgvDetalleVenta_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (dgvDetalleVenta.CurrentCell.ColumnIndex == dgvDetalleVenta.Columns["Cantidad"].Index)
+            {
+                TextBox textBox = e.Control as TextBox;
+                if (textBox != null)
+                {
+                    textBox.KeyPress -= new KeyPressEventHandler(textBox_KeyPress);
+                    textBox.KeyPress += new KeyPressEventHandler(textBox_KeyPress);
+                }
+            }
+        }
+
+        private void textBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+
+
     }
 }
