@@ -32,37 +32,38 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaPrincipal));
             this.MenuSideBar = new System.Windows.Forms.Panel();
             this.panelTools = new System.Windows.Forms.Panel();
-            this.panelVentas = new System.Windows.Forms.Panel();
-            this.panelMantenimientos = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.paneLogo = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelContainer = new System.Windows.Forms.Panel();
-            this.lblDia = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.btnMantenimientoCargo = new FontAwesome.Sharp.IconButton();
             this.btnMantenimientoMarca = new FontAwesome.Sharp.IconButton();
             this.btnMantenimientoCat = new FontAwesome.Sharp.IconButton();
             this.btnPanelGeneral = new System.Windows.Forms.Button();
+            this.panelVentas = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnManetenimientoEmpleado = new FontAwesome.Sharp.IconButton();
             this.btnMantenimientoProveedor = new FontAwesome.Sharp.IconButton();
             this.btnMantenimientoClientes = new FontAwesome.Sharp.IconButton();
             this.btnPrueba2 = new System.Windows.Forms.Button();
+            this.panelMantenimientos = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnMantenimientoProductos = new FontAwesome.Sharp.IconButton();
             this.btnPrueba = new System.Windows.Forms.Button();
+            this.paneLogo = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelContainer = new System.Windows.Forms.Panel();
+            this.lblDia = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.MenuSideBar.SuspendLayout();
             this.panelTools.SuspendLayout();
             this.panelVentas.SuspendLayout();
             this.panelMantenimientos.SuspendLayout();
             this.paneLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuSideBar
@@ -94,109 +95,6 @@
             this.panelTools.Name = "panelTools";
             this.panelTools.Size = new System.Drawing.Size(229, 152);
             this.panelTools.TabIndex = 6;
-            // 
-            // panelVentas
-            // 
-            this.panelVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelVentas.Controls.Add(this.iconButton1);
-            this.panelVentas.Controls.Add(this.btnManetenimientoEmpleado);
-            this.panelVentas.Controls.Add(this.btnMantenimientoProveedor);
-            this.panelVentas.Controls.Add(this.btnMantenimientoClientes);
-            this.panelVentas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelVentas.Location = new System.Drawing.Point(0, 235);
-            this.panelVentas.Name = "panelVentas";
-            this.panelVentas.Size = new System.Drawing.Size(229, 167);
-            this.panelVentas.TabIndex = 4;
-            // 
-            // panelMantenimientos
-            // 
-            this.panelMantenimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelMantenimientos.Controls.Add(this.panel2);
-            this.panelMantenimientos.Controls.Add(this.btnMantenimientoProductos);
-            this.panelMantenimientos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMantenimientos.Location = new System.Drawing.Point(0, 149);
-            this.panelMantenimientos.Name = "panelMantenimientos";
-            this.panelMantenimientos.Size = new System.Drawing.Size(229, 43);
-            this.panelMantenimientos.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DarkBlue;
-            this.panel2.Location = new System.Drawing.Point(0, 43);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 43);
-            this.panel2.TabIndex = 4;
-            // 
-            // paneLogo
-            // 
-            this.paneLogo.Controls.Add(this.pictureBox2);
-            this.paneLogo.Controls.Add(this.panel1);
-            this.paneLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.paneLogo.Location = new System.Drawing.Point(0, 0);
-            this.paneLogo.Name = "paneLogo";
-            this.paneLogo.Size = new System.Drawing.Size(229, 106);
-            this.paneLogo.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.panel1.Location = new System.Drawing.Point(3, 100);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 2);
-            this.panel1.TabIndex = 3;
-            // 
-            // panelContainer
-            // 
-            this.panelContainer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.panelContainer.Controls.Add(this.lblDia);
-            this.panelContainer.Controls.Add(this.lblHora);
-            this.panelContainer.Controls.Add(this.pictureBox1);
-            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainer.Location = new System.Drawing.Point(229, 0);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(777, 600);
-            this.panelContainer.TabIndex = 1;
-            // 
-            // lblDia
-            // 
-            this.lblDia.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblDia.AutoSize = true;
-            this.lblDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDia.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblDia.Location = new System.Drawing.Point(225, 387);
-            this.lblDia.Name = "lblDia";
-            this.lblDia.Size = new System.Drawing.Size(315, 37);
-            this.lblDia.TabIndex = 2;
-            this.lblDia.Text = "Domingo abril 2024";
-            // 
-            // lblHora
-            // 
-            this.lblHora.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblHora.Location = new System.Drawing.Point(257, 295);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(255, 73);
-            this.lblHora.TabIndex = 1;
-            this.lblHora.Text = "0:00:00";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(205, 77);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(335, 168);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // iconButton2
             // 
@@ -295,6 +193,19 @@
             this.btnPanelGeneral.Text = "Catalogos";
             this.btnPanelGeneral.UseVisualStyleBackColor = true;
             this.btnPanelGeneral.Click += new System.EventHandler(this.btnPanelGeneral_Click);
+            // 
+            // panelVentas
+            // 
+            this.panelVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelVentas.Controls.Add(this.iconButton1);
+            this.panelVentas.Controls.Add(this.btnManetenimientoEmpleado);
+            this.panelVentas.Controls.Add(this.btnMantenimientoProveedor);
+            this.panelVentas.Controls.Add(this.btnMantenimientoClientes);
+            this.panelVentas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelVentas.Location = new System.Drawing.Point(0, 235);
+            this.panelVentas.Name = "panelVentas";
+            this.panelVentas.Size = new System.Drawing.Size(229, 167);
+            this.panelVentas.TabIndex = 4;
             // 
             // iconButton1
             // 
@@ -396,6 +307,25 @@
             this.btnPrueba2.UseVisualStyleBackColor = true;
             this.btnPrueba2.Click += new System.EventHandler(this.btnPrueba2_Click);
             // 
+            // panelMantenimientos
+            // 
+            this.panelMantenimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelMantenimientos.Controls.Add(this.panel2);
+            this.panelMantenimientos.Controls.Add(this.btnMantenimientoProductos);
+            this.panelMantenimientos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMantenimientos.Location = new System.Drawing.Point(0, 149);
+            this.panelMantenimientos.Name = "panelMantenimientos";
+            this.panelMantenimientos.Size = new System.Drawing.Size(229, 43);
+            this.panelMantenimientos.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel2.Location = new System.Drawing.Point(0, 43);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(5, 43);
+            this.panel2.TabIndex = 4;
+            // 
             // btnMantenimientoProductos
             // 
             this.btnMantenimientoProductos.Dock = System.Windows.Forms.DockStyle.Top;
@@ -438,6 +368,16 @@
             this.btnPrueba.UseVisualStyleBackColor = true;
             this.btnPrueba.Click += new System.EventHandler(this.btnPrueba_Click);
             // 
+            // paneLogo
+            // 
+            this.paneLogo.Controls.Add(this.pictureBox2);
+            this.paneLogo.Controls.Add(this.panel1);
+            this.paneLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paneLogo.Location = new System.Drawing.Point(0, 0);
+            this.paneLogo.Name = "paneLogo";
+            this.paneLogo.Size = new System.Drawing.Size(229, 106);
+            this.paneLogo.TabIndex = 0;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -449,6 +389,79 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.panel1.Location = new System.Drawing.Point(3, 100);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(229, 2);
+            this.panel1.TabIndex = 3;
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+            this.panelContainer.Controls.Add(this.label1);
+            this.panelContainer.Controls.Add(this.lblDia);
+            this.panelContainer.Controls.Add(this.lblHora);
+            this.panelContainer.Controls.Add(this.pictureBox1);
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(229, 0);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(777, 600);
+            this.panelContainer.TabIndex = 1;
+            // 
+            // lblDia
+            // 
+            this.lblDia.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblDia.AutoSize = true;
+            this.lblDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDia.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblDia.Location = new System.Drawing.Point(225, 387);
+            this.lblDia.Name = "lblDia";
+            this.lblDia.Size = new System.Drawing.Size(315, 37);
+            this.lblDia.TabIndex = 2;
+            this.lblDia.Text = "Domingo abril 2024";
+            // 
+            // lblHora
+            // 
+            this.lblHora.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblHora.AutoSize = true;
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblHora.Location = new System.Drawing.Point(257, 295);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(255, 73);
+            this.lblHora.TabIndex = 1;
+            this.lblHora.Text = "0:00:00";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(205, 77);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(335, 168);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(253, 562);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(250, 16);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "© 2024 Copyright: CodeCarfter.com ";
             // 
             // VistaPrincipal
             // 
@@ -471,10 +484,10 @@
             this.panelVentas.ResumeLayout(false);
             this.panelMantenimientos.ResumeLayout(false);
             this.paneLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelContainer.ResumeLayout(false);
             this.panelContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -506,6 +519,7 @@
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
