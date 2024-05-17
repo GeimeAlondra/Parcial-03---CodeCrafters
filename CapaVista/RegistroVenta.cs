@@ -126,6 +126,14 @@ namespace CapaVista
 
                 if (producto != null)
                 {
+
+                    if (cantidad > producto.ProductoStock)
+                    {
+                        MessageBox.Show("La cantidad ingresada es mayor que la existencia del producto", "Tienda | Registro Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return; // Salir del método si la cantidad es mayor que la existencia
+                    }
+
+
                     detalleVenta.Rows.Add(codigo, producto.ProductoNombre, producto.ProductoPrecio,
                         cantidad, (cantidad * producto.ProductoPrecio));
 
@@ -278,6 +286,7 @@ namespace CapaVista
 
                 var clienteseleccionado = (Cliente)cbxCliente.SelectedItem;
                 venta.ClienteId = clienteseleccionado.ClienteId;
+            
 
                 foreach (DataGridViewRow row in dgvDetalleVenta.Rows)
                 {
