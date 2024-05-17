@@ -131,7 +131,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>World Center Extreme Tecnologi</Value>
+                <Value>World Center Extreme Tecnology</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -780,7 +780,7 @@
             </SortExpressions>
             <Top>0.3525cm</Top>
             <Height>1.2cm</Height>
-            <Width>16.80278cm</Width>
+            <Width>16.80279cm</Width>
             <Style>
               <Border>
                 <Color>DimGray</Color>
@@ -1284,7 +1284,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Correo:Compañia@Gmail.com</Value>
+                  <Value>Correo:worldcenter@gmail.com</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Normal</FontWeight>
@@ -1320,7 +1320,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Tel: 0000-0000</Value>
+                  <Value>Tel: 77777-7777</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Normal</FontWeight>
