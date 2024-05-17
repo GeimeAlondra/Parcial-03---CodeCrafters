@@ -380,7 +380,7 @@ namespace CapaVista
 
         private void dgvDetalleVenta_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
-            if (dgvDetalleVenta.CurrentCell.ColumnIndex == dgvDetalleVenta.Columns["Cantidad"].Index)
+            if (dgvDetalleVenta.CurrentCell.ColumnIndex == dgvDetalleVenta.Columns["Cantidad"].Index || dgvDetalleVenta.CurrentCell.ColumnIndex == dgvDetalleVenta.Columns["Precio"].Index)
             {
                 TextBox textBox = e.Control as TextBox;
                 if (textBox != null)
